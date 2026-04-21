@@ -1,0 +1,266 @@
+:root {
+  --bg: #151515;
+  --text: #f2f2f2;
+  --muted: #b2b2b2;
+  --line: #2f2f2f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Manrope", Arial, sans-serif;
+}
+
+.site-header,
+main,
+.site-footer {
+  width: min(1500px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 58px;
+  width: calc(100% - 2rem);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  background: rgba(21, 21, 21, 0.92);
+  backdrop-filter: blur(4px);
+}
+
+.brand,
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+}
+
+nav {
+  display: flex;
+  gap: 1.35rem;
+}
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(140px, 18vh, 230px) 0 2rem;
+}
+
+.hero__kicker {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.hero__title {
+  margin: 0.5rem 0 0;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+  font-size: clamp(2.8rem, 15vw, 16rem);
+}
+
+.hero__lead {
+  margin-top: 1rem;
+  max-width: 56ch;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.hero__avatar-wrap {
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.hero__avatar {
+  width: clamp(72px, 9vw, 118px);
+  height: clamp(72px, 9vw, 118px);
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+}
+
+.projects {
+  padding: 2rem 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  row-gap: 7rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  text-decoration: none;
+  color: var(--text);
+  opacity: 1;
+  transition: opacity 320ms ease;
+}
+
+.project:hover {
+  opacity: 0.85;
+}
+
+.project__thumb {
+  width: 100%;
+  padding-top: 64%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  background-image: var(--cover);
+  background-size: cover;
+  background-position: center;
+  transition: transform 820ms cubic-bezier(0.22, 1, 0.36, 1), filter 820ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.project__meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  align-items: center;
+  padding-top: 0.45rem;
+}
+
+.project__meta p {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: var(--muted);
+}
+
+.project.is-opening .project__thumb {
+  transform: translateY(-16%) scale(1.045);
+  filter: contrast(1.04);
+}
+
+.project-1,
+.project-5 {
+  grid-column: span 2;
+}
+
+.project-2,
+.project-6 {
+  grid-column: span 3;
+}
+
+.project-3,
+.project-7 {
+  grid-column: span 3;
+}
+
+.project-4,
+.project-8 {
+  grid-column: span 2;
+}
+
+.about,
+.contacts {
+  padding: 1.5rem 0;
+}
+
+.about h2,
+.contacts h2 {
+  margin: 0;
+  font-size: 0.84rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.about p {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  max-width: 64ch;
+}
+
+.contact-list {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-list a {
+  color: var(--text);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.site-footer {
+  padding: 1.2rem 0 1.5rem;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 900ms cubic-bezier(0.22, 1, 0.36, 1), transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 980px) {
+  .projects-grid {
+    row-gap: 2.8rem;
+  }
+
+  .project,
+  .project-1,
+  .project-2,
+  .project-3,
+  .project-4,
+  .project-5,
+  .project-6,
+  .project-7,
+  .project-8 {
+    grid-column: span 5;
+  }
+
+  .hero {
+    min-height: 66vh;
+  }
+
+  .project__thumb {
+    padding-top: 92%;
+  }
+}
+
+@media (max-width: 700px) {
+  .project__thumb {
+    padding-top: 118%;
+  }
+}
