@@ -178,11 +178,13 @@ nav {
 }
 
 .about,
+.resume,
 .contacts {
   padding: 1.5rem 0;
 }
 
 .about h2,
+.resume h2,
 .contacts h2 {
   margin: 0;
   font-size: 0.84rem;
@@ -194,6 +196,28 @@ nav {
   margin-top: 0.75rem;
   color: var(--muted);
   max-width: 64ch;
+}
+
+.resume-links {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.resume-links a {
+  color: var(--text);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  border: 1px solid var(--line);
+  padding: 0.58rem 0.8rem;
+  transition: opacity 220ms ease;
+}
+
+.resume-links a:hover {
+  opacity: 0.72;
 }
 
 .contact-list {
