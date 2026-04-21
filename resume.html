@@ -6,18 +6,18 @@
     <title>Резюме — Ксения Герник</title>
     <meta
       name="description"
-      content="Резюме Ксении Герник: коммуникационный и бренд-дизайнер, опыт, компетенции и контакты."
+      content="Резюме Ксении Герник: коммуникационный дизайнер, опыт работы, софт, навыки, образование и контакты."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
     <style>
       .resume-page {
-        padding-top: 88px;
+        padding-top: 90px;
       }
 
       .resume-hero {
@@ -40,9 +40,17 @@
       }
 
       .resume-role {
-        margin-top: 0.75rem;
-        max-width: 58ch;
+        margin-top: 0.7rem;
         color: var(--muted);
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .resume-summary {
+        margin-top: 0.8rem;
+        max-width: 76ch;
+        line-height: 1.55;
       }
 
       .resume-actions {
@@ -67,65 +75,27 @@
         opacity: 0.72;
       }
 
-      .resume-grid {
-        display: grid;
-        grid-template-columns: 1.35fr 1fr;
-        gap: 1rem;
-      }
-
-      .resume-card {
+      .resume-section {
+        margin-top: 1.5rem;
         border: 1px solid var(--line);
         padding: 1rem;
       }
 
-      .resume-card h2 {
+      .resume-section h2 {
         margin: 0;
         font-size: 0.8rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
       }
 
-      .resume-list {
-        margin: 0.75rem 0 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        gap: 0.75rem;
-      }
-
-      .resume-list li {
-        margin: 0;
-      }
-
-      .resume-period {
-        display: block;
-        color: var(--muted);
-        font-size: 0.72rem;
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-      }
-
-      .resume-title {
-        margin-top: 0.15rem;
-        display: block;
-        font-size: 0.95rem;
-      }
-
-      .resume-desc {
-        margin-top: 0.25rem;
-        color: var(--muted);
-        font-size: 0.9rem;
-        line-height: 1.45;
-      }
-
-      .skills {
-        margin: 0.75rem 0 0;
+      .chips {
+        margin-top: 0.75rem;
         display: flex;
         flex-wrap: wrap;
         gap: 0.45rem;
       }
 
-      .skills span {
+      .chips span {
         border: 1px solid var(--line);
         padding: 0.38rem 0.52rem;
         font-size: 0.74rem;
@@ -134,21 +104,76 @@
         color: var(--muted);
       }
 
+      .experience-list,
+      .education-list {
+        margin: 0.85rem 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 1rem;
+      }
+
+      .job,
+      .edu {
+        border-top: 1px solid var(--line);
+        padding-top: 0.9rem;
+      }
+
+      .job:first-child,
+      .edu:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .job-title,
+      .edu-title {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .job-period,
+      .edu-period {
+        margin-top: 0.2rem;
+        color: var(--muted);
+        font-size: 0.76rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .job-role,
+      .edu-role {
+        margin-top: 0.45rem;
+        color: #ddd;
+        line-height: 1.5;
+      }
+
+      .job-points {
+        margin: 0.55rem 0 0;
+        padding-left: 1rem;
+        color: var(--muted);
+        display: grid;
+        gap: 0.35rem;
+      }
+
       .contact-stack {
         margin-top: 0.75rem;
         display: grid;
         gap: 0.45rem;
       }
 
-      .contact-stack a {
+      .contact-stack a,
+      .contact-stack p {
+        margin: 0;
         color: var(--text);
         text-decoration: none;
-        font-size: 0.9rem;
       }
 
-      @media (max-width: 980px) {
-        .resume-grid {
-          grid-template-columns: 1fr;
+      @media (max-width: 720px) {
+        .resume-summary,
+        .job-role,
+        .edu-role {
+          font-size: 0.95rem;
         }
       }
     </style>
@@ -167,9 +192,11 @@
       <section class="resume-hero reveal">
         <p class="resume-kicker">резюме</p>
         <h1 class="resume-name">KSUSHA GERNIK</h1>
-        <p class="resume-role">
-          Коммуникационный и бренд-дизайнер. Проектирую визуальные системы, которые помогают
-          брендам говорить ясно и узнаваемо.
+        <p class="resume-role">коммуникационный дизайнер</p>
+        <p class="resume-summary">
+          Коммуникационный и бренд-дизайнер, мне близок ясный и содержательный дизайн. Интересуюсь
+          новыми технологиями и нейросетями, постоянно учусь, расту и ценю работу в амбициозных и
+          внимательных командах :)
         </p>
         <div class="resume-actions">
           <a
@@ -180,62 +207,155 @@
             >Скачать ПДФ</a
           >
           <a class="resume-btn" href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer"
-            >Связаться в телеграм</a
+            >Написать в телеграм</a
           >
+          <a class="resume-btn" href="./index.html">К портфолио</a>
         </div>
       </section>
 
-      <section class="resume-grid reveal">
-        <article class="resume-card">
-          <h2>Опыт</h2>
-          <ul class="resume-list">
-            <li>
-              <span class="resume-period">8+ лет</span>
-              <span class="resume-title">Коммуникационный и бренд-дизайн</span>
-              <p class="resume-desc">
-                Разработка айдентики, key visual и систем визуальных коммуникаций для компаний и
-                продуктовых команд.
-              </p>
-            </li>
-            <li>
-              <span class="resume-period">Проекты</span>
-              <span class="resume-title">Кампании, айдентика, промо</span>
-              <p class="resume-desc">
-                Опыт работы с сезонными кампаниями, городскими концепциями, digital-форматами и
-                многоформатными носителями.
-              </p>
-            </li>
-            <li>
-              <span class="resume-period">Формат работы</span>
-              <span class="resume-title">Индивидуально и с командами</span>
-              <p class="resume-desc">
-                Кросс-функциональное взаимодействие, презентация идей, сопровождение запуска и
-                контроль визуальной целостности.
-              </p>
-            </li>
-          </ul>
-        </article>
+      <section class="resume-section reveal">
+        <h2>Софт</h2>
+        <div class="chips">
+          <span>Figma</span>
+          <span>Adobe Photoshop</span>
+          <span>Adobe Illustrator</span>
+          <span>Adobe InDesign</span>
+          <span>Adobe After Effects</span>
+          <span>Adobe Premier Pro</span>
+          <span>Midjourney</span>
+          <span>Krea</span>
+          <span>Visual Electric</span>
+          <span>Tilda</span>
+          <span>Readymag</span>
+        </div>
+      </section>
 
-        <article class="resume-card">
-          <h2>Компетенции</h2>
-          <div class="skills">
-            <span>Айдентика</span>
-            <span>Коммуникационный дизайн</span>
-            <span>Key visual</span>
-            <span>Арт-дирекшн</span>
-            <span>Системное мышление</span>
-            <span>Презентация идей</span>
-            <span>Работа с подрядчиками</span>
-            <span>Менторство</span>
-          </div>
+      <section class="resume-section reveal">
+        <h2>Навыки</h2>
+        <div class="chips">
+          <span>Арт-дирекшен</span>
+          <span>Многополосные издания</span>
+          <span>Нейросети</span>
+          <span>Иллюстрация</span>
+          <span>Рекламный дизайн</span>
+          <span>Типографика</span>
+          <span>Веб-дизайн</span>
+          <span>SMM</span>
+          <span>Печатные носители</span>
+          <span>Брендинг и айдентика</span>
+        </div>
+      </section>
 
-          <h2 style="margin-top: 1rem">Контакты</h2>
-          <div class="contact-stack">
-            <a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer">Телеграм: @ksusha_pdf</a>
-            <a href="mailto:ks.gernik@gmail.com">Почта: ks.gernik@gmail.com</a>
-            <a href="tel:+381613796705">Телефон: +381 61 379-67-05</a>
-          </div>
-        </article>
+      <section class="resume-section reveal">
+        <h2>Опыт работы</h2>
+        <ul class="experience-list">
+          <li class="job">
+            <p class="job-title">OneTwoTrip, тревел-тех IT компания</p>
+            <p class="job-period">Август 2025 — ...</p>
+            <p class="job-role">
+              Работа digital коммуникационным дизайнером в одной из самых крупных тревел-тех
+              компаний страны.
+            </p>
+            <ul class="job-points">
+              <li>Разработала более 200 промо- и маркетинговых материалов, повысив вовлечённость аудитории и узнаваемость бренда.</li>
+              <li>Создала визуальные концепции для HR и SMM-кампаний.</li>
+              <li>Применяла нейросети для генерации контента, сократив время на производство креативов на 40%.</li>
+              <li>Курировала и проводила ревью работ младших дизайнеров, обеспечив визуальное единство и качество коммуникаций.</li>
+            </ul>
+          </li>
+
+          <li class="job">
+            <p class="job-title">Clay, дизайн-агентство</p>
+            <p class="job-period">Август 2024 — Август 2025</p>
+            <p class="job-role">Работа бренд-дизайнером в международном digital-агентстве clay.global.</p>
+            <ul class="job-points">
+              <li>Разработала 10+ дизайн-концепций для международных брендов, которые легли в основу айдентики и кампаний.</li>
+              <li>Запустила 20+ визуальных систем и бренд-гайдов, упростив масштабирование дизайна между командами.</li>
+              <li>Вела проекты от идеи до продакшна, обеспечивая визуальное единство на всех этапах.</li>
+              <li>Собирала эффективные маркетинговые презентации и лендинги, повышая конверсию и читаемость материалов.</li>
+            </ul>
+          </li>
+
+          <li class="job">
+            <p class="job-title">TravelLine, IT компания</p>
+            <p class="job-period">Февраль 2024 — Август 2024</p>
+            <p class="job-role">
+              Развитие HR-бренда и внутренние коммуникации во внутреннем департаменте крупной
+              IT-компании.
+            </p>
+            <ul class="job-points">
+              <li>Развивала HR-бренд и внутренние коммуникации IT-департамента.</li>
+              <li>Разработала дизайн welcome-боксов и мерча, повысив вовлечённость новичков на 20%.</li>
+              <li>Оформила корпоративное мероприятие на 1000+ человек, усилив командную идентичность.</li>
+              <li>Запустила внутренние кампании, увеличив узнаваемость HR-бренда на 40%.</li>
+            </ul>
+          </li>
+
+          <li class="job">
+            <p class="job-title">StrelkaKB, консалтинговое бюро в сфере градостроительства</p>
+            <p class="job-period">Февраль 2021 — Июль 2023</p>
+            <p class="job-role">
+              Коммуникационный дизайн, работа с многополосными изданиями, инфографикой и
+              презентациями.
+            </p>
+            <ul class="job-points">
+              <li>Разрабатывала коммуникационные материалы для внутренних и внешних проектов компании.</li>
+              <li>Создавала дизайн многополосных изданий и презентаций, упрощая восприятие сложной информации.</li>
+              <li>Проектировала инфографику и визуальные системы, повышая читаемость и вовлечённость аудитории.</li>
+              <li>Оптимизировала шаблоны и верстку, сократив время подготовки материалов на 30%.</li>
+            </ul>
+          </li>
+
+          <li class="job">
+            <p class="job-title">Фриланс</p>
+            <p class="job-period">2018 — ...</p>
+            <p class="job-role">
+              Разнообразные проекты — от разработки айдентики и SMM до крупных рекламных форматов.
+            </p>
+            <ul class="job-points">
+              <li>Работала над проектами разного масштаба — от айдентики и контента для соцсетей до наружной рекламы.</li>
+              <li>Разрабатывала визуальные концепции и макеты для digital-и офлайн-среды.</li>
+              <li>Создавала материалы для презентаций, мероприятий и промо-кампаний.</li>
+              <li>Сотрудничала с агентствами и бизнесами, адаптируя дизайн под разные цели и аудитории.</li>
+              <li>Занималась арт-дирекшеном и курировала визуальную часть проектов.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="resume-section reveal">
+        <h2>Образование</h2>
+        <ul class="education-list">
+          <li class="edu">
+            <p class="edu-title">Высшая школа экономики (Санкт-Петербург)</p>
+            <p class="edu-period">2018 — 2022</p>
+            <p class="edu-role">Коммуникационный дизайн (Бакалавриат)</p>
+          </li>
+          <li class="edu">
+            <p class="edu-title">Колледж печати и информационных технологий</p>
+            <p class="edu-period">2014 — 2018</p>
+            <p class="edu-role">Коммуникационный дизайн (Среднее профессиональное образование)</p>
+          </li>
+          <li class="edu">
+            <p class="edu-title">Курс Identity from I to Y</p>
+            <p class="edu-period">2024</p>
+            <p class="edu-role">Курс от Werkstatt и Артёма Матюшкина</p>
+          </li>
+          <li class="edu">
+            <p class="edu-title">Курс Арт-дирекшн (Яндекс Практикум)</p>
+            <p class="edu-period">2025</p>
+            <p class="edu-role">Курс по повышению квалификации</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="resume-section reveal">
+        <h2>Контакты</h2>
+        <div class="contact-stack">
+          <p>Телефон: <a href="tel:+381613796705">+381 61 379-67-05</a></p>
+          <p>Почта: <a href="mailto:ks.gernik@gmail.com">ks.gernik@gmail.com</a></p>
+          <p>Телеграм: <a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer">@ksusha_pdf</a></p>
+        </div>
       </section>
     </main>
 
