@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Резюме — Ксения Герник</title>
+    <meta
+      name="description"
+      content="Резюме Ксении Герник: коммуникационный и бренд-дизайнер, опыт, компетенции и контакты."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .resume-page {
+        padding-top: 88px;
+      }
+
+      .resume-hero {
+        padding: 1rem 0 1.2rem;
+      }
+
+      .resume-kicker {
+        margin: 0;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        font-size: 0.75rem;
+      }
+
+      .resume-name {
+        margin: 0.45rem 0 0;
+        font-size: clamp(2rem, 7vw, 5.4rem);
+        line-height: 0.92;
+        letter-spacing: -0.02em;
+      }
+
+      .resume-role {
+        margin-top: 0.75rem;
+        max-width: 58ch;
+        color: var(--muted);
+      }
+
+      .resume-actions {
+        margin-top: 1rem;
+        display: flex;
+        gap: 0.65rem;
+        flex-wrap: wrap;
+      }
+
+      .resume-btn {
+        color: var(--text);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.74rem;
+        letter-spacing: 0.08em;
+        border: 1px solid var(--line);
+        padding: 0.58rem 0.8rem;
+        transition: opacity 220ms ease;
+      }
+
+      .resume-btn:hover {
+        opacity: 0.72;
+      }
+
+      .resume-grid {
+        display: grid;
+        grid-template-columns: 1.35fr 1fr;
+        gap: 1rem;
+      }
+
+      .resume-card {
+        border: 1px solid var(--line);
+        padding: 1rem;
+      }
+
+      .resume-card h2 {
+        margin: 0;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .resume-list {
+        margin: 0.75rem 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .resume-list li {
+        margin: 0;
+      }
+
+      .resume-period {
+        display: block;
+        color: var(--muted);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .resume-title {
+        margin-top: 0.15rem;
+        display: block;
+        font-size: 0.95rem;
+      }
+
+      .resume-desc {
+        margin-top: 0.25rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.45;
+      }
+
+      .skills {
+        margin: 0.75rem 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+      }
+
+      .skills span {
+        border: 1px solid var(--line);
+        padding: 0.38rem 0.52rem;
+        font-size: 0.74rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+      }
+
+      .contact-stack {
+        margin-top: 0.75rem;
+        display: grid;
+        gap: 0.45rem;
+      }
+
+      .contact-stack a {
+        color: var(--text);
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 980px) {
+        .resume-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="./index.html">КСЕНИЯ ГЕРНИК</a>
+      <nav>
+        <a href="./index.html#projects">проекты</a>
+        <a href="./index.html#about">обо мне</a>
+        <a href="./index.html#contacts">контакты</a>
+      </nav>
+    </header>
+
+    <main class="resume-page">
+      <section class="resume-hero reveal">
+        <p class="resume-kicker">резюме</p>
+        <h1 class="resume-name">KSUSHA GERNIK</h1>
+        <p class="resume-role">
+          Коммуникационный и бренд-дизайнер. Проектирую визуальные системы, которые помогают
+          брендам говорить ясно и узнаваемо.
+        </p>
+        <div class="resume-actions">
+          <a
+            class="resume-btn"
+            href="https://drive.google.com/file/d/1l3l8XWgyj5ktjf3en0pGFAszL5pPEw7Z/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            >Скачать ПДФ</a
+          >
+          <a class="resume-btn" href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer"
+            >Связаться в телеграм</a
+          >
+        </div>
+      </section>
+
+      <section class="resume-grid reveal">
+        <article class="resume-card">
+          <h2>Опыт</h2>
+          <ul class="resume-list">
+            <li>
+              <span class="resume-period">8+ лет</span>
+              <span class="resume-title">Коммуникационный и бренд-дизайн</span>
+              <p class="resume-desc">
+                Разработка айдентики, key visual и систем визуальных коммуникаций для компаний и
+                продуктовых команд.
+              </p>
+            </li>
+            <li>
+              <span class="resume-period">Проекты</span>
+              <span class="resume-title">Кампании, айдентика, промо</span>
+              <p class="resume-desc">
+                Опыт работы с сезонными кампаниями, городскими концепциями, digital-форматами и
+                многоформатными носителями.
+              </p>
+            </li>
+            <li>
+              <span class="resume-period">Формат работы</span>
+              <span class="resume-title">Индивидуально и с командами</span>
+              <p class="resume-desc">
+                Кросс-функциональное взаимодействие, презентация идей, сопровождение запуска и
+                контроль визуальной целостности.
+              </p>
+            </li>
+          </ul>
+        </article>
+
+        <article class="resume-card">
+          <h2>Компетенции</h2>
+          <div class="skills">
+            <span>Айдентика</span>
+            <span>Коммуникационный дизайн</span>
+            <span>Key visual</span>
+            <span>Арт-дирекшн</span>
+            <span>Системное мышление</span>
+            <span>Презентация идей</span>
+            <span>Работа с подрядчиками</span>
+            <span>Менторство</span>
+          </div>
+
+          <h2 style="margin-top: 1rem">Контакты</h2>
+          <div class="contact-stack">
+            <a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer">Телеграм: @ksusha_pdf</a>
+            <a href="mailto:ks.gernik@gmail.com">Почта: ks.gernik@gmail.com</a>
+            <a href="tel:+381613796705">Телефон: +381 61 379-67-05</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 КСЕНИЯ ГЕРНИК</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
