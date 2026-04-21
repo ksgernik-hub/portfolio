@@ -190,6 +190,26 @@
         text-decoration: none;
       }
 
+      .resume-footer-contacts {
+        margin-top: 1.3rem;
+        padding: 0.2rem 0 0.2rem;
+      }
+
+      .portfolio-cta {
+        margin-top: 0.8rem;
+      }
+
+      .portfolio-cta a {
+        color: var(--text);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.74rem;
+        letter-spacing: 0.08em;
+        border: 1px solid var(--line);
+        padding: 0.5rem 0.75rem;
+        display: inline-block;
+      }
+
       @media (max-width: 980px) {
         .resume-layout {
           grid-template-columns: 1fr;
@@ -387,13 +407,15 @@
         </ul>
       </section>
 
-      <section class="education-block reveal">
+      <section class="resume-footer-contacts reveal">
         <h2 class="col-title">Контакты</h2>
         <div class="contact-stack">
           <p>Телефон: <a href="tel:+381613796705">+381 61 379-67-05</a></p>
           <p>Почта: <a href="mailto:ks.gernik@gmail.com">ks.gernik@gmail.com</a></p>
           <p>Телеграм: <a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer">@ksusha_pdf</a></p>
-          <p><a href="./index.html#projects">Смотреть портфолио</a></p>
+        </div>
+        <div class="portfolio-cta">
+          <a href="./index.html#projects">Смотреть портфолио</a>
         </div>
       </section>
     </main>

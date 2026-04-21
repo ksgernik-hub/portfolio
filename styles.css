@@ -167,14 +167,69 @@ nav {
   grid-column: span 3;
 }
 
-.project-3,
-.project-7 {
+.project-3 {
   grid-column: span 3;
 }
 
-.project-4,
-.project-8 {
+.project-4 {
   grid-column: span 2;
+}
+
+.other-projects {
+  margin-top: 1.6rem;
+  position: relative;
+}
+
+.other-projects h2 {
+  margin: 0;
+  font-size: 0.84rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.other-projects__list {
+  margin-top: 0.8rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.other-project {
+  color: var(--text);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  width: fit-content;
+  transition: opacity 220ms ease;
+}
+
+.other-project:hover {
+  opacity: 0.7;
+}
+
+.other-projects__preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  aspect-ratio: 4 / 3;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate3d(-9999px, -9999px, 0);
+  transition: opacity 160ms ease;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.other-projects__preview.is-visible {
+  opacity: 1;
+}
+
+.other-projects__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .about,
@@ -273,9 +328,7 @@ nav {
   .project-3,
   .project-4,
   .project-5,
-  .project-6,
-  .project-7,
-  .project-8 {
+  .project-6 {
     grid-column: span 5;
   }
 
@@ -285,6 +338,10 @@ nav {
 
   .project__thumb {
     padding-top: 92%;
+  }
+
+  .other-projects__preview {
+    display: none;
   }
 }
 
