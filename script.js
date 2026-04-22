@@ -21,7 +21,7 @@ const observer = new IntersectionObserver(
 
 revealNodes.forEach((node) => observer.observe(node));
 
-const projectLinks = [...document.querySelectorAll('.project[href]')];
+const projectLinks = [...document.querySelectorAll('.project')];
 const projectsObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
