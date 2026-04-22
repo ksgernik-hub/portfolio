@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Новогодняя кампания «Раз, два, едем» — кейс</title>
+    <title>Айдентика для компании в сфере нефрологии — кейс</title>
     <meta
       name="description"
-      content="Кейс Ксении Герник: новогодняя кампания «Раз, два, едем» для OneTwoTrip."
+      content="Кейс Ксении Герник: айдентика для компании в сфере нефрологии."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -93,7 +93,7 @@
         width: 100%;
         aspect-ratio: 16 / 8.6;
         min-height: 300px;
-        background: url('https://static.tildacdn.com/tild6561-3835-4639-a531-306639643838/Frame_2131329554.png') center / cover no-repeat;
+        background: url('./images/nefro-final/01-hand-card.png') center / cover no-repeat;
         transform: translateY(90px);
         opacity: 0;
         transition: transform 1300ms cubic-bezier(0.22, 1, 0.36, 1), opacity 900ms ease;
@@ -133,43 +133,44 @@
         row-gap: var(--case-gap-y);
       }
 
-      .case-content > * {
-        margin: 0;
-      }
-
-      .case-media,
-      .case-card {
-        width: 100%;
-        overflow: hidden;
-      }
-
-      .case-card {
-        margin: 0;
-      }
-
-      .case-media img,
-      .case-media video,
-      .case-card img,
-      .case-card video {
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: cover;
-      }
-
-      .case-grid-two {
+      .case-row {
         display: grid;
-        grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
-        column-gap: var(--case-gap-x);
         align-items: start;
+        column-gap: var(--case-gap-x);
       }
 
-      .case-grid-two .case-card {
-        aspect-ratio: 1 / 1;
+      .case-row--60-40 {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
       }
 
-      .case-grid-two--small-left {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr);
+      .case-row--40-60 {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      }
+
+      .case-row--26-74 {
+        grid-template-columns: minmax(0, 0.52fr) minmax(0, 1.48fr);
+      }
+
+      .case-row--50-50 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .case-row--34-66 {
+        grid-template-columns: minmax(0, 0.68fr) minmax(0, 1.32fr);
+      }
+
+      .case-row--44-56 {
+        grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+      }
+
+      .case-item {
+        margin: 0;
+      }
+
+      .case-item img {
+        display: block;
+        width: 100%;
+        height: auto;
       }
 
       .project-bottom {
@@ -224,13 +225,12 @@
           row-gap: 0.9rem;
         }
 
-        .case-grid-two {
-          grid-template-columns: 1fr;
-          row-gap: 0.9rem;
-        }
+      }
 
-        .case-grid-two .case-card {
-          aspect-ratio: 4 / 3;
+      @media (max-width: 680px) {
+        .case-row {
+          grid-template-columns: 1fr;
+          row-gap: var(--case-gap-x);
         }
       }
 
@@ -263,37 +263,96 @@
 
     <main class="page">
       <a class="back-text" href="./index.html#projects">к другим проектам</a>
-      <div class="hero-cover" role="img" aria-label="Обложка проекта Раз, два, едем"></div>
+
+      <div class="hero-cover" role="img" aria-label="Обложка проекта"></div>
 
       <section class="project-info">
         <div class="info-item">
           <strong>Проект</strong>
-          Новогодняя кампания «Раз, два, едем»
+          Айдентика для компании в сфере нефрологии
         </div>
         <div class="info-item">
           <strong>Описание</strong>
-          «Раз, два, едем!» — спецпроект OneTwoTrip о путешествиях на каждый месяц. Я разработала
-          праздничный визуальный стиль лендинга и digital-носителей: графику, систему акцентов и
-          адаптивные элементы интерфейса. Визуальная система масштабирована на разные месяцы и
-          сохраняет узнаваемость во всех форматах.
+          Бренд-система для компании в сфере нефрологии: визуальный язык для digital,
+          презентаций и офлайн-носителей. Фокус на чистой структуре, технологичности и доверии.
         </div>
         <div class="info-item">
           <strong>Услуги</strong>
-          Коммуникационный дизайн<br />
-          Арт-дирекшн<br />
-          Ключевой визуал
+          Бренд-дизайн<br />Айдентика<br />Коммуникационные материалы
         </div>
         <div class="info-item">
           <strong>Роль</strong>
-          Коммуникационный дизайнер
+          Бренд-дизайнер
         </div>
         <div class="info-item">
           <strong>Ссылка</strong>
-          <a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer" style="color:var(--text)">Обсудить</a>
+          <a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer" style="color: var(--text)">Обсудить</a>
         </div>
       </section>
 
-      <section class="case-content" aria-label="Материалы кейса"><div class="case-media"><video src="https://49d60f58-687b-4704-a14f-5f842995832b.selstorage.ru/new1.mp4" autoplay muted loop playsinline controls preload="metadata"></video></div><div class="case-grid-two"><figure class="case-card"><img src="https://static.tildacdn.com/tild3864-6239-4636-b430-643039316665/Frame_2131329558.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild3834-6436-4932-b762-636138396237/ezgifcom-animated-gi.gif" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two case-grid-two--small-left"><figure class="case-card"><img src="https://static.tildacdn.com/tild3537-3536-4264-b432-666635366535/Frame_2131329564.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild6164-3031-4132-b563-323132373036/Frame_2131329566.png" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two"><figure class="case-card"><img src="https://static.tildacdn.com/tild6432-3338-4639-b937-636431616335/photo.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild3932-3737-4135-b830-313366353261/photo.png" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-media"><video src="https://49d60f58-687b-4704-a14f-5f842995832b.selstorage.ru/Sequence%2001.mp4" autoplay muted loop playsinline controls preload="metadata"></video></div><div class="case-media"><img src="https://static.tildacdn.com/tild6563-6430-4639-a466-343432333439/photo.png" alt="Материал проекта" loading="lazy" /></div></section>
+      <section class="case-content" aria-label="Материалы кейса">
+        <div class="case-row case-row--60-40">
+          <figure class="case-item">
+            <img src="./images/nefro-final/02-logo.png" alt="Логотип NefroHealth" loading="lazy" />
+          </figure>
+          <figure class="case-item">
+            <img src="./images/nefro-final/03-lightbox.png" alt="Световая панель бренда" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="case-row case-row--40-60">
+          <figure class="case-item">
+            <img src="./images/nefro-final/04-app-icon.png" alt="Иконка приложения" loading="lazy" />
+          </figure>
+          <figure class="case-item">
+            <img src="./images/nefro-final/05-shirt.png" alt="Брендинг на рубашке" loading="lazy" />
+          </figure>
+        </div>
+
+        <figure class="case-item">
+          <img src="./images/nefro-final/06-card-wide.png" alt="Фирменная карточка" loading="lazy" />
+        </figure>
+
+        <div class="case-row case-row--26-74">
+          <figure class="case-item">
+            <img src="./images/nefro-final/07-silhouette-card.png" alt="Иллюстрация в фирменном стиле" loading="lazy" />
+          </figure>
+          <figure class="case-item">
+            <img src="./images/nefro-final/08-mother-child.png" alt="Имиджевая фотография" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="case-row case-row--60-40">
+          <figure class="case-item">
+            <img src="./images/nefro-final/09-plasma-color.png" alt="Абстрактная графика" loading="lazy" />
+          </figure>
+          <figure class="case-item">
+            <img src="./images/nefro-final/10-plasma-lines.png" alt="Текстурный паттерн" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="case-row case-row--34-66">
+          <figure class="case-item">
+            <img src="./images/nefro-final/11-chart.png" alt="Графики исследования" loading="lazy" />
+          </figure>
+          <figure class="case-item">
+            <img src="./images/nefro-final/12-signpost.png" alt="Навигационный стенд" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="case-row case-row--44-56">
+          <figure class="case-item">
+            <img src="./images/nefro-final/13-tote.png" alt="Шоппер в фирменном стиле" loading="lazy" />
+          </figure>
+          <figure class="case-item">
+            <img src="./images/nefro-final/14-typography.png" alt="Типографика бренда" loading="lazy" />
+          </figure>
+        </div>
+
+        <figure class="case-item">
+          <img src="./images/nefro-final/15-social-cards.png" alt="Серия постов для соцсетей" loading="lazy" />
+        </figure>
+      </section>
 
       <section class="project-bottom">
         <a class="back-to-projects" href="./index.html#projects">К другим проектам</a>
@@ -308,9 +367,7 @@
       const desktopMedia = window.matchMedia('(hover: hover) and (pointer: fine)');
       const customCursor = document.querySelector('.custom-cursor');
 
-      window.addEventListener('load', () => {
-        document.body.classList.add('is-ready');
-      });
+      window.addEventListener('load', () => document.body.classList.add('is-ready'));
 
       if (customCursor && desktopMedia.matches) {
         let mouseX = window.innerWidth / 2;
@@ -321,7 +378,7 @@
         const animateCursor = () => {
           cursorX += (mouseX - cursorX) * 0.52;
           cursorY += (mouseY - cursorY) * 0.52;
-          customCursor.style.transform = `translate3d(${cursorX - 4}px, ${cursorY - 4}px, 0)`;
+          customCursor.style.transform = 'translate3d(' + (cursorX - 4) + 'px, ' + (cursorY - 4) + 'px, 0)';
           window.requestAnimationFrame(animateCursor);
         };
 

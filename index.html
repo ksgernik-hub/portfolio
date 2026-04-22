@@ -17,22 +17,24 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="custom-cursor" aria-hidden="true"></div>
+
     <header class="site-header reveal" id="top">
-      <a class="brand" href="#top">KSUSHA GERNIK</a>
+      <a class="brand" href="#top">КСЕНИЯ ГЕРНИК</a>
       <nav>
-        <a href="#projects">work</a>
-        <a href="#about">about</a>
-        <a href="#contacts">contact</a>
+        <a href="#projects">проекты</a>
+        <a href="#about">обо мне</a>
+        <a href="#contacts">контакты</a>
       </nav>
     </header>
 
     <main>
       <section class="hero reveal">
-        <p class="hero__kicker">designer / communication / identity</p>
+        <p class="hero__kicker">коммуникационный и бренд-дизайнер</p>
         <div class="hero__avatar-wrap">
           <img
             class="hero__avatar"
-            src="https://static.tildacdn.com/tild6164-6362-4431-a263-613064306537/photo.png"
+            src="./images/avatar-ksusha.png"
             alt="Ксения Герник"
           />
         </div>
@@ -45,84 +47,105 @@
 
       <section id="projects" class="projects reveal">
         <div class="projects-grid">
-          <a class="project project-1" href="./project-12edem.html">
-            <div class="project__thumb" style="--cover:url('https://static.tildacdn.com/tild6466-3137-4537-b732-313933323530/cover.png')"></div>
-            <div class="project__meta">
-              <p>Новогодняя кампания «Раз, два, едем»</p>
-            </div>
-          </a>
-
-          <a class="project project-2" href="http://ksushagernik.ru/12vesna" target="_blank" rel="noreferrer">
-            <div class="project__thumb" style="--cover:url('https://static.tildacdn.com/tild3133-6339-4438-a362-303463636536/79509dcf-fce7-4371-b.png')"></div>
+          <a class="project project-1" href="./project-12vesna.html">
+            <div class="project__thumb" style="--cover:url('./images/projects/raz-dva-vesna.png')"></div>
             <div class="project__meta">
               <p>Раз, Два, Весна!</p>
             </div>
           </a>
 
-          <a class="project project-3" href="http://ksushagernik.ru/fastino" target="_blank" rel="noreferrer">
-            <div class="project__thumb" style="--cover:url('https://static.tildacdn.com/tild3135-3538-4739-a334-386230643037/a_large_inflatable_o.jpg')"></div>
+          <a class="project project-2" href="./project-12edem.html">
+            <div class="project__thumb" style="--cover:url('./images/projects/novogodnyaya-raz-dva-edem.png')"></div>
             <div class="project__meta">
-              <p>Айдентика для AI Лаборатории</p>
+              <p>Новогодняя кампания «Раз, два, едем»</p>
             </div>
           </a>
 
-          <a class="project project-4" href="http://ksushagernik.ru/ohota" target="_blank" rel="noreferrer">
-            <div class="project__thumb" style="--cover:url('https://static.tildacdn.com/tild3962-6533-4666-b832-643462326631/1737556201737.png')"></div>
+          <a class="project project-3" href="./project-fastino.html">
+            <div class="project__thumb" style="--cover:url('https://static.tildacdn.com/tild3135-3538-4739-a334-386230643037/a_large_inflatable_o.jpg')"></div>
+            <div class="project__meta">
+              <p>Айдентика для ИИ-лаборатории</p>
+            </div>
+          </a>
+
+          <a class="project project-4" href="./project-ohota.html">
+            <div class="project__thumb" style="--cover:url('./images/projects/dikaya-ohota.png')"></div>
             <div class="project__meta">
               <p>Промо-материалы «Дикой охоты»</p>
             </div>
           </a>
 
-          <a class="project project-5" href="http://ksushagernik.ru/nefrohealth" target="_blank" rel="noreferrer">
-            <div class="project__thumb" style="--cover:url('https://static.tildacdn.com/tild3562-6133-4361-b138-626665356232/Frame_2136138580.png')"></div>
-            <div class="project__meta">
-              <p>Айдентика для компании в сфере нефрологии</p>
-            </div>
-          </a>
-
-          <a class="project project-6" href="http://ksushagernik.ru/viborg" target="_blank" rel="noreferrer">
-            <div class="project__thumb" style="--cover:url('https://static.tildacdn.com/tild6163-3138-4134-b364-656637353964/Frame_2136138616-2.png')"></div>
+          <a class="project project-5" href="./project-viborg.html">
+            <div class="project__thumb" style="--cover:url('./images/projects/vyborg.png')"></div>
             <div class="project__meta">
               <p>Концептуальная айдентика города Выборг</p>
             </div>
           </a>
 
-          <a class="project project-7" href="http://ksushagernik.ru/lizhnya" target="_blank" rel="noreferrer">
-            <div class="project__thumb" style="--cover:url('https://static.tildacdn.com/tild3066-6530-4431-b465-616239656436/land-o-lakes-inc-lAB.jpg')"></div>
+          <a class="project project-6" href="./project-nefrohealth.html">
+            <div class="project__thumb" style="--cover:url('./images/projects/nefrologiya.png')"></div>
             <div class="project__meta">
-              <p>Айдентика лыжного забега</p>
+              <p>Айдентика для компании в сфере нефрологии</p>
             </div>
           </a>
 
-          <a class="project project-8" href="http://ksushagernik.ru/postupatelno" target="_blank" rel="noreferrer">
-            <div class="project__thumb" style="--cover:url('https://static.tildacdn.com/tild6536-3562-4131-b564-623362346537/photo.png')"></div>
-            <div class="project__meta">
-              <p>Справочники для поступающих</p>
-            </div>
-          </a>
+        </div>
+      </section>
+
+      <section class="other-projects reveal" aria-label="Другие проекты">
+        <h2>Другие проекты</h2>
+        <div class="other-projects__list">
+          <p
+            class="other-project"
+            data-preview="./images/projects/other-project-template.png"
+            >Айдентика лыжного забега</p
+          >
+          <p
+            class="other-project"
+            data-preview="./images/projects/other-project-template.png"
+            >Справочники для поступающих</p
+          >
         </div>
       </section>
 
       <section id="about" class="about reveal">
-        <h2>ABOUT</h2>
+        <h2>ОБО МНЕ</h2>
         <p>
           8+ лет в коммуникационном и бренд-дизайне. Проектирую визуальные системы, которые
           помогают быстрее понимать и принимать решения.
         </p>
       </section>
 
+      <section id="resume" class="resume reveal">
+        <h2>CV</h2>
+        <div class="resume-links">
+          <a
+            href="https://drive.google.com/file/d/1l3l8XWgyj5ktjf3en0pGFAszL5pPEw7Z/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            >Скачать</a
+          >
+          <a href="./resume.html">Смотреть онлайн</a>
+        </div>
+      </section>
+
       <section id="contacts" class="contacts reveal">
-        <h2>CONTACT</h2>
+        <h2>КОНТАКТЫ</h2>
         <div class="contact-list">
-          <a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer">Telegram</a>
-          <a href="mailto:ks.gernik@gmail.com">Email</a>
-          <a href="tel:+381613796705">Mobile</a>
+          <a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer">Телеграм</a>
+          <a href="mailto:ks.gernik@gmail.com">Почта</a>
+          <a href="tel:+381613796705">Телефон</a>
+          <a href="https://www.linkedin.com/in/kseniia-gernik-pdf/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </section>
     </main>
 
+    <div class="other-projects__preview" aria-hidden="true">
+      <img src="./images/projects/other-project-template.png" alt="" />
+    </div>
+
     <footer class="site-footer">
-      <p>© 2026 KSUSHA GERNIK</p>
+      <p>© 2026 КСЕНИЯ ГЕРНИК</p>
     </footer>
 
     <script src="script.js"></script>
