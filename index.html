@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ксения Герник — портфолио</title>
+    <title>Ксюша Герник — портфолио</title>
     <meta
       name="description"
-      content="Портфолио Ксении Герник: коммуникационный и бренд-дизайн, айдентика и визуальные системы."
+      content="Портфолио Ксюши Герник: коммуникационный и бренд-дизайн, айдентика и визуальные системы."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,15 +15,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+      <link rel="icon" type="image/png" href="./images/favicon-k.png" />
   </head>
   <body>
     <div class="custom-cursor" aria-hidden="true"></div>
 
     <header class="site-header reveal" id="top">
-      <a class="brand" href="#top">КСЕНИЯ ГЕРНИК</a>
+      <a class="brand" href="#top">КСЮША ГЕРНИК</a>
       <nav>
         <a href="#projects">проекты</a>
         <a href="#about">обо мне</a>
+        <a href="./resume.html">резюме</a>
         <a href="#contacts">контакты</a>
       </nav>
     </header>
@@ -34,8 +36,8 @@
         <div class="hero__avatar-wrap">
           <img
             class="hero__avatar"
-            src="./images/avatar-ksusha.png"
-            alt="Ксения Герник"
+            src="./images/avatar-ksusha.jpg"
+            alt="Ксюша Герник"
           />
         </div>
         <h1 class="hero__title">KSUSHA GERNIK</h1>
@@ -43,19 +45,27 @@
           Коммуникационный и бренд-дизайн для проектов, которые хотят быть понятными и сильными
           визуально.
         </p>
+        <p class="hero__tg"><a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer">tg: @ksusha_pdf</a></p>
       </section>
 
       <section id="projects" class="projects reveal">
         <div class="projects-grid">
+          <a class="project project-full project-top" href="./project-nefrohealth.html">
+            <div class="project__thumb" style="--cover:url('./images/projects/nefrologiya.jpg')"></div>
+            <div class="project__meta">
+              <p>Айдентика для компании в сфере нефрологии</p>
+            </div>
+          </a>
+
           <a class="project project-1" href="./project-12vesna.html">
-            <div class="project__thumb" style="--cover:url('./images/projects/raz-dva-vesna.png')"></div>
+            <div class="project__thumb" style="--cover:url('./images/projects/raz-dva-vesna.jpg')"></div>
             <div class="project__meta">
               <p>Раз, Два, Весна!</p>
             </div>
           </a>
 
           <a class="project project-2" href="./project-12edem.html">
-            <div class="project__thumb" style="--cover:url('./images/projects/novogodnyaya-raz-dva-edem.png')"></div>
+            <div class="project__thumb" style="--cover:url('./images/projects/novogodnyaya-raz-dva-edem.jpg')"></div>
             <div class="project__meta">
               <p>Новогодняя кампания «Раз, два, едем»</p>
             </div>
@@ -69,26 +79,18 @@
           </a>
 
           <a class="project project-4" href="./project-ohota.html">
-            <div class="project__thumb" style="--cover:url('./images/projects/dikaya-ohota.png')"></div>
+            <div class="project__thumb" style="--cover:url('./images/projects/dikaya-ohota.jpg')"></div>
             <div class="project__meta">
               <p>Промо-материалы «Дикой охоты»</p>
             </div>
           </a>
 
-          <a class="project project-5" href="./project-viborg.html">
-            <div class="project__thumb" style="--cover:url('./images/projects/vyborg.png')"></div>
+          <a class="project project-full project-after-fox" href="./project-viborg.html">
+            <div class="project__thumb" style="--cover:url('./images/projects/vyborg.jpg')"></div>
             <div class="project__meta">
               <p>Концептуальная айдентика города Выборг</p>
             </div>
           </a>
-
-          <a class="project project-6" href="./project-nefrohealth.html">
-            <div class="project__thumb" style="--cover:url('./images/projects/nefrologiya.png')"></div>
-            <div class="project__meta">
-              <p>Айдентика для компании в сфере нефрологии</p>
-            </div>
-          </a>
-
         </div>
       </section>
 
@@ -97,12 +99,12 @@
         <div class="other-projects__list">
           <p
             class="other-project"
-            data-preview="./images/projects/other-project-template.png"
+            data-preview="./images/projects/other-project-template.jpg"
             >Айдентика лыжного забега</p
           >
           <p
             class="other-project"
-            data-preview="./images/projects/other-project-template.png"
+            data-preview="./images/projects/other-project-template.jpg"
             >Справочники для поступающих</p
           >
         </div>
@@ -141,11 +143,11 @@
     </main>
 
     <div class="other-projects__preview" aria-hidden="true">
-      <img src="./images/projects/other-project-template.png" alt="" />
+      <img src="./images/projects/other-project-template.jpg" alt="" />
     </div>
 
     <footer class="site-footer">
-      <p>© 2026 КСЕНИЯ ГЕРНИК</p>
+      <p>© 2026 КСЮША ГЕРНИК</p>
     </footer>
 
     <script src="script.js"></script>

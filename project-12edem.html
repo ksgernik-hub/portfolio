@@ -51,9 +51,7 @@
         background: rgba(21, 21, 21, 0.36);
         backdrop-filter: blur(14px) saturate(120%);
         -webkit-backdrop-filter: blur(14px) saturate(120%);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-top: none;
-      }
+              }
 
       .brand,
       nav a {
@@ -94,20 +92,12 @@
         aspect-ratio: 16 / 8.6;
         min-height: 300px;
         background: url('https://static.tildacdn.com/tild6561-3835-4639-a531-306639643838/Frame_2131329554.png') center / cover no-repeat;
-        transform: translateY(90px);
-        opacity: 0;
-        transition: transform 1300ms cubic-bezier(0.22, 1, 0.36, 1), opacity 900ms ease;
-      }
-
-      .is-ready .hero-cover {
-        transform: translateY(0);
-        opacity: 1;
       }
 
       .project-info {
         margin-top: 1.35rem;
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr 1fr 0.8fr;
+        grid-template-columns: 1fr 2fr 1fr 1.35fr 1fr;
         gap: 1rem;
         align-items: start;
       }
@@ -171,6 +161,13 @@
       .case-grid-two--small-left {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr);
       }
+
+      .tag-list { display:flex; flex-wrap:wrap; gap:0.35rem; margin-top:0.06rem; }
+      .tag { display:inline-flex; align-items:center; padding:0.22rem 0.5rem; border:1px solid rgba(255,255,255,0.16); color:var(--muted); font-size:0.66rem; letter-spacing:0.05em; text-transform:uppercase; line-height:1; }
+      .contributors { margin-top:0.38rem; color:var(--muted); font-size:0.66rem; line-height:1.34; }
+      .contributors span { color:var(--muted); opacity:0.9; }
+      .project-site { margin-top:0.42rem; }
+      .project-site a { color:var(--muted); text-decoration:underline; text-underline-offset:2px; }
 
       .project-bottom {
         margin-top: 2.4rem;
@@ -247,70 +244,100 @@
           display: block;
         }
       }
+    
+      a,
+      button {
+        transition: opacity 180ms ease, filter 180ms ease, color 180ms ease, background-color 180ms ease;
+      }
+
+      .project-contacts {
+        width:min(1500px,calc(100% - 2rem));
+        margin:0 auto;
+        padding: 1.5rem 0 0.8rem;
+      }
+
+      .project-contacts h2 {
+        margin: 0;
+        font-size: 0.84rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .project-contacts .contact-list {
+        margin-top: 0.75rem;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .project-contacts .contact-list a {
+        color: var(--text);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 700px) {
+        .site-header nav a[href="./index.html#about"],
+        .site-header nav a[href="./resume.html"] {
+          display: none;
+        }
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        a:hover,
+        button:hover {
+          filter: brightness(0.82);
+        }
+      }
+
     </style>
+      <link rel="icon" type="image/png" href="./images/favicon-k.png" />
   </head>
   <body>
     <div class="custom-cursor" aria-hidden="true"></div>
 
     <header class="site-header" id="top">
-      <a class="brand" href="./index.html">КСЕНИЯ ГЕРНИК</a>
+      <a class="brand" href="./index.html">КСЮША ГЕРНИК</a>
       <nav>
         <a href="./index.html#projects">проекты</a>
         <a href="./index.html#about">обо мне</a>
+        <a href="./resume.html">резюме</a>
         <a href="./index.html#contacts">контакты</a>
       </nav>
     </header>
 
     <main class="page">
-      <a class="back-text" href="./index.html#projects">к другим проектам</a>
+      <a class="back-text" href="./index.html#projects">← к другим проектам</a>
       <div class="hero-cover" role="img" aria-label="Обложка проекта Раз, два, едем"></div>
 
-      <section class="project-info">
-        <div class="info-item">
-          <strong>Проект</strong>
-          Новогодняя кампания «Раз, два, едем»
-        </div>
-        <div class="info-item">
-          <strong>Описание</strong>
-          «Раз, два, едем!» — спецпроект OneTwoTrip о путешествиях на каждый месяц. Я разработала
-          праздничный визуальный стиль лендинга и digital-носителей: графику, систему акцентов и
-          адаптивные элементы интерфейса. Визуальная система масштабирована на разные месяцы и
-          сохраняет узнаваемость во всех форматах.
-        </div>
-        <div class="info-item">
-          <strong>Услуги</strong>
-          Коммуникационный дизайн<br />
-          Арт-дирекшн<br />
-          Ключевой визуал
-        </div>
-        <div class="info-item">
-          <strong>Роль</strong>
-          Коммуникационный дизайнер
-        </div>
-        <div class="info-item">
-          <strong>Ссылка</strong>
-          <a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer" style="color:var(--text)">Обсудить</a>
-        </div>
-      </section>
+      <section class="project-info"><div class="info-item"><strong>Проект</strong>Новогодняя кампания «Раз, два, едем»</div><div class="info-item"><strong>Описание</strong>Сезонная коммуникационная кампания с фокусом на узнаваемость, единый визуальный язык и масштабирование материалов на digital и промо-носители.</div><div class="info-item"><strong>Роль</strong>Коммуникационный дизайнер</div><div class="info-item"><strong>Услуги</strong><div class="tag-list"><span class="tag">коммуникационная кампания</span><span class="tag">key visual</span><span class="tag">лендинг</span><span class="tag">SMM</span><span class="tag">digital-носители</span><span class="tag">промо</span></div></div><div class="info-item"><a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer" style="color:var(--text)">Обсудить ваш проект</a></div></section>
 
       <section class="case-content" aria-label="Материалы кейса"><div class="case-media"><video src="https://49d60f58-687b-4704-a14f-5f842995832b.selstorage.ru/new1.mp4" autoplay muted loop playsinline controls preload="metadata"></video></div><div class="case-grid-two"><figure class="case-card"><img src="https://static.tildacdn.com/tild3864-6239-4636-b430-643039316665/Frame_2131329558.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild3834-6436-4932-b762-636138396237/ezgifcom-animated-gi.gif" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two case-grid-two--small-left"><figure class="case-card"><img src="https://static.tildacdn.com/tild3537-3536-4264-b432-666635366535/Frame_2131329564.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild6164-3031-4132-b563-323132373036/Frame_2131329566.png" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two"><figure class="case-card"><img src="https://static.tildacdn.com/tild6432-3338-4639-b937-636431616335/photo.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild3932-3737-4135-b830-313366353261/photo.png" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-media"><video src="https://49d60f58-687b-4704-a14f-5f842995832b.selstorage.ru/Sequence%2001.mp4" autoplay muted loop playsinline controls preload="metadata"></video></div><div class="case-media"><img src="https://static.tildacdn.com/tild6563-6430-4639-a466-343432333439/photo.png" alt="Материал проекта" loading="lazy" /></div></section>
 
       <section class="project-bottom">
-        <a class="back-to-projects" href="./index.html#projects">К другим проектам</a>
+        <a class="back-to-projects" href="./index.html#projects">← К другим проектам</a>
       </section>
     </main>
 
+    
+      <section id="contacts" class="contacts project-contacts">
+        <h2>КОНТАКТЫ</h2>
+        <div class="contact-list">
+          <a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer">Телеграм</a>
+          <a href="mailto:ks.gernik@gmail.com">Почта</a>
+          <a href="tel:+381613796705">Телефон</a>
+          <a href="https://www.linkedin.com/in/kseniia-gernik-pdf/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </section>
+
     <footer class="site-footer">
-      <p>© 2026 КСЕНИЯ ГЕРНИК</p>
+      <p>© 2026 КСЮША ГЕРНИК</p>
     </footer>
 
     <script>
       const desktopMedia = window.matchMedia('(hover: hover) and (pointer: fine)');
       const customCursor = document.querySelector('.custom-cursor');
-
-      window.addEventListener('load', () => {
-        document.body.classList.add('is-ready');
-      });
 
       if (customCursor && desktopMedia.matches) {
         let mouseX = window.innerWidth / 2;

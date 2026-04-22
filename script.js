@@ -22,20 +22,22 @@ const observer = new IntersectionObserver(
 revealNodes.forEach((node) => observer.observe(node));
 
 const projectLinks = [...document.querySelectorAll('.project[href]')];
+const projectsObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-shown');
+        projectsObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.08,
+    rootMargin: '0px 0px -8% 0px'
+  }
+);
 
-projectLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    const href = link.getAttribute('href');
-    if (!href || href.startsWith('http')) return;
-
-    event.preventDefault();
-    link.classList.add('is-opening');
-
-    setTimeout(() => {
-      window.location.href = href;
-    }, 520);
-  });
-});
+projectLinks.forEach((link) => projectsObserver.observe(link));
 
 const otherProjectsPreview = document.querySelector('.other-projects__preview');
 const otherProjectsPreviewImage = otherProjectsPreview

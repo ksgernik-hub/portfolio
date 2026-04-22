@@ -38,8 +38,6 @@ main,
   background: rgba(21, 21, 21, 0.36);
   backdrop-filter: blur(14px) saturate(120%);
   -webkit-backdrop-filter: blur(14px) saturate(120%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-top: none;
 }
 
 .brand,
@@ -54,6 +52,12 @@ nav a {
 nav {
   display: flex;
   gap: 1.35rem;
+}
+
+a,
+button,
+.project {
+  transition: opacity 180ms ease, filter 180ms ease, color 180ms ease, background-color 180ms ease;
 }
 
 .hero {
@@ -87,6 +91,17 @@ nav {
   font-size: 1rem;
 }
 
+.hero__tg {
+  margin-top: 0.55rem;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.hero__tg a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
 .hero__avatar-wrap {
   margin-top: 1rem;
   margin-bottom: 1.2rem;
@@ -117,12 +132,14 @@ nav {
   gap: 0.55rem;
   text-decoration: none;
   color: var(--text);
-  opacity: 1;
-  transition: opacity 320ms ease;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 280ms ease, transform 280ms ease, filter 180ms ease;
 }
 
-.project:hover {
-  opacity: 0.85;
+.project.is-shown {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .project__thumb {
@@ -155,11 +172,6 @@ nav {
   color: var(--muted);
 }
 
-.project.is-opening .project__thumb {
-  transform: translateY(-16%) scale(1.045);
-  filter: contrast(1.04);
-}
-
 .project-1,
 .project-5 {
   grid-column: span 2;
@@ -176,6 +188,14 @@ nav {
 
 .project-4 {
   grid-column: span 2;
+}
+
+.project-full {
+  grid-column: 1 / -1;
+}
+
+.project-full .project__thumb {
+  padding-top: 44%;
 }
 
 .other-projects {
@@ -378,7 +398,27 @@ nav {
 }
 
 @media (max-width: 700px) {
+  .hero {
+    padding-top: clamp(240px, 38vh, 360px);
+  }
+
+  .site-header nav a[href="#about"],
+  .site-header nav a[href="./resume.html"] {
+    display: none;
+  }
+
   .project__thumb {
     padding-top: 118%;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a:hover,
+  button:hover {
+    filter: brightness(0.82);
+  }
+
+  .project:hover {
+    filter: brightness(0.92);
   }
 }
