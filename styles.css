@@ -27,7 +27,7 @@ main,
 .site-header {
   position: fixed;
   inset: 0 0 auto 0;
-  height: 58px;
+  height: 35px;
   width: 100%;
   margin: 0;
   padding-inline: 1rem;
@@ -52,6 +52,33 @@ nav a {
 nav {
   display: flex;
   gap: 1.35rem;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.28rem;
+  margin-left: 0.8rem;
+}
+
+.lang-switch button {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0;
+  cursor: pointer;
+}
+
+.lang-switch button.is-active {
+  color: var(--text);
+}
+
+.lang-switch span {
+  color: var(--muted);
+  font-size: 0.62rem;
 }
 
 a,
@@ -144,7 +171,7 @@ button,
 
 .project__thumb {
   width: 100%;
-  padding-top: 64%;
+  padding-top: 80%;
   position: relative;
   overflow: hidden;
   border-radius: 0;
@@ -195,7 +222,7 @@ button,
 }
 
 .project-full .project__thumb {
-  padding-top: 44%;
+  padding-top: 55%;
 }
 
 .other-projects {
@@ -292,6 +319,10 @@ button,
   max-width: 64ch;
 }
 
+.about__clients {
+  margin-top: 0.55rem;
+}
+
 .resume-links {
   margin-top: 0.75rem;
   display: flex;
@@ -376,7 +407,7 @@ button,
   }
 
   .project__thumb {
-    padding-top: 92%;
+    padding-top: 115%;
   }
 
   .other-projects__preview {
@@ -408,7 +439,7 @@ button,
   }
 
   .project__thumb {
-    padding-top: 118%;
+    padding-top: 148%;
   }
 }
 

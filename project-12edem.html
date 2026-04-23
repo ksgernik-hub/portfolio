@@ -40,7 +40,7 @@
       .site-header {
         position: fixed;
         inset: 0 0 auto 0;
-        height: 58px;
+        height: 35px;
         width: 100%;
         margin: 0;
         padding-inline: 1rem;
@@ -67,6 +67,33 @@
         gap: 1.35rem;
       }
 
+      .lang-switch {
+        display: flex;
+        align-items: center;
+        gap: 0.28rem;
+        margin-left: 0.8rem;
+      }
+
+      .lang-switch button {
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        font-size: 0.66rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0;
+        cursor: pointer;
+      }
+
+      .lang-switch button.is-active {
+        color: var(--text);
+      }
+
+      .lang-switch span {
+        color: var(--muted);
+        font-size: 0.62rem;
+      }
+
       .page,
       .site-footer {
         width: min(1500px, calc(100% - 2rem));
@@ -74,7 +101,7 @@
       }
 
       .page {
-        padding: 4.7rem 0 2rem;
+        padding: 3.1rem 0 2rem;
       }
 
       .back-text {
@@ -103,6 +130,7 @@
       }
 
       .info-item {
+        min-width: 0;
         font-size: 0.78rem;
         line-height: 1.25;
       }
@@ -277,6 +305,23 @@
         font-size: 0.85rem;
       }
 
+      .project-contacts__cta {
+        margin-top: 0.95rem;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .project-discuss {
+        color: var(--text);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        border: 1px solid var(--line);
+        padding: 0.5rem 0.72rem;
+        display: inline-flex;
+      }
+
       @media (max-width: 700px) {
         .site-header nav a[href="./index.html#about"],
         .site-header nav a[href="./resume.html"] {
@@ -300,18 +345,23 @@
     <header class="site-header" id="top">
       <a class="brand" href="./index.html">КСЮША ГЕРНИК</a>
       <nav>
-        <a href="./index.html#projects">проекты</a>
-        <a href="./index.html#about">обо мне</a>
-        <a href="./resume.html">резюме</a>
-        <a href="./index.html#contacts">контакты</a>
+        <a href="./index.html#projects">projects</a>
+        <a href="./index.html#about">about</a>
+        <a href="./resume.html">resume</a>
+        <a href="./index.html#contacts">contacts</a>
       </nav>
+      <div class="lang-switch" aria-label="Language switcher">
+        <button type="button" data-lang-switch="en" class="is-active">EN</button>
+        <span>/</span>
+        <button type="button" data-lang-switch="ru">RU</button>
+      </div>
     </header>
 
     <main class="page">
       <a class="back-text" href="./index.html#projects">← к другим проектам</a>
       <div class="hero-cover" role="img" aria-label="Обложка проекта Раз, два, едем"></div>
 
-      <section class="project-info"><div class="info-item"><strong>Проект</strong>Новогодняя кампания «Раз, два, едем»</div><div class="info-item"><strong>Описание</strong>Сезонная коммуникационная кампания с фокусом на узнаваемость, единый визуальный язык и масштабирование материалов на digital и промо-носители.</div><div class="info-item"><strong>Роль</strong>Коммуникационный дизайнер</div><div class="info-item"><strong>Услуги</strong><div class="tag-list"><span class="tag">коммуникационная кампания</span><span class="tag">key visual</span><span class="tag">лендинг</span><span class="tag">SMM</span><span class="tag">digital-носители</span><span class="tag">промо</span></div></div><div class="info-item"><a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer" style="color:var(--text)">Обсудить ваш проект</a></div></section>
+      <section class="project-info"><div class="info-item"><strong>Проект</strong>Новогодняя кампания «Раз, два, едем»</div><div class="info-item"><strong>Описание</strong>Сезонная коммуникационная кампания с фокусом на узнаваемость, единый визуальный язык и масштабирование материалов на digital и промо-носители.</div><div class="info-item"><strong>Роль</strong>Коммуникационный дизайнер</div><div class="info-item"><strong>Услуги</strong><div class="tag-list"><span class="tag">коммуникационная кампания</span><span class="tag">key visual</span><span class="tag">лендинг</span><span class="tag">SMM</span><span class="tag">digital-носители</span><span class="tag">промо</span></div></div></section>
 
       <section class="case-content" aria-label="Материалы кейса"><div class="case-media"><video src="https://49d60f58-687b-4704-a14f-5f842995832b.selstorage.ru/new1.mp4" autoplay muted loop playsinline controls preload="metadata"></video></div><div class="case-grid-two"><figure class="case-card"><img src="https://static.tildacdn.com/tild3864-6239-4636-b430-643039316665/Frame_2131329558.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild3834-6436-4932-b762-636138396237/ezgifcom-animated-gi.gif" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two case-grid-two--small-left"><figure class="case-card"><img src="https://static.tildacdn.com/tild3537-3536-4264-b432-666635366535/Frame_2131329564.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild6164-3031-4132-b563-323132373036/Frame_2131329566.png" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two"><figure class="case-card"><img src="https://static.tildacdn.com/tild6432-3338-4639-b937-636431616335/photo.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild3932-3737-4135-b830-313366353261/photo.png" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-media"><video src="https://49d60f58-687b-4704-a14f-5f842995832b.selstorage.ru/Sequence%2001.mp4" autoplay muted loop playsinline controls preload="metadata"></video></div><div class="case-media"><img src="https://static.tildacdn.com/tild6563-6430-4639-a466-343432333439/photo.png" alt="Материал проекта" loading="lazy" /></div></section>
 
@@ -329,12 +379,17 @@
           <a href="tel:+381613796705">Телефон</a>
           <a href="https://www.linkedin.com/in/kseniia-gernik-pdf/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
-      </section>
+      
+        <div class="project-contacts__cta">
+          <a class="project-discuss" href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer">Обсудить ваш проект</a>
+        </div>
+</section>
 
     <footer class="site-footer">
       <p>© 2026 КСЮША ГЕРНИК</p>
     </footer>
 
+    <script src="i18n.js"></script>
     <script>
       const desktopMedia = window.matchMedia('(hover: hover) and (pointer: fine)');
       const customCursor = document.querySelector('.custom-cursor');

@@ -40,7 +40,7 @@
       .site-header {
         position: fixed;
         inset: 0 0 auto 0;
-        height: 58px;
+        height: 35px;
         width: 100%;
         margin: 0;
         padding-inline: 1rem;
@@ -67,6 +67,33 @@
         gap: 1.35rem;
       }
 
+      .lang-switch {
+        display: flex;
+        align-items: center;
+        gap: 0.28rem;
+        margin-left: 0.8rem;
+      }
+
+      .lang-switch button {
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        font-size: 0.66rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0;
+        cursor: pointer;
+      }
+
+      .lang-switch button.is-active {
+        color: var(--text);
+      }
+
+      .lang-switch span {
+        color: var(--muted);
+        font-size: 0.62rem;
+      }
+
       .page,
       .site-footer {
         width: min(1500px, calc(100% - 2rem));
@@ -74,7 +101,7 @@
       }
 
       .page {
-        padding: 4.7rem 0 2rem;
+        padding: 3.1rem 0 2rem;
       }
 
       .back-text {
@@ -103,6 +130,7 @@
       }
 
       .info-item {
+        min-width: 0;
         font-size: 0.78rem;
         line-height: 1.25;
       }
@@ -296,6 +324,23 @@
         font-size: 0.85rem;
       }
 
+      .project-contacts__cta {
+        margin-top: 0.95rem;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .project-discuss {
+        color: var(--text);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        border: 1px solid var(--line);
+        padding: 0.5rem 0.72rem;
+        display: inline-flex;
+      }
+
       @media (max-width: 700px) {
         .site-header nav a[href="./index.html#about"],
         .site-header nav a[href="./resume.html"] {
@@ -319,11 +364,16 @@
     <header class="site-header" id="top">
       <a class="brand" href="./index.html">КСЮША ГЕРНИК</a>
       <nav>
-        <a href="./index.html#projects">проекты</a>
-        <a href="./index.html#about">обо мне</a>
-        <a href="./resume.html">резюме</a>
-        <a href="./index.html#contacts">контакты</a>
+        <a href="./index.html#projects">projects</a>
+        <a href="./index.html#about">about</a>
+        <a href="./resume.html">resume</a>
+        <a href="./index.html#contacts">contacts</a>
       </nav>
+      <div class="lang-switch" aria-label="Language switcher">
+        <button type="button" data-lang-switch="en" class="is-active">EN</button>
+        <span>/</span>
+        <button type="button" data-lang-switch="ru">RU</button>
+      </div>
     </header>
 
     <main class="page">
@@ -331,7 +381,7 @@
 
       <div class="hero-cover" role="img" aria-label="Обложка проекта"></div>
 
-      <section class="project-info"><div class="info-item"><strong>Проект</strong>Айдентика для компании в сфере нефрологии</div><div class="info-item"><strong>Описание</strong>NefroHealth трансформирует подход к лечению почечных заболеваний — финансирует, развивает и внедряет передовые и жизненно важные технологии во всех сферах нефрологической помощи. Мы создали для них визуальную айдентику: современную и технологичную, отражающую большой опыт и экспертизу.<div class="project-site"><a href="https://nefrohealth.com" target="_blank" rel="noreferrer">nefrohealth.com</a></div></div><div class="info-item"><strong>Роль</strong>Бренд-дизайнер<div class="contributors"><span>Над проектом работали:</span><br />Олег Турбаба — Арт-директор<br />Саша Денисова — Лид бренд-дизайнер<br />Катя Федотова — Бренд-дизайнер</div></div><div class="info-item"><strong>Услуги</strong><div class="tag-list"><span class="tag">айдентика</span><span class="tag">брендинг</span><span class="tag">логотип</span><span class="tag">печатные носители</span><span class="tag">SMM</span><span class="tag">презентация</span><span class="tag">брендбук</span></div></div><div class="info-item"><a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer" style="color:var(--text)">Обсудить ваш проект</a></div></section>
+      <section class="project-info"><div class="info-item"><strong>Проект</strong>Айдентика для компании в сфере нефрологии</div><div class="info-item"><strong>Описание</strong>NefroHealth трансформирует подход к лечению почечных заболеваний — финансирует, развивает и внедряет передовые и жизненно важные технологии во всех сферах нефрологической помощи. Мы создали для них визуальную айдентику: современную и технологичную, отражающую большой опыт и экспертизу.<div class="project-site"><a href="https://nefrohealth.com" target="_blank" rel="noreferrer">nefrohealth.com</a></div></div><div class="info-item"><strong>Роль</strong>Бренд-дизайнер<div class="contributors"><span>Над проектом работали:</span><br />Олег Турбаба — Арт-директор<br />Саша Денисова — Лид бренд-дизайнер<br />Катя Федотова — Бренд-дизайнер</div></div><div class="info-item"><strong>Услуги</strong><div class="tag-list"><span class="tag">айдентика</span><span class="tag">брендинг</span><span class="tag">логотип</span><span class="tag">печатные носители</span><span class="tag">SMM</span><span class="tag">презентация</span><span class="tag">брендбук</span></div></div></section>
 
       <section class="case-content" aria-label="Материалы кейса">
         <div class="case-row case-row--60-40">
@@ -411,12 +461,17 @@
           <a href="tel:+381613796705">Телефон</a>
           <a href="https://www.linkedin.com/in/kseniia-gernik-pdf/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
-      </section>
+      
+        <div class="project-contacts__cta">
+          <a class="project-discuss" href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer">Обсудить ваш проект</a>
+        </div>
+</section>
 
     <footer class="site-footer">
       <p>© 2026 КСЮША ГЕРНИК</p>
     </footer>
 
+    <script src="i18n.js"></script>
     <script>
       const desktopMedia = window.matchMedia('(hover: hover) and (pointer: fine)');
       const customCursor = document.querySelector('.custom-cursor');

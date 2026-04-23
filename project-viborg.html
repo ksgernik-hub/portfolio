@@ -5,11 +5,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
 :root{--bg:#151515;--text:#f0f0f0;--muted:#9e9e9e;--line:rgba(255,255,255,.14);--case-gap-y:1.2rem;--case-gap-x:.7rem;}*{box-sizing:border-box;}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:"Google Sans","Product Sans","Google Sans Text","Manrope","Inter",Arial,sans-serif;}
-.site-header{position:fixed;inset:0 0 auto 0;height:58px;width:100%;margin:0;padding-inline:1rem;display:flex;align-items:center;justify-content:space-between;z-index:30;background:rgba(21,21,21,.36);backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);}
-.brand,nav a{color:var(--text);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;}nav{display:flex;gap:1.35rem;}
-.page,.site-footer{width:min(1500px,calc(100% - 2rem));margin:0 auto;}.page{padding:4.7rem 0 2rem;}.back-text{display:inline-block;color:var(--muted);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.68rem;margin:0 0 .75rem;}
+.site-header{position:fixed;inset:0 0 auto 0;height:35px;width:100%;margin:0;padding-inline:1rem;display:flex;align-items:center;justify-content:space-between;z-index:30;background:rgba(21,21,21,.36);backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);}
+.brand,nav a{color:var(--text);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;}nav{display:flex;gap:1.35rem;} .lang-switch{display:flex;align-items:center;gap:.28rem;margin-left:.8rem;} .lang-switch button{border:0;background:transparent;color:var(--muted);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:0;cursor:pointer;} .lang-switch button.is-active{color:var(--text);} .lang-switch span{color:var(--muted);font-size:.62rem;}
+.page,.site-footer{width:min(1500px,calc(100% - 2rem));margin:0 auto;}.page{padding:3.1rem 0 2rem;}.back-text{display:inline-block;color:var(--muted);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.68rem;margin:0 0 .75rem;}
 .hero-cover{width:100%;aspect-ratio:16/8.6;min-height:300px;background:url('https://static.tildacdn.com/tild6631-3831-4132-a132-366139633535/Frame_2087329243.png') center/cover no-repeat;}
-.project-info{margin-top:1.35rem;display:grid;grid-template-columns: 1fr 2fr 1fr 1.35fr 1fr;gap:1rem;align-items:start;}.info-item{font-size:.78rem;line-height:1.25;}.info-item strong{display:block;font-weight:500;font-size:.76rem;color:var(--muted);margin-bottom:.26rem;text-transform:uppercase;letter-spacing:.07em;}
+.project-info{margin-top:1.35rem;display:grid;grid-template-columns: 1fr 2fr 1fr 1.35fr 1fr;gap:1rem;align-items:start;}.info-item{min-width:0;font-size:.78rem;line-height:1.25;}.info-item strong{display:block;font-weight:500;font-size:.76rem;color:var(--muted);margin-bottom:.26rem;text-transform:uppercase;letter-spacing:.07em;}
 .case-content{margin-top:6rem;display:grid;row-gap:var(--case-gap-y);} .case-content>*,.case-card{margin:0;} .case-media,.case-card{width:100%;overflow:hidden;} .case-media img,.case-media video,.case-card img,.case-card video{width:100%;height:100%;display:block;object-fit:cover;}
 .case-grid-two{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);column-gap:var(--case-gap-x);align-items:start;} .case-grid-two .case-card{aspect-ratio:1/1;} .case-grid-two--small-left{grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);} .tag-list { display:flex; flex-wrap:wrap; gap:0.35rem; margin-top:0.06rem; }      .tag { display:inline-flex; align-items:center; padding:0.22rem 0.5rem; border:1px solid rgba(255,255,255,0.16); color:var(--muted); font-size:0.66rem; letter-spacing:0.05em; text-transform:uppercase; line-height:1; }      .contributors { margin-top:0.38rem; color:var(--muted); font-size:0.66rem; line-height:1.34; }      .contributors span { color:var(--muted); opacity:0.9; }      .project-site { margin-top:0.42rem; }      .project-site a { color:var(--muted); text-decoration:underline; text-underline-offset:2px; }.project-bottom{margin-top:2.4rem;}
 .back-to-projects{color:var(--text);text-decoration:none;text-transform:uppercase;font-size:.78rem;letter-spacing:.08em;border:1px solid var(--line);padding:.6rem .9rem;display:inline-flex;} .site-footer{padding:1.2rem 0 1.5rem;} .site-footer p{margin:0;color:var(--muted);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;}
@@ -49,6 +49,23 @@
         font-size: 0.85rem;
       }
 
+      .project-contacts__cta {
+        margin-top: 0.95rem;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .project-discuss {
+        color: var(--text);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        border: 1px solid var(--line);
+        padding: 0.5rem 0.72rem;
+        display: inline-flex;
+      }
+
       @media (max-width: 700px) {
         .site-header nav a[href="./index.html#about"],
         .site-header nav a[href="./resume.html"] {
@@ -65,9 +82,14 @@
 
     </style>    <link rel="icon" type="image/png" href="./images/favicon-k.png" />
   </head>
-<body><div class="custom-cursor" aria-hidden="true"></div><header class="site-header" id="top"><a class="brand" href="./index.html">КСЮША ГЕРНИК</a><nav><a href="./index.html#projects">проекты</a><a href="./index.html#about">обо мне</a><a href="./resume.html">резюме</a><a href="./index.html#contacts">контакты</a></nav></header>
+<body><div class="custom-cursor" aria-hidden="true"></div><header class="site-header" id="top"><a class="brand" href="./index.html">КСЮША ГЕРНИК</a><nav><a href="./index.html#projects">projects</a><a href="./index.html#about">about</a><a href="./resume.html">resume</a><a href="./index.html#contacts">contacts</a></nav>
+      <div class="lang-switch" aria-label="Language switcher">
+        <button type="button" data-lang-switch="en" class="is-active">EN</button>
+        <span>/</span>
+        <button type="button" data-lang-switch="ru">RU</button>
+      </div></header>
 <main class="page"><a class="back-text" href="./index.html#projects">← к другим проектам</a><div class="hero-cover" role="img" aria-label="Обложка проекта"></div>
-<section class="project-info"><div class="info-item"><strong>Проект</strong>Концептуальная айдентика города Выборг</div><div class="info-item"><strong>Описание</strong>Концептуальная айдентика, построенная на исторической фактуре и образе города как культурного артефакта. Система объединяет графику, типографику и носители в цельный визуальный нарратив.</div><div class="info-item"><strong>Роль</strong>Коммуникационный дизайнер</div><div class="info-item"><strong>Услуги</strong><div class="tag-list"><span class="tag">айдентика</span><span class="tag">брендинг территории</span><span class="tag">логотип</span><span class="tag">печатные носители</span><span class="tag">мерч</span><span class="tag">презентация</span></div></div><div class="info-item"><a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer" style="color:var(--text)">Обсудить ваш проект</a></div></section>
+<section class="project-info"><div class="info-item"><strong>Проект</strong>Концептуальная айдентика города Выборг</div><div class="info-item"><strong>Описание</strong>Концептуальная айдентика, построенная на исторической фактуре и образе города как культурного артефакта. Система объединяет графику, типографику и носители в цельный визуальный нарратив.</div><div class="info-item"><strong>Роль</strong>Коммуникационный дизайнер</div><div class="info-item"><strong>Услуги</strong><div class="tag-list"><span class="tag">айдентика</span><span class="tag">брендинг территории</span><span class="tag">логотип</span><span class="tag">печатные носители</span><span class="tag">мерч</span><span class="tag">презентация</span></div></div></section>
 <section class="case-content" aria-label="Материалы кейса"><div class="case-grid-two"><figure class="case-card"><img src="https://static.tildacdn.com/tild3230-3462-4935-b161-626536363732/46.jpg" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild3833-6537-4736-a463-613432323961/__copy.jpg" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two case-grid-two--small-left"><figure class="case-card"><img src="https://static.tildacdn.com/tild6162-3336-4234-a131-636465626461/2323.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild6430-6333-4465-b338-616232333838/23432.png" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two"><figure class="case-card"><img src="https://static.tildacdn.com/tild3235-3764-4963-b331-393864653530/50.jpg" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild3264-6562-4630-b764-303762373638/52.jpg" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two case-grid-two--small-left"><figure class="case-card"><img src="https://static.tildacdn.com/tild6564-3831-4034-a632-386639316330/_2_.jpg" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild3636-3564-4064-b835-346363343339/__2022-03-09__0223_1.png" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two"><figure class="case-card"><img src="https://static.tildacdn.com/tild3165-6561-4030-b134-653965313764/fsdfdsvcfsdcv.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild3739-3736-4465-a263-313435636366/-----___1__2.jpg" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two case-grid-two--small-left"><figure class="case-card"><img src="https://static.tildacdn.com/tild3933-6165-4635-b838-356263356231/21_1.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild3832-6132-4738-a536-666463333537/46.jpg" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two"><figure class="case-card"><img src="https://static.tildacdn.com/tild3931-3435-4635-b161-363863323239/jhbhjbhk.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild6361-3734-4631-a363-343632656339/photo.png" alt="Материал проекта" loading="lazy" /></figure></div></section>
 <section class="project-bottom"><a class="back-to-projects" href="./index.html#projects">← К другим проектам</a></section></main>
       <section id="contacts" class="contacts project-contacts">
@@ -78,8 +100,13 @@
           <a href="tel:+381613796705">Телефон</a>
           <a href="https://www.linkedin.com/in/kseniia-gernik-pdf/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
-      </section>
+      
+        <div class="project-contacts__cta">
+          <a class="project-discuss" href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer">Обсудить ваш проект</a>
+        </div>
+</section>
 
     <footer class="site-footer"><p>© 2026 КСЮША ГЕРНИК</p></footer>
-<script>const desktopMedia=window.matchMedia('(hover: hover) and (pointer: fine)');const customCursor=document.querySelector('.custom-cursor');if(customCursor&&desktopMedia.matches){let mouseX=window.innerWidth/2,mouseY=window.innerHeight/2,cursorX=mouseX,cursorY=mouseY;const animateCursor=()=>{cursorX+=(mouseX-cursorX)*0.52;cursorY+=(mouseY-cursorY)*0.52;customCursor.style.transform='translate3d('+(cursorX-4)+'px, '+(cursorY-4)+'px, 0)';window.requestAnimationFrame(animateCursor);};window.addEventListener('mousemove',(event)=>{mouseX=event.clientX;mouseY=event.clientY;});window.requestAnimationFrame(animateCursor);}
+<script src="i18n.js"></script>
+    <script>const desktopMedia=window.matchMedia('(hover: hover) and (pointer: fine)');const customCursor=document.querySelector('.custom-cursor');if(customCursor&&desktopMedia.matches){let mouseX=window.innerWidth/2,mouseY=window.innerHeight/2,cursorX=mouseX,cursorY=mouseY;const animateCursor=()=>{cursorX+=(mouseX-cursorX)*0.52;cursorY+=(mouseY-cursorY)*0.52;customCursor.style.transform='translate3d('+(cursorX-4)+'px, '+(cursorY-4)+'px, 0)';window.requestAnimationFrame(animateCursor);};window.addEventListener('mousemove',(event)=>{mouseX=event.clientX;mouseY=event.clientY;});window.requestAnimationFrame(animateCursor);}
 </script></body></html>

@@ -5,11 +5,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
 :root{--bg:#151515;--text:#f0f0f0;--muted:#9e9e9e;--line:rgba(255,255,255,.14);--case-gap-y:1.2rem;--case-gap-x:.7rem;}*{box-sizing:border-box;}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:"Google Sans","Product Sans","Google Sans Text","Manrope","Inter",Arial,sans-serif;}
-.site-header{position:fixed;inset:0 0 auto 0;height:58px;width:100%;margin:0;padding-inline:1rem;display:flex;align-items:center;justify-content:space-between;z-index:30;background:rgba(21,21,21,.36);backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);}
-.brand,nav a{color:var(--text);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;}nav{display:flex;gap:1.35rem;}
-.page,.site-footer{width:min(1500px,calc(100% - 2rem));margin:0 auto;}.page{padding:4.7rem 0 2rem;}.back-text{display:inline-block;color:var(--muted);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.68rem;margin:0 0 .75rem;}
+.site-header{position:fixed;inset:0 0 auto 0;height:35px;width:100%;margin:0;padding-inline:1rem;display:flex;align-items:center;justify-content:space-between;z-index:30;background:rgba(21,21,21,.36);backdrop-filter:blur(14px) saturate(120%);-webkit-backdrop-filter:blur(14px) saturate(120%);}
+.brand,nav a{color:var(--text);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;}nav{display:flex;gap:1.35rem;} .lang-switch{display:flex;align-items:center;gap:.28rem;margin-left:.8rem;} .lang-switch button{border:0;background:transparent;color:var(--muted);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:0;cursor:pointer;} .lang-switch button.is-active{color:var(--text);} .lang-switch span{color:var(--muted);font-size:.62rem;}
+.page,.site-footer{width:min(1500px,calc(100% - 2rem));margin:0 auto;}.page{padding:3.1rem 0 2rem;}.back-text{display:inline-block;color:var(--muted);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.68rem;margin:0 0 .75rem;}
 .hero-cover{width:100%;aspect-ratio:16/8.6;min-height:300px;background:url('https://static.tildacdn.com/tild3035-3530-4637-b936-623366353362/mnm.png') center/cover no-repeat;}
-.project-info{margin-top:1.35rem;display:grid;grid-template-columns: 1fr 2fr 1fr 1.35fr 1fr;gap:1rem;align-items:start;}.info-item{font-size:.78rem;line-height:1.25;}.info-item strong{display:block;font-weight:500;font-size:.76rem;color:var(--muted);margin-bottom:.26rem;text-transform:uppercase;letter-spacing:.07em;}
+.project-info{margin-top:1.35rem;display:grid;grid-template-columns: 1fr 2fr 1fr 1.35fr 1fr;gap:1rem;align-items:start;}.info-item{min-width:0;font-size:.78rem;line-height:1.25;}.info-item strong{display:block;font-weight:500;font-size:.76rem;color:var(--muted);margin-bottom:.26rem;text-transform:uppercase;letter-spacing:.07em;}
 .case-content{margin-top:6rem;display:grid;row-gap:var(--case-gap-y);} .case-content>*,.case-card{margin:0;} .case-media,.case-card{width:100%;overflow:hidden;} .case-media img,.case-media video,.case-card img,.case-card video{width:100%;height:100%;display:block;object-fit:cover;}
 .case-grid-two{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);column-gap:var(--case-gap-x);align-items:start;} .case-grid-two .case-card{aspect-ratio:1/1;} .case-grid-two--small-left{grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);} .tag-list { display:flex; flex-wrap:wrap; gap:0.35rem; margin-top:0.06rem; }      .tag { display:inline-flex; align-items:center; padding:0.22rem 0.5rem; border:1px solid rgba(255,255,255,0.16); color:var(--muted); font-size:0.66rem; letter-spacing:0.05em; text-transform:uppercase; line-height:1; }      .contributors { margin-top:0.38rem; color:var(--muted); font-size:0.66rem; line-height:1.34; }      .contributors span { color:var(--muted); opacity:0.9; }      .project-site { margin-top:0.42rem; }      .project-site a { color:var(--muted); text-decoration:underline; text-underline-offset:2px; }.project-bottom{margin-top:2.4rem;}
 .back-to-projects{color:var(--text);text-decoration:none;text-transform:uppercase;font-size:.78rem;letter-spacing:.08em;border:1px solid var(--line);padding:.6rem .9rem;display:inline-flex;} .site-footer{padding:1.2rem 0 1.5rem;} .site-footer p{margin:0;color:var(--muted);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;}
@@ -49,6 +49,23 @@
         font-size: 0.85rem;
       }
 
+      .project-contacts__cta {
+        margin-top: 0.95rem;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .project-discuss {
+        color: var(--text);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        border: 1px solid var(--line);
+        padding: 0.5rem 0.72rem;
+        display: inline-flex;
+      }
+
       @media (max-width: 700px) {
         .site-header nav a[href="./index.html#about"],
         .site-header nav a[href="./resume.html"] {
@@ -65,9 +82,14 @@
 
     </style>    <link rel="icon" type="image/png" href="./images/favicon-k.png" />
   </head>
-<body><div class="custom-cursor" aria-hidden="true"></div><header class="site-header" id="top"><a class="brand" href="./index.html">КСЮША ГЕРНИК</a><nav><a href="./index.html#projects">проекты</a><a href="./index.html#about">обо мне</a><a href="./resume.html">резюме</a><a href="./index.html#contacts">контакты</a></nav></header>
+<body><div class="custom-cursor" aria-hidden="true"></div><header class="site-header" id="top"><a class="brand" href="./index.html">КСЮША ГЕРНИК</a><nav><a href="./index.html#projects">projects</a><a href="./index.html#about">about</a><a href="./resume.html">resume</a><a href="./index.html#contacts">contacts</a></nav>
+      <div class="lang-switch" aria-label="Language switcher">
+        <button type="button" data-lang-switch="en" class="is-active">EN</button>
+        <span>/</span>
+        <button type="button" data-lang-switch="ru">RU</button>
+      </div></header>
 <main class="page"><a class="back-text" href="./index.html#projects">← к другим проектам</a><div class="hero-cover" role="img" aria-label="Обложка проекта"></div>
-<section class="project-info"><div class="info-item"><strong>Проект</strong>Айдентика лыжного забега</div><div class="info-item"><strong>Описание</strong>Промо-дизайн спортивного события для IT-сообщества. Визуальная система строится на яркой типографике и динамичной графике для digital и офлайн-форматов.</div><div class="info-item"><strong>Роль</strong>Коммуникационный дизайнер</div><div class="info-item"><strong>Услуги</strong><div class="tag-list"><span class="tag">айдентика</span><span class="tag">брендинг события</span><span class="tag">печатные носители</span><span class="tag">digital</span><span class="tag">SMM</span><span class="tag">мерч</span></div></div><div class="info-item"><a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer" style="color:var(--text)">Обсудить ваш проект</a></div></section>
+<section class="project-info"><div class="info-item"><strong>Проект</strong>Айдентика лыжного забега</div><div class="info-item"><strong>Описание</strong>Промо-дизайн спортивного события для IT-сообщества. Визуальная система строится на яркой типографике и динамичной графике для digital и офлайн-форматов.</div><div class="info-item"><strong>Роль</strong>Коммуникационный дизайнер</div><div class="info-item"><strong>Услуги</strong><div class="tag-list"><span class="tag">айдентика</span><span class="tag">брендинг события</span><span class="tag">печатные носители</span><span class="tag">digital</span><span class="tag">SMM</span><span class="tag">мерч</span></div></div></section>
 <section class="case-content" aria-label="Материалы кейса"><div class="case-grid-two"><figure class="case-card"><img src="https://static.tildacdn.com/tild6634-3831-4238-a663-343738636662/photo.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild3839-3736-4238-b337-396331633834/Frame_2087329264.png" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two case-grid-two--small-left"><figure class="case-card"><img src="https://static.tildacdn.com/tild3635-3734-4638-a238-656535383831/photo.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild3663-3563-4139-a230-353536623463/Frame_2087329273-2-2.gif" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two"><figure class="case-card"><img src="https://static.tildacdn.com/tild3263-6561-4766-b766-353965343936/Frame_2087329267.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild3265-3135-4137-b131-623466303138/Frame_2087329266.png" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two case-grid-two--small-left"><figure class="case-card"><img src="https://static.tildacdn.com/tild6530-3865-4431-b136-633136643264/Frame_2087329268.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="https://static.tildacdn.com/tild3735-3135-4638-b834-646561326364/Frame_2087329269.jpg" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-media"><img src="https://static.tildacdn.com/tild6637-3433-4334-a263-653931646266/Frame_2087329272.png" alt="Материал проекта" loading="lazy" /></div></section>
 <section class="project-bottom"><a class="back-to-projects" href="./index.html#projects">← К другим проектам</a></section></main>
       <section id="contacts" class="contacts project-contacts">
@@ -78,8 +100,13 @@
           <a href="tel:+381613796705">Телефон</a>
           <a href="https://www.linkedin.com/in/kseniia-gernik-pdf/" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
-      </section>
+      
+        <div class="project-contacts__cta">
+          <a class="project-discuss" href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer">Обсудить ваш проект</a>
+        </div>
+</section>
 
     <footer class="site-footer"><p>© 2026 КСЮША ГЕРНИК</p></footer>
-<script>const desktopMedia=window.matchMedia('(hover: hover) and (pointer: fine)');const customCursor=document.querySelector('.custom-cursor');if(customCursor&&desktopMedia.matches){let mouseX=window.innerWidth/2,mouseY=window.innerHeight/2,cursorX=mouseX,cursorY=mouseY;const animateCursor=()=>{cursorX+=(mouseX-cursorX)*0.52;cursorY+=(mouseY-cursorY)*0.52;customCursor.style.transform='translate3d('+(cursorX-4)+'px, '+(cursorY-4)+'px, 0)';window.requestAnimationFrame(animateCursor);};window.addEventListener('mousemove',(event)=>{mouseX=event.clientX;mouseY=event.clientY;});window.requestAnimationFrame(animateCursor);}
+<script src="i18n.js"></script>
+    <script>const desktopMedia=window.matchMedia('(hover: hover) and (pointer: fine)');const customCursor=document.querySelector('.custom-cursor');if(customCursor&&desktopMedia.matches){let mouseX=window.innerWidth/2,mouseY=window.innerHeight/2,cursorX=mouseX,cursorY=mouseY;const animateCursor=()=>{cursorX+=(mouseX-cursorX)*0.52;cursorY+=(mouseY-cursorY)*0.52;customCursor.style.transform='translate3d('+(cursorX-4)+'px, '+(cursorY-4)+'px, 0)';window.requestAnimationFrame(animateCursor);};window.addEventListener('mousemove',(event)=>{mouseX=event.clientX;mouseY=event.clientY;});window.requestAnimationFrame(animateCursor);}
 </script></body></html>

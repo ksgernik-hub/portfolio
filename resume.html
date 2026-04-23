@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="styles.css" />
     <style>
       .resume-page {
-        padding-top: 90px;
+        padding-top: 62px;
       }
 
       .resume-hero {
@@ -259,19 +259,25 @@
       <link rel="icon" type="image/png" href="./images/favicon-k.png" />
   </head>
   <body>
+    <div class="custom-cursor" aria-hidden="true"></div>
     <header class="site-header" id="top">
       <a class="brand" href="./index.html">КСЮША ГЕРНИК</a>
       <nav>
-        <a href="./index.html#projects">проекты</a>
-        <a href="./index.html#about">обо мне</a>
-        <a href="./resume.html">резюме</a>
-        <a href="./index.html#contacts">контакты</a>
+        <a href="./index.html#projects">projects</a>
+        <a href="./index.html#about">about</a>
+        <a href="./resume.html">resume</a>
+        <a href="./index.html#contacts">contacts</a>
       </nav>
+      <div class="lang-switch" aria-label="Language switcher">
+        <button type="button" data-lang-switch="en" class="is-active">EN</button>
+        <span>/</span>
+        <button type="button" data-lang-switch="ru">RU</button>
+      </div>
     </header>
 
     <main class="resume-page">
       <section class="resume-hero reveal">
-        <p class="resume-kicker">резюме</p>
+        <p class="resume-kicker">resume</p>
         <h1 class="resume-name">KSUSHA GERNIK</h1>
         <p class="resume-role">коммуникационный дизайнер</p>
         <p class="resume-summary">
@@ -465,6 +471,7 @@
       <p>© 2026 КСЮША ГЕРНИК</p>
     </footer>
 
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
