@@ -264,13 +264,17 @@ button,
   position: fixed;
   top: 0;
   left: 0;
-  width: 260px;
-  aspect-ratio: 4 / 3;
+  width: auto;
+  max-width: min(420px, 42vw);
+  max-height: min(320px, 36vh);
   pointer-events: none;
   opacity: 0;
   transition: opacity 160ms ease;
   z-index: 50;
-  overflow: hidden;
+  overflow: visible;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .other-projects__preview.is-visible {
@@ -278,9 +282,11 @@ button,
 }
 
 .other-projects__preview img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: auto;
+  height: auto;
+  max-width: min(420px, 42vw);
+  max-height: min(320px, 36vh);
+  object-fit: contain;
   display: block;
 }
 

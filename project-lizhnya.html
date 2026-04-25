@@ -9,12 +9,12 @@
 .brand,nav a{color:var(--text);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;}nav{display:flex;gap:1.35rem;} .lang-switch{display:flex;align-items:center;gap:.28rem;margin-left:.8rem;} .lang-switch button{border:0;background:transparent;color:var(--muted);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:0;cursor:pointer;} .lang-switch button.is-active{color:var(--text);} .lang-switch span{color:var(--muted);font-size:.62rem;}
 .page,.site-footer{width:min(1500px,calc(100% - 2rem));margin:0 auto;}.page{padding:3.1rem 0 2rem;}.back-text{display:inline-block;color:var(--muted);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.68rem;margin:0 0 .75rem;}
 .hero-cover{width:100%;aspect-ratio:16/8.6;min-height:300px;background:url('https://static.tildacdn.com/tild3035-3530-4637-b936-623366353362/mnm.png') center/cover no-repeat;}
-.project-info{margin-top:1.35rem;display:grid;grid-template-columns: 1fr 2fr 1fr 1.35fr 1fr;gap:1rem;align-items:start;}.info-item{min-width:0;font-size:.78rem;line-height:1.25;}.info-item strong{display:block;font-weight:500;font-size:.76rem;color:var(--muted);margin-bottom:.26rem;text-transform:uppercase;letter-spacing:.07em;}
+.project-info { margin-top: 1.35rem; padding: 1.4rem 1.8rem; display: grid; grid-template-columns: 1fr 2fr 1fr 1.35fr 1fr; gap: 1rem; align-items: start; }.info-item{min-width:0;font-size:.78rem;line-height:1.25;}.info-item strong{display:block;font-weight:500;font-size:.76rem;color:var(--muted);margin-bottom:.26rem;text-transform:uppercase;letter-spacing:.07em;}
 .case-content{margin-top:6rem;display:grid;row-gap:var(--case-gap-y);} .case-content>*,.case-card{margin:0;} .case-media,.case-card{width:100%;overflow:hidden;} .case-media img,.case-media video,.case-card img,.case-card video{width:100%;height:100%;display:block;object-fit:cover;}
-.case-grid-two{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);column-gap:var(--case-gap-x);align-items:start;} .case-grid-two .case-card{aspect-ratio:1/1;} .case-grid-two--small-left{grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);} .tag-list { display:flex; flex-wrap:wrap; gap:0.35rem; margin-top:0.06rem; }      .tag { display:inline-flex; align-items:center; padding:0.22rem 0.5rem; border:1px solid rgba(255,255,255,0.16); color:var(--muted); font-size:0.66rem; letter-spacing:0.05em; text-transform:uppercase; line-height:1; }      .contributors { margin-top:0.38rem; color:var(--muted); font-size:0.66rem; line-height:1.34; }      .contributors span { color:var(--muted); opacity:0.9; }      .project-site { margin-top:0.42rem; }      .project-site a { color:var(--muted); text-decoration:underline; text-underline-offset:2px; }.project-bottom{margin-top:2.4rem;}
+.case-grid-two{display:grid;grid-template-columns:minmax(0,1.23fr) minmax(0,0.77fr);column-gap:var(--case-gap-x);align-items:start;} .case-grid-two .case-card{aspect-ratio:1/1;} .case-grid-two--small-left{grid-template-columns:minmax(0,0.77fr) minmax(0,1.23fr);} .tag-list { display:flex; flex-wrap:wrap; gap:0.35rem; margin-top:0.06rem; }      .tag { display:inline-flex; align-items:center; padding:0.28rem 0.56rem; border:0; background:rgba(255,255,255,0.03); color:var(--muted); font-size:0.66rem; letter-spacing:0.05em; text-transform:uppercase; line-height:1.02; }      .contributors { margin-top:0.38rem; color:var(--muted); font-size:0.66rem; line-height:1.34; }      .contributors span { color:var(--muted); opacity:0.9; }      .project-site { margin-top:0.42rem; }      .project-site a { color:var(--muted); text-decoration:underline; text-underline-offset:2px; }.project-bottom { margin-top: 1.1rem; }
 .back-to-projects{color:var(--text);text-decoration:none;text-transform:uppercase;font-size:.78rem;letter-spacing:.08em;border:1px solid var(--line);padding:.6rem .9rem;display:inline-flex;} .site-footer{padding:1.2rem 0 1.5rem;} .site-footer p{margin:0;color:var(--muted);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;}
 .custom-cursor{position:fixed;top:0;left:0;width:8px;height:8px;border-radius:999px;background:#fff;pointer-events:none;transform:translate3d(-9999px,-9999px,0);z-index:130;display:none;}
-@media (max-width:980px){.project-info{grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;}.case-content{margin-top:4rem;row-gap:.9rem;}.case-grid-two{grid-template-columns:1fr;row-gap:.9rem;}.case-grid-two .case-card{aspect-ratio:4/3;}}
+@media (max-width:980px){.project-info{grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;padding:0.55rem 0.6rem;}.case-content{margin-top:4rem;row-gap:.9rem;}.case-grid-two{grid-template-columns:1fr;row-gap:.9rem;}.case-grid-two .case-card{aspect-ratio:4/3;}}
 @media (hover:hover) and (pointer:fine){body,a,p,button,video{cursor:none !important;}.custom-cursor{display:block;}}
 
       a,
@@ -22,25 +22,11 @@
         transition: opacity 180ms ease, filter 180ms ease, color 180ms ease, background-color 180ms ease;
       }
 
-      .project-contacts {
-        width:min(1500px,calc(100% - 2rem));
-        margin:0 auto;
-        padding: 1.5rem 0 0.8rem;
-      }
+      .project-contacts { width:min(1500px,calc(100% - 2rem)); margin:0 auto; padding: 1rem 0 0.8rem; display:grid; grid-template-columns: 1fr auto; grid-template-areas: "h h" "list cta"; align-items:end; row-gap:0.7rem; }
 
-      .project-contacts h2 {
-        margin: 0;
-        font-size: 0.84rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
+      .project-contacts h2 { grid-area:h; margin: 0; font-size: 0.84rem; letter-spacing: 0.1em; text-transform: uppercase; }
 
-      .project-contacts .contact-list {
-        margin-top: 0.75rem;
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
+      .project-contacts .contact-list { grid-area:list; margin-top: 0; display: flex; gap: 1rem; flex-wrap: wrap; }
 
       .project-contacts .contact-list a {
         color: var(--text);
@@ -49,11 +35,7 @@
         font-size: 0.85rem;
       }
 
-      .project-contacts__cta {
-        margin-top: 0.95rem;
-        display: flex;
-        justify-content: flex-end;
-      }
+      .project-contacts__cta { grid-area:cta; margin-top:0; display: flex; justify-content: flex-end; align-self: end; }
 
       .project-discuss {
         color: var(--text);
@@ -66,7 +48,8 @@
         display: inline-flex;
       }
 
-      @media (max-width: 700px) {
+      @media (max-width: 900px) { .project-contacts { grid-template-columns:1fr; grid-template-areas:"h" "list" "cta"; row-gap:0.75rem; } .project-contacts__cta { justify-content:flex-start; } }
+        @media (max-width: 700px) {
         .site-header nav a[href="./index.html#about"],
         .site-header nav a[href="./resume.html"] {
           display: none;
@@ -81,7 +64,8 @@
       }
 
     </style>    <link rel="icon" type="image/png" href="./images/favicon-k.png" />
-  </head>
+    <script src="./password-gate.js"></script>
+</head>
 <body><div class="custom-cursor" aria-hidden="true"></div><header class="site-header" id="top"><a class="brand" href="./index.html">КСЮША ГЕРНИК</a><nav><a href="./index.html#projects">projects</a><a href="./index.html#about">about</a><a href="./resume.html">resume</a><a href="./index.html#contacts">contacts</a></nav>
       <div class="lang-switch" aria-label="Language switcher">
         <button type="button" data-lang-switch="en" class="is-active">EN</button>

@@ -25,11 +25,12 @@ const RU_TO_EN = {
   "Телеграм:": "Telegram:",
   "Новый проект": "New project",
   "КСЮША ГЕРНИК": "KSUSHA GERNIK",
+  "© 2026 КСЮША ГЕРНИК": "© 2026 KSUSHA GERNIK",
 
   "8+ лет в коммуникационном и бренд-дизайне. Проектирую визуальные системы, которые помогают быстрее понимать и принимать решения.":
     "8+ years in communication and brand design. I build visual systems that help people understand faster and make better decisions.",
-  "С кем работала: OneTwoTrip, Clay, TravelLine, Strelka KB, NefroHealth, Fastino.":
-    "Worked with: OneTwoTrip, Clay, TravelLine, Strelka KB, NefroHealth, Fastino.",
+  "С кем работала: OneTwoTrip, Clay, TravelLine, Strelka KB, Half-Price Punk Spiders, Mission Control, Группа компаний ДАЛЬ.":
+    "Worked with: OneTwoTrip, Clay, TravelLine, Strelka KB, Half-Price Punk Spiders, Mission Control, DAL Group of Companies.",
   "Коммуникационный и бренд-дизайн для проектов, которые хотят быть понятными и сильными визуально.":
     "Communication and brand design for projects that need to be clear and visually strong.",
   "коммуникационный и бренд-дизайнер": "communication & brand designer",
@@ -40,7 +41,7 @@ const RU_TO_EN = {
   "Айдентика для ИИ-лаборатории": "Brand Identity for an AI Lab",
   "Айдентика для AI-лаборатории Fastino": "Brand Identity for Fastino AI Lab",
   "Промо-материалы «Дикой охоты»": "Promotional Materials for \"Wild Hunt\"",
-  "Концептуальная айдентика города Выборг": "Conceptual Brand Identity for Vyborg",
+  "Концептуальная айдентика города Выборг": "Conceptual Identity for Vyborg",
   "Айдентика для компании в сфере нефрологии": "Brand Identity for a Nephrology Company",
   "Айдентика лыжного забега": "Ski Race Identity",
   "Справочники для поступающих": "Applicant Guidebooks",
@@ -50,7 +51,11 @@ const RU_TO_EN = {
   "Айдентика для AI Лаборатории — кейс": "Brand Identity for an AI Lab — Case Study",
   "Айдентика для AI-лаборатории Fastino — кейс": "Brand Identity for Fastino AI Lab — Case Study",
   "Промо материалы «Дикой охоты» — кейс": "Promo Materials for \"Wild Hunt\" — Case Study",
-  "Концептуальная айдентика города Выборг — кейс": "Conceptual Brand Identity for Vyborg — Case Study",
+  "Концептуальная айдентика города Выборг — кейс": "Conceptual Identity for Vyborg — Case Study",
+  "HR-постеры для офиса OneTwoTrip": "HR Posters for the OneTwoTrip Office",
+  "AI-фотобиблиотека для B2B-сервиса": "AI Photo Library for a B2B Service",
+  "Behance-кейс с серией мерча": "Behance Case: Merch Series",
+  "Серия Telegram-постов": "Telegram Post Series",
   "Айдентика для компании в сфере нефрологии — кейс": "Brand Identity for a Nephrology Company — Case Study",
   "Айдентика лыжного забега — кейс": "Ski Race Identity — Case Study",
   "Справочники для поступающих — кейс": "Applicant Guidebooks — Case Study",

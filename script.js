@@ -71,9 +71,12 @@ if (otherProjectsPreview && otherProjectsPreviewImage && otherProjectLinks.lengt
     }
 
     const previewImage = hoveredProject.getAttribute('data-preview');
-    if (previewImage) {
-      otherProjectsPreviewImage.src = previewImage;
+    if (!previewImage) {
+      otherProjectsPreview.classList.remove('is-visible');
+      return;
     }
+
+    otherProjectsPreviewImage.src = previewImage;
 
     movePreview(event.clientX, event.clientY);
     otherProjectsPreview.classList.add('is-visible');
