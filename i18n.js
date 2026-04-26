@@ -88,6 +88,7 @@ const RU_TO_EN = {
   "брендинг территории": "place branding",
   "мерч": "merch",
   "коммуникационная кампания": "communication campaign",
+  "digital-носители": "digital assets",
   "лендинг": "landing page",
   "промо": "promo",
   "адаптивы": "adaptations",
