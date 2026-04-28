@@ -9,6 +9,20 @@
   box-sizing: border-box;
 }
 
+
+.media-protected,
+img,
+video {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+img,
+video {
+  pointer-events: none;
+}
+
 html,
 body {
   margin: 0;
@@ -159,14 +173,14 @@ button,
   gap: 0.55rem;
   text-decoration: none;
   color: var(--text);
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 280ms ease, transform 280ms ease, filter 180ms ease;
+  opacity: 1;
+  transform: none;
+  transition: filter 180ms ease;
 }
 
 .project.is-shown {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 .project__thumb {

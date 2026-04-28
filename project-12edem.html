@@ -261,6 +261,11 @@
           cursor: none !important;
         }
 
+        .case-card iframe,
+        .case-media iframe {
+          pointer-events: none;
+        }
+
         .custom-cursor {
           display: block;
         }
@@ -439,5 +444,6 @@
         window.requestAnimationFrame(animateCursor);
       }
     </script>
-  </body>
+      <script src="./protection.js"></script>
+</body>
 </html>

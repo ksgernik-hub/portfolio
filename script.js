@@ -39,6 +39,34 @@ const projectsObserver = new IntersectionObserver(
 
 projectLinks.forEach((link) => projectsObserver.observe(link));
 
+const revealInViewportNow = () => {
+  const viewportH = window.innerHeight || document.documentElement.clientHeight;
+  const viewportW = window.innerWidth || document.documentElement.clientWidth;
+
+  revealNodes.forEach((node) => {
+    const rect = node.getBoundingClientRect();
+    const visible = rect.bottom > 0 && rect.right > 0 && rect.top < viewportH * 0.98 && rect.left < viewportW;
+    if (visible) {
+      node.classList.add('is-visible');
+    }
+  });
+
+  projectLinks.forEach((link) => {
+    const rect = link.getBoundingClientRect();
+    const visible = rect.bottom > 0 && rect.right > 0 && rect.top < viewportH * 0.98 && rect.left < viewportW;
+    if (visible) {
+      link.classList.add('is-shown');
+    }
+  });
+};
+
+// Safari/production fallback: ensure cards are visible on first paint, not only after resize.
+requestAnimationFrame(revealInViewportNow);
+setTimeout(revealInViewportNow, 120);
+window.addEventListener('load', revealInViewportNow, { once: true });
+window.addEventListener('pageshow', revealInViewportNow);
+window.addEventListener('resize', revealInViewportNow);
+
 const otherProjectsPreview = document.querySelector('.other-projects__preview');
 const otherProjectsPreviewImage = otherProjectsPreview
   ? otherProjectsPreview.querySelector('img')

@@ -222,6 +222,20 @@
         height: auto;
       }
 
+      .case-embed {
+        position: relative;
+        width: 100%;
+      }
+
+      .case-embed iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        pointer-events: none;
+      }
+
       .case-spacer {
         width: 100%;
         min-height: 2rem;
@@ -427,7 +441,9 @@
 
         <div class="case-row case-row--45-55">
           <figure class="case-item">
-            <img src="./images/fastino-final/2-left-smallsquare.png" alt="Материал проекта Fastino" loading="lazy" />
+            <div class="case-embed" style="padding-top: 100%;">
+              <iframe src="https://kinescope.io/embed/nAScLuii3oWD3JUFnfqvnJ" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" allowfullscreen></iframe>
+            </div>
           </figure>
           <figure class="case-item">
             <img src="./images/fastino-final/2-right-bigsquare.png" alt="Материал проекта Fastino" loading="lazy" />
@@ -449,7 +465,9 @@
 
         <div class="case-row case-row--30-70">
           <figure class="case-item">
-            <img src="./images/fastino-final/5-left-smallrect.png" alt="Материал проекта Fastino" loading="lazy" />
+            <div class="case-embed" style="padding-top: 122.41%;">
+              <iframe src="https://kinescope.io/embed/45mvEhQ7L2naJmRq4n1cMS" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" allowfullscreen></iframe>
+            </div>
           </figure>
           <figure class="case-item">
             <img src="./images/fastino-final/5-right-bigrect.png" alt="Материал проекта Fastino" loading="lazy" />
@@ -559,5 +577,6 @@
         window.requestAnimationFrame(animateCursor);
       }
     </script>
-  </body>
+      <script src="./protection.js"></script>
+</body>
 </html>

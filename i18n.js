@@ -41,6 +41,7 @@ const RU_TO_EN = {
   "Айдентика для ИИ-лаборатории": "Brand Identity for an AI Lab",
   "Айдентика для AI-лаборатории Fastino": "Brand Identity for Fastino AI Lab",
   "Промо-материалы «Дикой охоты»": "Promotional Materials for \"Wild Hunt\"",
+  "Промо-серии OneTwoTrip": "OneTwoTrip Promo Series",
   "Концептуальная айдентика города Выборг": "Conceptual Identity for Vyborg",
   "Айдентика для компании в сфере нефрологии": "Brand Identity for a Nephrology Company",
   "Айдентика лыжного забега": "Ski Race Identity",
@@ -51,6 +52,7 @@ const RU_TO_EN = {
   "Айдентика для AI Лаборатории — кейс": "Brand Identity for an AI Lab — Case Study",
   "Айдентика для AI-лаборатории Fastino — кейс": "Brand Identity for Fastino AI Lab — Case Study",
   "Промо материалы «Дикой охоты» — кейс": "Promo Materials for \"Wild Hunt\" — Case Study",
+  "Промо-серии OneTwoTrip — кейс": "OneTwoTrip Promo Series — Case Study",
   "Концептуальная айдентика города Выборг — кейс": "Conceptual Identity for Vyborg — Case Study",
   "HR-постеры для офиса OneTwoTrip": "HR Posters for the OneTwoTrip Office",
   "AI-фотобиблиотека для B2B-сервиса": "AI Photo Library for a B2B Service",
@@ -70,6 +72,8 @@ const RU_TO_EN = {
     "Fastino is an AI research lab building precise language models for real-world tasks. We created a friendly and memorable visual identity featuring a fox mascot that represents intelligence and openness. The system scales easily and supports long-term brand growth.",
   "Промо-кампания с игровой метафорой охоты за выгодными предложениями. Собран набор digital-носителей с яркой контрастной подачей и адаптацией под разные форматы.":
     "A promo campaign built around a game-like hunt for great offers. A set of digital assets was created with bold contrast and adaptation for different formats.",
+  "Подборка из пяти промо-кампаний OneTwoTrip: сезонные спецпроекты, акционные механики и имиджевые digital-волны. Для каждой серии собран самостоятельный визуальный ритм, но с единым брендовым каркасом — чтобы материалы узнавались сразу в разных каналах.":
+    "A selection of five OneTwoTrip promo campaign series: seasonal specials, offer mechanics, and image-driven digital waves. Each series has its own visual rhythm while sharing one brand framework for instant recognition across channels.",
   "Концептуальная айдентика, построенная на исторической фактуре и образе города как культурного артефакта. Система объединяет графику, типографику и носители в цельный визуальный нарратив.":
     "A conceptual identity built on historical texture and the city image as a cultural artifact. The system unites graphics, typography, and media into one visual narrative.",
   "NefroHealth трансформирует подход к лечению почечных заболеваний — финансирует, развивает и внедряет передовые и жизненно важные технологии во всех сферах нефрологической помощи. Мы создали для них визуальную айдентику: современную и технологичную, отражающую большой опыт и экспертизу.":
@@ -95,6 +99,7 @@ const RU_TO_EN = {
   "промо-кампания": "promo campaign",
   "спецпроект": "special project",
   "креатив": "creative",
+  "арт-дирекшн": "art direction",
   "брендинг события": "event branding",
   "редакционный дизайн": "editorial design",
   "верстка": "layout",
