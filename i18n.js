@@ -42,6 +42,7 @@ const RU_TO_EN = {
   "Айдентика для AI-лаборатории Fastino": "Brand Identity for Fastino AI Lab",
   "Айдентика для кафе-бистро else": "Brand Identity for else Bistro Cafe",
   "Концепт-айдентика для кафе-бистро else": "Concept Identity for else Bistro Cafe",
+  "Концепт-айдентика для кафе-бистро «else»": "Concept Identity for “else” Bistro Cafe",
   "Промо-материалы «Дикой охоты»": "Promotional Materials for \"Wild Hunt\"",
   "Промо-серии OneTwoTrip": "OneTwoTrip Promo Series",
   "Концептуальная айдентика города Выборг": "Conceptual Identity for Vyborg",
@@ -81,6 +82,10 @@ const RU_TO_EN = {
     "else is a concept identity for a bistro cafe in Akademgorodok, Novosibirsk: a quiet place for breakfast, coffee, and laptop work. The visual language is built on a duality of warm and digital: a tactile food atmosphere meets a contemporary urban tech context. This is expressed through human-friendly typography, a neutral geometric grotesque, a calm olive base, and vivid digital gradients.",
   "Фирменный пласт системы — абстрактное low-poly поле, одновременно напоминающее природный ландшафт и раннюю компьютерную графику. Маскот-барашек усиливает характер бренда: чуть наивный, ироничный и тёплый, как персонаж из старой игры. Айдентика масштабируется на меню, упаковку, стаканы, мерч, карты лояльности, соцсети и элементы пространства, формируя цельное, спокойное и запоминающееся «промежуточное пространство» между кафе и коворкингом.":
     "A key brand layer is an abstract low-poly field that references both natural landscapes and early computer graphics. The sheep mascot adds personality: slightly naive, playful, and warm, like a character from an old game. The system scales across menus, packaging, cups, merch, loyalty cards, social media, and interior elements, shaping a calm and memorable in-between space between a cafe and a coworking spot.",
+  "else — концепт-айдентики для кафе-бистро в Академгородке, Новосибирск: тихого места для завтраков, кофе и работы за ноутбуком. Визуальный язык строится на дуальности «тёплого» и «цифрового»: живая гастрономическая атмосфера встречается с городской технологичной средой.":
+    "else is a concept identity for a bistro cafe in Akademgorodok, Novosibirsk: a quiet place for breakfast, coffee, and laptop work. The visual language is built on a duality of warm and digital: a tactile food atmosphere meets an urban tech context.",
+  "Фирменный пласт системы — абстрактное low-poly поле, отсылающее к природному ландшафту и ранней компьютерной графике. Маскот-барашек добавляет характер, а айдентика масштабируется на меню, упаковку, стаканы, мерч, карты лояльности, соцсети и элементы пространства.":
+    "A key brand layer is an abstract low-poly field referencing natural landscapes and early computer graphics. The sheep mascot adds personality, while the identity scales across menus, packaging, cups, merch, loyalty cards, social media, and interior elements.",
   "Концептуальная айдентика, построенная на исторической фактуре и образе города как культурного артефакта. Система объединяет графику, типографику и носители в цельный визуальный нарратив.":
     "A conceptual identity built on historical texture and the city image as a cultural artifact. The system unites graphics, typography, and media into one visual narrative.",
   "NefroHealth трансформирует подход к лечению почечных заболеваний — финансирует, развивает и внедряет передовые и жизненно важные технологии во всех сферах нефрологической помощи. Мы создали для них визуальную айдентику: современную и технологичную, отражающую большой опыт и экспертизу.":
@@ -119,6 +124,7 @@ const RU_TO_EN = {
 
   "Бренд-дизайнер": "Brand Designer",
   "Коммуникационный дизайнер": "Communication Designer",
+  "Арт-дирекшн, коммуникационный дизайн": "Art Direction, Communication Design",
   "Над проектом работали:": "Project team:",
   "Олег Турбаба — Арт-директор": "Oleg Turbaba — Art Director",
   "Саша Денисова — Лид бренд-дизайнер": "Sasha Denisova — Lead Brand Designer",
