@@ -40,6 +40,8 @@ const RU_TO_EN = {
   "Новогодняя кампания «Раз, два, едем»": "New Year Campaign \"One, Two, Let’s Go\"",
   "Айдентика для ИИ-лаборатории": "Brand Identity for an AI Lab",
   "Айдентика для AI-лаборатории Fastino": "Brand Identity for Fastino AI Lab",
+  "Айдентика для кафе-бистро else": "Brand Identity for else Bistro Cafe",
+  "Концепт-айдентика для кафе-бистро else": "Concept Identity for else Bistro Cafe",
   "Промо-материалы «Дикой охоты»": "Promotional Materials for \"Wild Hunt\"",
   "Промо-серии OneTwoTrip": "OneTwoTrip Promo Series",
   "Концептуальная айдентика города Выборг": "Conceptual Identity for Vyborg",
@@ -53,6 +55,7 @@ const RU_TO_EN = {
   "Айдентика для AI-лаборатории Fastino — кейс": "Brand Identity for Fastino AI Lab — Case Study",
   "Промо материалы «Дикой охоты» — кейс": "Promo Materials for \"Wild Hunt\" — Case Study",
   "Промо-серии OneTwoTrip — кейс": "OneTwoTrip Promo Series — Case Study",
+  "Айдентика для кафе-бистро else — кейс": "Brand Identity for else Bistro Cafe — Case Study",
   "Концептуальная айдентика города Выборг — кейс": "Conceptual Identity for Vyborg — Case Study",
   "HR-постеры для офиса OneTwoTrip": "HR Posters for the OneTwoTrip Office",
   "AI-фотобиблиотека для B2B-сервиса": "AI Photo Library for a B2B Service",
@@ -74,6 +77,10 @@ const RU_TO_EN = {
     "A promo campaign built around a game-like hunt for great offers. A set of digital assets was created with bold contrast and adaptation for different formats.",
   "Подборка из пяти промо-кампаний OneTwoTrip: сезонные спецпроекты, акционные механики и имиджевые digital-волны. Для каждой серии собран самостоятельный визуальный ритм, но с единым брендовым каркасом — чтобы материалы узнавались сразу в разных каналах.":
     "A selection of five OneTwoTrip promo campaign series: seasonal specials, offer mechanics, and image-driven digital waves. Each series has its own visual rhythm while sharing one brand framework for instant recognition across channels.",
+  "else — концепт-айдентики для кафе-бистро в Академгородке, Новосибирск: тихого места для завтраков, кофе и работы за ноутбуком. Визуальный язык строится на дуальности «тёплого» и «цифрового»: живая гастрономическая атмосфера сочетается с технологичной городской средой. Эту идею раскрывают мягкая «человечная» типографика, нейтральный геометрический гротеск, спокойная оливковая база и яркие digital-градиенты.":
+    "else is a concept identity for a bistro cafe in Akademgorodok, Novosibirsk: a quiet place for breakfast, coffee, and laptop work. The visual language is built on a duality of warm and digital: a tactile food atmosphere meets a contemporary urban tech context. This is expressed through human-friendly typography, a neutral geometric grotesque, a calm olive base, and vivid digital gradients.",
+  "Фирменный пласт системы — абстрактное low-poly поле, одновременно напоминающее природный ландшафт и раннюю компьютерную графику. Маскот-барашек усиливает характер бренда: чуть наивный, ироничный и тёплый, как персонаж из старой игры. Айдентика масштабируется на меню, упаковку, стаканы, мерч, карты лояльности, соцсети и элементы пространства, формируя цельное, спокойное и запоминающееся «промежуточное пространство» между кафе и коворкингом.":
+    "A key brand layer is an abstract low-poly field that references both natural landscapes and early computer graphics. The sheep mascot adds personality: slightly naive, playful, and warm, like a character from an old game. The system scales across menus, packaging, cups, merch, loyalty cards, social media, and interior elements, shaping a calm and memorable in-between space between a cafe and a coworking spot.",
   "Концептуальная айдентика, построенная на исторической фактуре и образе города как культурного артефакта. Система объединяет графику, типографику и носители в цельный визуальный нарратив.":
     "A conceptual identity built on historical texture and the city image as a cultural artifact. The system unites graphics, typography, and media into one visual narrative.",
   "NefroHealth трансформирует подход к лечению почечных заболеваний — финансирует, развивает и внедряет передовые и жизненно важные технологии во всех сферах нефрологической помощи. Мы создали для них визуальную айдентику: современную и технологичную, отражающую большой опыт и экспертизу.":
@@ -89,6 +96,8 @@ const RU_TO_EN = {
   "печатные носители": "print assets",
   "презентация": "presentation",
   "брендбук": "brand book",
+  "типографика": "typography",
+  "упаковка": "packaging",
   "брендинг территории": "place branding",
   "мерч": "merch",
   "коммуникационная кампания": "communication campaign",
