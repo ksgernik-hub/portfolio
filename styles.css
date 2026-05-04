@@ -230,6 +230,10 @@ button,
   grid-column: span 3;
 }
 
+.project-top {
+  grid-column: span 3;
+}
+
 .project-4 {
   grid-column: span 2;
 }
@@ -240,6 +244,10 @@ button,
 
 .project-full .project__thumb {
   padding-top: 55%;
+}
+
+.project-top .project__thumb {
+  padding-top: 80%;
 }
 
 .other-projects {
@@ -456,8 +464,7 @@ button,
     padding-top: clamp(240px, 38vh, 360px);
   }
 
-  .site-header nav a[href="#about"],
-  .site-header nav a[href="./resume.html"] {
+  .site-header nav a:not([href="./resume.html"]) {
     display: none;
   }
 
