@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -34,7 +34,7 @@
         padding: 0;
         background: var(--bg);
         color: var(--text);
-        font-family: "Google Sans", "Product Sans", "Google Sans Text", "Manrope", "Inter", Arial, sans-serif;
+        font-family: "Golos Text", "Manrope", "Inter", Arial, sans-serif;
       }
 
       .site-header {
@@ -48,9 +48,7 @@
         align-items: center;
         justify-content: space-between;
         z-index: 30;
-        background: rgba(21, 21, 21, 0.36);
-        backdrop-filter: blur(14px) saturate(120%);
-        -webkit-backdrop-filter: blur(14px) saturate(120%);
+        background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none;
               }
 
       .brand,
@@ -317,6 +315,16 @@
         }
       }
 
+    
+    
+
+      .brand,
+      nav a,
+      .lang-switch button,
+      .lang-switch span {
+        color: #fff;
+        mix-blend-mode: difference;
+      }
     </style>
       <link rel="icon" type="image/png" href="./images/favicon-k.png" />
     <script src="./password-gate.js"></script>

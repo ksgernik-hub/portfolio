@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -34,7 +34,7 @@
         padding: 0;
         background: var(--bg);
         color: var(--text);
-        font-family: "Google Sans", "Product Sans", "Google Sans Text", "Manrope", "Inter", Arial, sans-serif;
+        font-family: "Golos Text", "Manrope", "Inter", Arial, sans-serif;
       }
 
       .site-header {
@@ -48,9 +48,7 @@
         align-items: center;
         justify-content: space-between;
         z-index: 30;
-        background: rgba(21, 21, 21, 0.36);
-        backdrop-filter: blur(14px) saturate(120%);
-        -webkit-backdrop-filter: blur(14px) saturate(120%);
+        background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none;
       }
 
       .brand,
@@ -186,6 +184,10 @@
 
       .case-row--45-55 {
         grid-template-columns: minmax(0, 0.77fr) minmax(0, 1.23fr);
+      }
+
+      .case-row--42-58 {
+        grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
       }
 
       .case-row--30-70 {
@@ -364,6 +366,16 @@
           filter: brightness(0.82);
         }
       }
+    
+    
+
+      .brand,
+      nav a,
+      .lang-switch button,
+      .lang-switch span {
+        color: #fff;
+        mix-blend-mode: difference;
+      }
     </style>
     <link rel="icon" type="image/png" href="./images/favicon-k.png" />
     <script src="./password-gate.js"></script>
@@ -394,14 +406,12 @@
       <section class="project-info">
         <div class="info-item">
           <strong>Проект</strong>
-          Концепт-айдентика для кафе-бистро «else»
+          Айдентика для кафе-бистро «else»
         </div>
 
         <div class="info-item">
           <strong>Описание</strong>
-          else — концепт-айдентики для кафе-бистро в Академгородке, Новосибирск: тихого места для завтраков, кофе и работы за ноутбуком. Визуальный язык строится на дуальности «тёплого» и «цифрового»: живая гастрономическая атмосфера встречается с городской технологичной средой.
-          <br /><br />
-          Фирменный пласт системы — абстрактное low-poly поле, отсылающее к природному ландшафту и ранней компьютерной графике. Маскот-барашек добавляет характер, а айдентика масштабируется на меню, упаковку, стаканы, мерч, карты лояльности, соцсети и элементы пространства.
+          else — айдентика для кафе-бистро в Академгородке, Новосибирск: тихого места для завтраков, кофе и работы за ноутбуком. Визуальный язык объединяет тёплую гастрономическую атмосферу и современную городскую среду и масштабируется на меню, упаковку, стаканы, мерч, карты лояльности, соцсети и элементы пространства.
         </div>
 
         <div class="info-item">
@@ -428,31 +438,45 @@
           <img src="./images/else-final/1-full.png" alt="Материал проекта else" loading="lazy" />
         </figure>
 
-        <div class="case-row case-row--42-58">
-          <figure class="case-item">
-            <img src="./images/else-final/2-right-smallsquare.png" alt="Материал проекта else" loading="lazy" />
-          </figure>
+        <div class="case-row case-row--58-42">
           <figure class="case-item">
             <img src="./images/else-final/2-left-bigsquare.png" alt="Материал проекта else" loading="lazy" />
           </figure>
+          <div class="case-embed" style="padding-top: 100%;">
+            <iframe
+              src="https://kinescope.io/embed/6heUstWawYtxb7aJesaZKt"
+              allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+              frameborder="0"
+              allowfullscreen
+              loading="lazy"
+              title="Видео проекта else"
+            ></iframe>
+          </div>
         </div>
 
         <figure class="case-item">
           <img src="./images/else-final/3-full.png" alt="Материал проекта else" loading="lazy" />
         </figure>
 
-        <div class="case-row case-row--58-42">
+        <div class="case-row case-row--42-58">
           <figure class="case-item">
-            <img src="./images/else-final/4-left-bigsquare.png" alt="Материал проекта else" loading="lazy" />
+            <img src="./images/else-final/4-left-smallsquare.png" alt="Материал проекта else" loading="lazy" />
           </figure>
           <figure class="case-item">
-            <img src="./images/else-final/4-right-smallsquare.png" alt="Материал проекта else" loading="lazy" />
+            <img src="./images/else-final/4-right-bigsquare.png" alt="Материал проекта else" loading="lazy" />
           </figure>
         </div>
 
-        <figure class="case-item">
-          <img src="./images/else-final/5-full.png" alt="Материал проекта else" loading="lazy" />
-        </figure>
+        <div class="case-embed" style="padding-top: 59.02%;">
+          <iframe
+            src="https://kinescope.io/embed/cFHiwkjALRRfnHB3JXVYtm"
+            allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+            frameborder="0"
+            allowfullscreen
+            loading="lazy"
+            title="Видео проекта else"
+          ></iframe>
+        </div>
 
         <div class="case-row case-row--58-42">
           <figure class="case-item">
@@ -465,10 +489,19 @@
 
         <div class="case-row case-row--42-58">
           <figure class="case-item">
-            <img src="./images/else-final/7-right-smallsquare.png" alt="Материал проекта else" loading="lazy" />
+            <div class="case-embed" style="padding-top: 100%;">
+              <iframe
+                src="https://kinescope.io/embed/mrMauaixi42FLm71hn8qSY"
+                allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+                frameborder="0"
+                allowfullscreen
+                loading="lazy"
+                title="Видео проекта else"
+              ></iframe>
+            </div>
           </figure>
           <figure class="case-item">
-            <img src="./images/else-final/7-left-bigsquare.png" alt="Материал проекта else" loading="lazy" />
+            <img src="./images/else-final/7-right-bigsquare.png" alt="Материал проекта else" loading="lazy" />
           </figure>
         </div>
 
@@ -480,9 +513,16 @@
           <figure class="case-item">
             <img src="./images/else-final/9-left-smallrect.png" alt="Материал проекта else" loading="lazy" />
           </figure>
-          <figure class="case-item">
-            <img src="./images/else-final/9-right-bigrect.png" alt="Материал проекта else" loading="lazy" />
-          </figure>
+          <div class="case-embed" style="padding-top: 85.31%;">
+            <iframe
+              src="https://kinescope.io/embed/kcBJbYcCMDHpzRB1AJRjJW"
+              allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;"
+              frameborder="0"
+              allowfullscreen
+              loading="lazy"
+              title="Видео проекта else"
+            ></iframe>
+          </div>
         </div>
 
         <div class="case-row case-row--58-42">
