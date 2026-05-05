@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -34,7 +34,7 @@
         padding: 0;
         background: var(--bg);
         color: var(--text);
-        font-family: "Golos Text", "Manrope", "Inter", Arial, sans-serif;
+        font-family: "Google Sans", "Google Sans Text", "Product Sans", "Inter", Arial, sans-serif;
       }
 
       .site-header {
@@ -350,10 +350,7 @@
 
       @media (max-width: 900px) { .project-contacts { grid-template-columns:1fr; grid-template-areas:"h" "list" "cta"; row-gap:0.75rem; } .project-contacts__cta { justify-content:flex-start; } }
         @media (max-width: 700px) {
-        .site-header nav a[href="./index.html#about"],
-        .site-header nav a[href="./resume.html"] {
-          display: none;
-        }
+        
       }
 
       @media (hover: hover) and (pointer: fine) {
@@ -371,6 +368,25 @@
       .lang-switch span {
         color: #fff;
         mix-blend-mode: difference;
+      }
+    
+
+      @media (max-width: 700px) {
+        .site-header nav a:not([href="./resume.html"]) {
+          display: none;
+        }
+
+        .case-item img,
+        .case-card img,
+        .case-media img {
+          height: auto !important;
+          object-fit: contain !important;
+        }
+
+        .case-card,
+        .case-media {
+          overflow: visible !important;
+        }
       }
     </style>
     <link rel="icon" type="image/png" href="./images/favicon-k.png" />

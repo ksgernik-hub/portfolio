@@ -135,3 +135,128 @@ if (customCursor && desktopPreviewMedia.matches) {
 
   window.requestAnimationFrame(animateCursor);
 }
+
+const initHeroNameImageLetters = () => {
+  const title = document.querySelector('.hero__title');
+  if (!title) return;
+
+  const ruLetterImageMap = {
+    'г': './images/letters-cyr/г.png',
+    'е': './images/letters-cyr/е.png',
+    'р': './images/letters-cyr/р.png',
+    'н': './images/letters-cyr/н.png',
+    'и': './images/letters-cyr/и.png',
+    'к': './images/letters-cyr/к.png',
+    'с': './images/letters-cyr/с.png',
+    'ю': './images/letters-cyr/ю.png',
+    'ш': './images/letters-cyr/ш.png',
+    'а': './images/letters-cyr/а.png'
+  };
+
+  const enNameLetterImageMap = {
+    'k': './images/letters-lat/name/k.png',
+    's': './images/letters-lat/name/s.png',
+    'u': './images/letters-lat/name/u.png',
+    'h': './images/letters-lat/name/h.png',
+    'a': './images/letters-lat/name/a.png'
+  };
+
+  const enSurnameLetterImageMap = {
+    'g': './images/letters-lat/surname/g.png',
+    'e': './images/letters-lat/surname/e.png',
+    'r': './images/letters-lat/surname/r.png',
+    'n': './images/letters-lat/surname/n.png',
+    'i': './images/letters-lat/surname/i.png',
+    'k': './images/letters-lat/surname/k.png'
+  };
+
+  const createLetterSpan = (char, variant = 'base', lineIndex = 0, lang = 'ru') => {
+    const span = document.createElement('span');
+    span.className = 'title-letter';
+    span.textContent = char;
+    const lower = char.toLowerCase();
+    let imagePath = '';
+
+    if (lang === 'ru') {
+      imagePath = variant === 'name' && lower === 'к'
+        ? './images/letters-cyr/к-name.png'
+        : ruLetterImageMap[lower];
+    } else {
+      if (variant === 'name') {
+        if (lower === 's' && lineIndex === 3) {
+          imagePath = './images/letters-lat/name/s-2.png';
+        } else {
+          imagePath = enNameLetterImageMap[lower];
+        }
+      } else {
+        imagePath = enSurnameLetterImageMap[lower];
+      }
+    }
+
+    if (imagePath) {
+      span.dataset.image = imagePath;
+      span.style.setProperty('--letter-image', `url('${imagePath}')`);
+      span.addEventListener('mouseenter', () => {
+        span.classList.add('is-image');
+      });
+      span.addEventListener('mouseleave', () => {
+        span.classList.remove('is-image');
+      });
+    }
+
+    return span;
+  };
+
+  const renderTitle = () => {
+    const isRu = document.documentElement.lang === 'ru';
+    const isEn = !isRu;
+
+    if (title.dataset.lettersReady === '1') {
+      return;
+    }
+
+    const firstWord = isRu ? 'КСЮША' : 'KSUSHA';
+    const lastWord = isRu ? 'ГЕРНИК' : 'GERNIK';
+    const lang = isRu ? 'ru' : 'en';
+    const firstLine = document.createElement('span');
+    firstLine.className = 'title-line';
+    for (const [index, char] of [...firstWord].entries()) {
+      if (char === ' ') {
+        firstLine.appendChild(document.createTextNode(' '));
+        continue;
+      }
+
+      firstLine.appendChild(createLetterSpan(char, 'name', index, lang));
+    }
+    const rebuilt = [firstLine];
+
+    if (lastWord) {
+      const secondLine = document.createElement('span');
+      secondLine.className = 'title-line';
+      for (const [index, char] of [...lastWord].entries()) {
+        secondLine.appendChild(createLetterSpan(char, 'surname', index, lang));
+      }
+      rebuilt.push(secondLine);
+    }
+
+    title.textContent = '';
+    rebuilt.forEach((node) => title.appendChild(node));
+    title.dataset.lettersReady = '1';
+  };
+
+  const resetIfNeeded = () => {
+    const isRu = document.documentElement.lang === 'ru';
+    title.dataset.lettersReady = '';
+    title.innerHTML = isRu
+      ? '<span class="title-line">КСЮША</span><span class="title-line">ГЕРНИК</span>'
+      : '<span class="title-line">KSUSHA</span><span class="title-line">GERNIK</span>';
+    window.requestAnimationFrame(renderTitle);
+  };
+
+  const langObserver = new MutationObserver(resetIfNeeded);
+  langObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+
+  resetIfNeeded();
+};
+
+initHeroNameImageLetters();

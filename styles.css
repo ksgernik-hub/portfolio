@@ -29,7 +29,7 @@ body {
   padding: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Golos Text", "Manrope", "Inter", Arial, sans-serif;
+  font-family: "Google Sans", "Google Sans Text", "Product Sans", "Inter", Arial, sans-serif;
 }
 
 main,
@@ -126,6 +126,40 @@ button,
   letter-spacing: -0.02em;
   line-height: 0.9;
   font-size: clamp(2.8rem, 15vw, 16rem);
+}
+
+.hero__title .title-letter {
+  display: inline-block;
+  vertical-align: baseline;
+  position: relative;
+  z-index: 0;
+  transition: transform 180ms ease;
+}
+
+.hero__title .title-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero__title .title-letter.is-image {
+  color: transparent;
+  z-index: 5;
+}
+
+.hero__title .title-letter.is-image::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  width: 0.86em;
+  height: 0.86em;
+  transform: translate(-50%, -54%);
+  background-image: var(--letter-image);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }
 
 .hero__lead {
@@ -231,7 +265,7 @@ button,
 }
 
 .project-top {
-  grid-column: span 3;
+  grid-column: 1 / -1;
 }
 
 .project-4 {
@@ -247,7 +281,7 @@ button,
 }
 
 .project-top .project__thumb {
-  padding-top: 80%;
+  padding-top: 55%;
 }
 
 .other-projects {
