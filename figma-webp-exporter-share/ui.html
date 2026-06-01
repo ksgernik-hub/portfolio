@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>WebP Export (with max size)</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #121316;
+      --muted: #5c6270;
+      --accent: #1463ff;
+      --accent-2: #0c4cd0;
+      --border: #e7e9f0;
+      --ok: #138a4a;
+      --warn: #b26a00;
+      --bad: #b42318;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #f9faff 0%, #f2f4fb 100%);
+      color: var(--text);
+      padding: 14px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: 0 6px 18px rgba(14, 34, 87, 0.06);
+    }
+
+    .title {
+      margin: 0 0 6px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.1px;
+    }
+
+    .hint {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    label {
+      font-size: 12px;
+      color: var(--muted);
+      min-width: 78px;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      background: #fff;
+      padding: 9px 10px;
+      font-size: 13px;
+      color: var(--text);
+      outline: none;
+    }
+
+    input[type="number"]:focus {
+      border-color: #8fb5ff;
+      box-shadow: 0 0 0 3px rgba(20, 99, 255, 0.14);
+    }
+
+    .actions {
+      margin-top: 12px;
+      display: flex;
+      gap: 8px;
+    }
+
+    button {
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.15s ease;
+    }
+
+    .primary {
+      background: var(--accent);
+      color: #fff;
+      flex: 1;
+    }
+
+    .primary:hover {
+      background: var(--accent-2);
+    }
+
+    .ghost {
+      background: #edf1ff;
+      color: #1f3b7c;
+    }
+
+    .ghost:hover {
+      background: #dfe8ff;
+    }
+
+    .status {
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--muted);
+      min-height: 18px;
+    }
+
+    .log {
+      margin-top: 10px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      max-height: 205px;
+      overflow: auto;
+      background: #fff;
+      padding: 8px;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+
+    .line {
+      padding: 4px 0;
+      border-bottom: 1px dashed #eef1f7;
+    }
+
+    .line:last-child {
+      border-bottom: 0;
+    }
+
+    .ok { color: var(--ok); }
+    .warn { color: var(--warn); }
+    .bad { color: var(--bad); }
+
+    .meta {
+      margin-top: 8px;
+      padding: 7px 8px;
+      border-radius: 8px;
+      background: #f7f9ff;
+      border: 1px solid #e6ecff;
+      font-size: 11px;
+      color: #314071;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1 class="title">Привет! 👋🏻</h1>
+    <p class="hint">Выделите несколько фреймов, укажите лимит в KB. Плагин подберет максимально возможное качество (и при необходимости уменьшит размер изображения), чтобы файл не превышал лимит.</p>
+
+    <div class="row">
+      <label for="maxKb">Max size (KB)</label>
+      <input id="maxKb" type="number" min="1" step="1" value="150" />
+    </div>
+
+    <div class="meta" id="selectionInfo">Выбрано: 0, подходит для экспорта: 0</div>
+
+    <div class="actions">
+      <button class="primary" id="exportBtn">Экспортировать</button>
+      <button class="ghost" id="closeBtn">Закрыть</button>
+    </div>
+
+    <div class="status" id="status"></div>
+    <div class="log" id="log"></div>
+  </div>
+
+  <script>
+    const maxKbInput = document.getElementById("maxKb");
+    const exportBtn = document.getElementById("exportBtn");
+    const closeBtn = document.getElementById("closeBtn");
+    const statusEl = document.getElementById("status");
+    const logEl = document.getElementById("log");
+    const selectionInfo = document.getElementById("selectionInfo");
+
+    function addLog(text, level = "") {
+      const line = document.createElement("div");
+      line.className = `line ${level}`.trim();
+      line.textContent = text;
+      logEl.appendChild(line);
+      logEl.scrollTop = logEl.scrollHeight;
+    }
+
+    function setStatus(text) {
+      statusEl.textContent = text;
+    }
+
+    function bytesToKb(bytes) {
+      return bytes / 1000;
+    }
+
+    function formatKb(bytes) {
+      return `${bytesToKb(bytes).toFixed(1)} KB`;
+    }
+
+    async function decodeImageFromBytes(uint8) {
+      const pngBlob = new Blob([uint8], { type: "image/png" });
+      const bitmap = await createImageBitmap(pngBlob);
+      return bitmap;
+    }
+
+    async function toWebPBlob(bitmap, quality, scale) {
+      const canvas = document.createElement("canvas");
+      canvas.width = Math.max(1, Math.round(bitmap.width * scale));
+      canvas.height = Math.max(1, Math.round(bitmap.height * scale));
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+
+      return new Promise((resolve) => {
+        canvas.toBlob(
+          (blob) => {
+            resolve(blob);
+          },
+          "image/webp",
+          quality
+        );
+      });
+    }
+
+    async function findBestQuality(bitmap, maxBytes, scale) {
+      let low = 0.05;
+      let high = 1.0;
+      let bestBlob = null;
+      let bestQuality = 0;
+
+      for (let i = 0; i < 8; i += 1) {
+        const q = i === 0 ? high : (low + high) / 2;
+        const blob = await toWebPBlob(bitmap, q, scale);
+
+        if (!blob) continue;
+
+        if (blob.size <= maxBytes) {
+          bestBlob = blob;
+          bestQuality = q;
+          low = q;
+        } else {
+          high = q;
+        }
+      }
+
+      if (!bestBlob) {
+        const minBlob = await toWebPBlob(bitmap, 0.05, scale);
+        if (minBlob && minBlob.size <= maxBytes) {
+          return { blob: minBlob, quality: 0.05, scale, fitted: true };
+        }
+        return { blob: minBlob, quality: 0.05, scale, fitted: false };
+      }
+
+      return { blob: bestBlob, quality: bestQuality, scale, fitted: true };
+    }
+
+    async function fitWebPUnderLimit(bitmap, maxBytes) {
+      const scales = [1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3];
+      let lastAttempt = null;
+
+      for (const scale of scales) {
+        const result = await findBestQuality(bitmap, maxBytes, scale);
+        lastAttempt = result;
+
+        if (result.fitted) {
+          return result;
+        }
+      }
+
+      return lastAttempt;
+    }
+
+    function downloadBlob(blob, filename) {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1500);
+    }
+
+    function createCrc32Table() {
+      const table = new Uint32Array(256);
+      for (let n = 0; n < 256; n += 1) {
+        let c = n;
+        for (let k = 0; k < 8; k += 1) {
+          c = (c & 1) ? (0xedb88320 ^ (c >>> 1)) : (c >>> 1);
+        }
+        table[n] = c >>> 0;
+      }
+      return table;
+    }
+
+    const CRC32_TABLE = createCrc32Table();
+
+    function crc32(bytes) {
+      let crc = 0xffffffff;
+      for (let i = 0; i < bytes.length; i += 1) {
+        const idx = (crc ^ bytes[i]) & 0xff;
+        crc = (CRC32_TABLE[idx] ^ (crc >>> 8)) >>> 0;
+      }
+      return (crc ^ 0xffffffff) >>> 0;
+    }
+
+    function dosTimeDate(date) {
+      const year = Math.max(1980, date.getFullYear());
+      const month = date.getMonth() + 1;
+      const day = date.getDate();
+      const hours = date.getHours();
+      const minutes = date.getMinutes();
+      const seconds = Math.floor(date.getSeconds() / 2);
+
+      const dosTime = (hours << 11) | (minutes << 5) | seconds;
+      const dosDate = ((year - 1980) << 9) | (month << 5) | day;
+      return { dosTime, dosDate };
+    }
+
+    function u16le(value) {
+      const out = new Uint8Array(2);
+      out[0] = value & 0xff;
+      out[1] = (value >>> 8) & 0xff;
+      return out;
+    }
+
+    function u32le(value) {
+      const out = new Uint8Array(4);
+      out[0] = value & 0xff;
+      out[1] = (value >>> 8) & 0xff;
+      out[2] = (value >>> 16) & 0xff;
+      out[3] = (value >>> 24) & 0xff;
+      return out;
+    }
+
+    function concatUint8(parts, totalLength) {
+      const out = new Uint8Array(totalLength);
+      let offset = 0;
+      for (const part of parts) {
+        out.set(part, offset);
+        offset += part.length;
+      }
+      return out;
+    }
+
+    function createZip(entries) {
+      const encoder = new TextEncoder();
+      const now = new Date();
+      const { dosTime, dosDate } = dosTimeDate(now);
+
+      const localParts = [];
+      const centralParts = [];
+      let localSize = 0;
+      let centralSize = 0;
+      let offset = 0;
+
+      for (const entry of entries) {
+        const nameBytes = encoder.encode(entry.name);
+        const dataBytes = entry.data;
+        const size = dataBytes.length;
+        const checksum = crc32(dataBytes);
+
+        const localHeader = [
+          u32le(0x04034b50),
+          u16le(20),
+          u16le(0),
+          u16le(0),
+          u16le(dosTime),
+          u16le(dosDate),
+          u32le(checksum),
+          u32le(size),
+          u32le(size),
+          u16le(nameBytes.length),
+          u16le(0),
+          nameBytes,
+        ];
+        const localHeaderLen = 30 + nameBytes.length;
+        const localEntry = concatUint8([...localHeader, dataBytes], localHeaderLen + size);
+        localParts.push(localEntry);
+        localSize += localEntry.length;
+
+        const centralHeader = concatUint8(
+          [
+            u32le(0x02014b50),
+            u16le(20),
+            u16le(20),
+            u16le(0),
+            u16le(0),
+            u16le(dosTime),
+            u16le(dosDate),
+            u32le(checksum),
+            u32le(size),
+            u32le(size),
+            u16le(nameBytes.length),
+            u16le(0),
+            u16le(0),
+            u16le(0),
+            u16le(0),
+            u32le(0),
+            u32le(offset),
+            nameBytes,
+          ],
+          46 + nameBytes.length
+        );
+        centralParts.push(centralHeader);
+        centralSize += centralHeader.length;
+        offset += localEntry.length;
+      }
+
+      const endRecord = concatUint8(
+        [
+          u32le(0x06054b50),
+          u16le(0),
+          u16le(0),
+          u16le(entries.length),
+          u16le(entries.length),
+          u32le(centralSize),
+          u32le(localSize),
+          u16le(0),
+        ],
+        22
+      );
+
+      const zipBytes = concatUint8([...localParts, ...centralParts, endRecord], localSize + centralSize + 22);
+      return new Blob([zipBytes], { type: "application/zip" });
+    }
+
+    function pad2(n) {
+      return String(n).padStart(2, "0");
+    }
+
+    function buildArchiveName(maxKb) {
+      const now = new Date();
+      const yyyy = now.getFullYear();
+      const mm = pad2(now.getMonth() + 1);
+      const dd = pad2(now.getDate());
+      const hh = pad2(now.getHours());
+      const mi = pad2(now.getMinutes());
+      return `webp-export-${yyyy}-${mm}-${dd}-${hh}${mi}-${Math.round(maxKb)}kb.zip`;
+    }
+
+    async function processExportItems(items, maxKb) {
+      const maxBytes = Math.floor(maxKb * 1000);
+      let success = 0;
+      let failed = 0;
+      const zipEntries = [];
+
+      for (let i = 0; i < items.length; i += 1) {
+        const item = items[i];
+        const step = `${i + 1}/${items.length}`;
+
+        if (item.error) {
+          failed += 1;
+          addLog(`[${step}] ${item.name}: ошибка экспорта PNG (${item.error})`, "bad");
+          continue;
+        }
+
+        setStatus(`Обработка ${step}: ${item.name}`);
+
+        try {
+          const bitmap = await decodeImageFromBytes(item.bytes);
+          const fitted = await fitWebPUnderLimit(bitmap, maxBytes);
+
+          if (!fitted || !fitted.blob) {
+            failed += 1;
+            addLog(`[${step}] ${item.name}: не удалось получить WebP`, "bad");
+            continue;
+          }
+
+          const qualityPct = Math.round((fitted.quality || 0) * 100);
+          const scalePct = Math.round((fitted.scale || 1) * 100);
+          const outputName = `${item.name || "frame"}.webp`;
+
+          if (fitted.blob.size <= maxBytes) {
+            const webpBytes = new Uint8Array(await fitted.blob.arrayBuffer());
+            zipEntries.push({ name: outputName, data: webpBytes });
+            success += 1;
+            addLog(
+              `[${step}] ${outputName}: ${formatKb(fitted.blob.size)}, качество ${qualityPct}%, размер ${scalePct}%`,
+              "ok"
+            );
+          } else {
+            failed += 1;
+            addLog(
+              `[${step}] ${outputName}: не влез в лимит (${formatKb(fitted.blob.size)} > ${maxKb} KB)`,
+              "warn"
+            );
+          }
+        } catch (error) {
+          failed += 1;
+          addLog(`[${step}] ${item.name}: ${String(error)}`, "bad");
+        }
+      }
+
+      if (zipEntries.length > 0) {
+        const archiveName = buildArchiveName(maxKb);
+        const zipBlob = createZip(zipEntries);
+        downloadBlob(zipBlob, archiveName);
+        addLog(`Архив создан: ${archiveName}`, "ok");
+        setStatus(`Готово. Успешно: ${success}, с ошибкой: ${failed}. Архив скачан.`);
+      } else {
+        setStatus(`Готово. Успешно: ${success}, с ошибкой: ${failed}. Нечего архивировать.`);
+      }
+    }
+
+    exportBtn.addEventListener("click", () => {
+      const maxKb = Number(maxKbInput.value);
+      logEl.innerHTML = "";
+
+      parent.postMessage(
+        {
+          pluginMessage: {
+            type: "run-export",
+            maxKb,
+          },
+        },
+        "*"
+      );
+    });
+
+    closeBtn.addEventListener("click", () => {
+      parent.postMessage({ pluginMessage: { type: "close" } }, "*");
+    });
+
+    window.onmessage = async (event) => {
+      const msg = event.data.pluginMessage;
+      if (!msg) return;
+
+      if (msg.type === "selection-info") {
+        selectionInfo.textContent = `Выбрано: ${msg.selectedCount}, подходит для экспорта: ${msg.exportableCount}`;
+      }
+
+      if (msg.type === "export-error") {
+        setStatus(msg.message);
+        addLog(msg.message, "bad");
+      }
+
+      if (msg.type === "export-started") {
+        setStatus(`Подготовка PNG из Figma (${msg.total})...`);
+        addLog(`Старт экспорта. Лимит: ${msg.maxKb} KB, элементов: ${msg.total}`);
+      }
+
+      if (msg.type === "export-png-ready") {
+        await processExportItems(msg.items || [], msg.maxKb);
+      }
+    };
+  </script>
+</body>
+</html>

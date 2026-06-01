@@ -22,6 +22,10 @@
         --line: rgba(255, 255, 255, 0.14);
         --case-gap-y: 1.2rem;
         --case-gap-x: 0.7rem;
+        --case-big-col: 1.23fr;
+        --case-small-col: 0.77fr;
+        --case-big-rect-col: 1.45fr;
+        --case-small-rect-col: 0.55fr;
       }
 
       * {
@@ -52,7 +56,9 @@
               }
 
       .brand,
-      nav a {
+      nav a,
+      .lang-switch button,
+      .lang-switch span {
         color: var(--text);
         text-decoration: none;
         text-transform: uppercase;
@@ -169,7 +175,7 @@
 
       .case-grid-two {
         display: grid;
-        grid-template-columns: minmax(0, 1.23fr) minmax(0, 0.77fr);
+        grid-template-columns: minmax(0, var(--case-big-col)) minmax(0, var(--case-small-col));
         column-gap: var(--case-gap-x);
         align-items: start;
       }
@@ -179,7 +185,24 @@
       }
 
       .case-grid-two--small-left {
-        grid-template-columns: minmax(0, 0.77fr) minmax(0, 1.23fr);
+        grid-template-columns: minmax(0, var(--case-small-col)) minmax(0, var(--case-big-col));
+      }
+
+      .case-grid-two--rect {
+        grid-template-columns: minmax(0, var(--case-big-rect-col)) minmax(0, var(--case-small-rect-col));
+      }
+
+      .case-grid-two--rect.case-grid-two--small-left {
+        grid-template-columns: minmax(0, var(--case-small-rect-col)) minmax(0, var(--case-big-rect-col));
+      }
+
+      .case-grid-two--rect .case-card {
+        aspect-ratio: auto;
+      }
+
+      .case-grid-two--rect .case-card img {
+        height: auto;
+        object-fit: contain;
       }
 
       .tag-list { display:flex; flex-wrap:wrap; gap:0.35rem; margin-top:0.06rem; }
@@ -247,6 +270,10 @@
 
         .case-grid-two .case-card {
           aspect-ratio: 4 / 3;
+        }
+
+        .case-grid-two--rect .case-card {
+          aspect-ratio: auto;
         }
       }
 

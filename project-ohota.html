@@ -4,14 +4,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 <style>
-:root{--bg:#151515;--text:#f0f0f0;--muted:#9e9e9e;--line:rgba(255,255,255,.14);--case-gap-y:1.2rem;--case-gap-x:.7rem;}*{box-sizing:border-box;}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:"Google Sans", "Google Sans Text", "Product Sans", "Inter", Arial, sans-serif;}
+:root{--bg:#151515;--text:#f0f0f0;--muted:#9e9e9e;--line:rgba(255,255,255,.14);--case-gap-y:1.2rem;--case-gap-x:.7rem;--case-big-col:1.23fr;--case-small-col:.77fr;--case-big-rect-col:1.45fr;--case-small-rect-col:0.55fr;}*{box-sizing:border-box;}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:"Google Sans", "Google Sans Text", "Product Sans", "Inter", Arial, sans-serif;}
 .site-header{position:fixed;inset:0 0 auto 0;height:35px;width:100%;margin:0;padding-inline:1rem;display:flex;align-items:center;justify-content:space-between;z-index:30;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;}
 .brand,nav a{color:var(--text);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;}nav{display:flex;gap:1.35rem;} .lang-switch{display:flex;align-items:center;gap:.28rem;margin-left:.8rem;} .lang-switch button{border:0;background:transparent;color:var(--muted);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:0;cursor:pointer;} .lang-switch button.is-active{color:var(--text);} .lang-switch span{color:var(--muted);font-size:.62rem;}
 .page,.site-footer{width:min(1500px,calc(100% - 2rem));margin:0 auto;}.page{padding:3.1rem 0 2rem;}.back-text{display:inline-block;color:var(--muted);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:.68rem;margin:0 0 .75rem;}
 .hero-cover{width:100%;aspect-ratio:16/8.6;min-height:300px;background:url('./images/promo-final/hero-cover.png') center/cover no-repeat;}
 .project-info { margin-top: 1.35rem; padding: 1.4rem 1.8rem; display: grid; grid-template-columns: 1fr 2fr 1fr 1.35fr 1fr; gap: 1rem; align-items: start; }.info-item{min-width:0;font-size:.78rem;line-height:1.25;}.info-item strong{display:block;font-weight:500;font-size:.76rem;color:var(--muted);margin-bottom:.26rem;text-transform:uppercase;letter-spacing:.07em;}
 .case-content{margin-top:6rem;display:grid;row-gap:var(--case-gap-y);} .case-content>*,.case-card{margin:0;} .case-media,.case-card{width:100%;overflow:hidden;} .case-media img,.case-media video,.case-card img,.case-card video{width:100%;height:100%;display:block;object-fit:cover;} .case-embed{position:relative;width:100%;} .case-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none;}
-.case-grid-two{display:grid;grid-template-columns:minmax(0,1.23fr) minmax(0,0.77fr);column-gap:var(--case-gap-x);align-items:start;} .case-grid-two .case-card{aspect-ratio:1/1;} .case-grid-two--small-left{grid-template-columns:minmax(0,0.77fr) minmax(0,1.23fr);} .case-grid-two--rect .case-card{aspect-ratio:auto;} .case-grid-two--rect .case-card img{height:auto;object-fit:contain;} .tag-list { display:flex; flex-wrap:wrap; gap:0.35rem; margin-top:0.06rem; }      .tag { display:inline-flex; align-items:center; padding:0.28rem 0.56rem; border:0; background:rgba(255,255,255,0.03); color:var(--muted); font-size:0.66rem; letter-spacing:0.05em; text-transform:uppercase; line-height:1.02; }      .contributors { margin-top:0.38rem; color:var(--muted); font-size:0.66rem; line-height:1.34; }      .contributors span { color:var(--muted); opacity:0.9; }      .project-site { margin-top:0.42rem; }      .project-site a { color:var(--muted); text-decoration:underline; text-underline-offset:2px; }.project-bottom { margin-top: 1.1rem; }
+.case-grid-two{display:grid;grid-template-columns:minmax(0,var(--case-big-col)) minmax(0,var(--case-small-col));column-gap:var(--case-gap-x);align-items:start;}
+.case-grid-two--small-left{grid-template-columns:minmax(0,var(--case-small-col)) minmax(0,var(--case-big-col));}
+ .case-grid-two--rect{grid-template-columns:minmax(0,var(--case-big-rect-col)) minmax(0,var(--case-small-rect-col));}
+.case-grid-two--rect.case-grid-two--small-left{grid-template-columns:minmax(0,var(--case-small-rect-col)) minmax(0,var(--case-big-rect-col));}
+.case-grid-two--rect .case-card{aspect-ratio:auto;} .case-grid-two--rect .case-card img{height:auto;object-fit:contain;} .tag-list { display:flex; flex-wrap:wrap; gap:0.35rem; margin-top:0.06rem; }      .tag { display:inline-flex; align-items:center; padding:0.28rem 0.56rem; border:0; background:rgba(255,255,255,0.03); color:var(--muted); font-size:0.66rem; letter-spacing:0.05em; text-transform:uppercase; line-height:1.02; }      .contributors { margin-top:0.38rem; color:var(--muted); font-size:0.66rem; line-height:1.34; }      .contributors span { color:var(--muted); opacity:0.9; }      .project-site { margin-top:0.42rem; }      .project-site a { color:var(--muted); text-decoration:underline; text-underline-offset:2px; }.project-bottom { margin-top: 1.1rem; }
 .back-to-projects{color:var(--text);text-decoration:none;text-transform:uppercase;font-size:.78rem;letter-spacing:.08em;border:1px solid var(--line);padding:.6rem .9rem;display:inline-flex;} .site-footer{padding:1.2rem 0 1.5rem;} .site-footer p{margin:0;color:var(--muted);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;}
 .custom-cursor{position:fixed;top:0;left:0;width:8px;height:8px;border-radius:999px;background:#fff;pointer-events:none;transform:translate3d(-9999px,-9999px,0);z-index:130;display:none;}
 @media (max-width:980px){.project-info{grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;padding:0.55rem 0.6rem;}.case-content{margin-top:4rem;row-gap:.9rem;}.case-grid-two{grid-template-columns:1fr;row-gap:.9rem;}.case-grid-two .case-card{aspect-ratio:4/3;}.case-grid-two--rect .case-card{aspect-ratio:auto;}}
@@ -64,9 +68,7 @@
     
 
       .brand,
-      nav a,
-      .lang-switch button,
-      .lang-switch span {
+      nav a {
         color: #fff;
         mix-blend-mode: difference;
       }
@@ -100,7 +102,121 @@
       </div></header>
 <main class="page"><a class="back-text" href="./index.html#projects">← к другим проектам</a><div class="hero-cover" role="img" aria-label="Обложка проекта"></div>
 <section class="project-info"><div class="info-item"><strong>Проект</strong>Промо-серии OneTwoTrip</div><div class="info-item"><strong>Описание</strong>Подборка из пяти промо-кампаний OneTwoTrip: сезонные спецпроекты, акционные механики и имиджевые digital-волны. Для каждой серии собран самостоятельный визуальный ритм, но с единым брендовым каркасом — чтобы материалы узнавались сразу в разных каналах.</div><div class="info-item"><strong>Роль</strong>Коммуникационный дизайнер</div><div class="info-item"><strong>Услуги</strong><div class="tag-list"><span class="tag">промо-кампания</span><span class="tag">key visual</span><span class="tag">SMM</span><span class="tag">digital-баннеры</span><span class="tag">спецпроект</span><span class="tag">арт-дирекшн</span></div></div></section>
-<section class="case-content" aria-label="Материалы кейса"><div class="case-grid-two case-grid-two--small-left case-grid-two--rect"><figure class="case-card"><div class="case-embed" style="padding-top:122.41%;"><iframe src="https://kinescope.io/embed/sPrfJPo7ib6KChS9h7WmB5" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" allowfullscreen></iframe></div></figure><figure class="case-card"><img src="./images/promo-final/1-right-bigrect.png" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two"><figure class="case-card"><img src="./images/promo-final/2-left-bigsquare.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="./images/promo-final/2-right-smallsquare.png" alt="Материал проекта" loading="lazy" /></figure></div><figure class="case-card case-media"><img src="./images/promo-final/3-full.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card case-media"><div class="case-embed" style="padding-top:59.02%;"><iframe src="https://kinescope.io/embed/jE1kF6sufEASLmoD9Zdjzg" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" allowfullscreen></iframe></div></figure><div class="case-grid-two"><figure class="case-card"><img src="./images/promo-final/5-left-bigsquare.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="./images/promo-final/5-right-smallsquare.png" alt="Материал проекта" loading="lazy" /></figure></div><figure class="case-card case-media"><div class="case-embed" style="padding-top:54.93%;"><iframe src="https://kinescope.io/embed/32ioTBCqmpsvxAwMM9r7qL" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" allowfullscreen></iframe></div></figure><div class="case-grid-two"><figure class="case-card"><img src="./images/promo-final/7-right-smallsquare.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="./images/promo-final/7-left-bigsquare.png" alt="Материал проекта" loading="lazy" /></figure></div><div class="case-grid-two"><figure class="case-card"><img src="./images/promo-final/8-left-bigsquare.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="./images/promo-final/8-right-smallsquare.png" alt="Материал проекта" loading="lazy" /></figure></div><figure class="case-card case-media"><img src="./images/promo-final/9-full.png" alt="Материал проекта" loading="lazy" /></figure><div class="case-grid-two"><figure class="case-card"><img src="./images/promo-final/10-left-bigsquare.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="./images/promo-final/10-right-smallsquare.png" alt="Материал проекта" loading="lazy" /></figure></div><figure class="case-card case-media"><img src="./images/promo-final/11-full.png" alt="Материал проекта" loading="lazy" /></figure><div class="case-grid-two case-grid-two--small-left case-grid-two--rect"><figure class="case-card"><img src="./images/promo-final/12-left-smallrect.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="./images/promo-final/12-right-bigrect.png" alt="Материал проекта" loading="lazy" /></figure></div><figure class="case-card case-media"><img src="./images/promo-final/13-full.png" alt="Материал проекта" loading="lazy" /></figure><div class="case-grid-two case-grid-two--rect"><figure class="case-card"><img src="./images/promo-final/14-right-bigrect.png" alt="Материал проекта" loading="lazy" /></figure><figure class="case-card"><img src="./images/promo-final/14-left-smallrect.png" alt="Материал проекта" loading="lazy" /></figure></div><figure class="case-card case-media"><img src="./images/promo-final/15-full.png" alt="Материал проекта" loading="lazy" /></figure></section>
+<section class="case-content" aria-label="Материалы кейса">
+  <!-- rect-pair: small left / big right -->
+  <div class="case-grid-two case-grid-two--small-left case-grid-two--rect">
+    <figure class="case-card">
+      <div class="case-embed" style="padding-top:122.41%;">
+        <iframe src="https://kinescope.io/embed/sPrfJPo7ib6KChS9h7WmB5" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" allowfullscreen></iframe>
+      </div>
+    </figure>
+    <figure class="case-card">
+      <img src="./images/promo-final/1-right-bigrect.png" alt="Материал проекта" loading="lazy" />
+    </figure>
+  </div>
+
+  <!-- square-pair: big left / small right -->
+  <div class="case-grid-two">
+    <figure class="case-card">
+      <img src="./images/promo-final/2-left-bigsquare.png" alt="Материал проекта" loading="lazy" />
+    </figure>
+    <figure class="case-card">
+      <img src="./images/promo-final/2-right-smallsquare.png" alt="Материал проекта" loading="lazy" />
+    </figure>
+  </div>
+
+  <figure class="case-card case-media">
+    <img src="./images/promo-final/3-full.png" alt="Материал проекта" loading="lazy" />
+  </figure>
+
+  <figure class="case-card case-media">
+    <div class="case-embed" style="padding-top:59.02%;">
+      <iframe src="https://kinescope.io/embed/jE1kF6sufEASLmoD9Zdjzg" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" allowfullscreen></iframe>
+    </div>
+  </figure>
+
+  <!-- square-pair: big left / small right -->
+  <div class="case-grid-two">
+    <figure class="case-card">
+      <img src="./images/promo-final/5-left-bigsquare.png" alt="Материал проекта" loading="lazy" />
+    </figure>
+    <figure class="case-card">
+      <img src="./images/promo-final/5-right-smallsquare.png" alt="Материал проекта" loading="lazy" />
+    </figure>
+  </div>
+
+  <figure class="case-card case-media">
+    <div class="case-embed" style="padding-top:54.93%;">
+      <iframe src="https://kinescope.io/embed/32ioTBCqmpsvxAwMM9r7qL" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" allowfullscreen></iframe>
+    </div>
+  </figure>
+
+  <!-- square-pair: small left / big right -->
+  <div class="case-grid-two case-grid-two--small-left">
+    <figure class="case-card">
+      <img src="./images/promo-final/7-left-smallsquare.png" alt="Материал проекта" loading="lazy" />
+    </figure>
+    <figure class="case-card">
+      <img src="./images/promo-final/7-right-bigsquare.png" alt="Материал проекта" loading="lazy" />
+    </figure>
+  </div>
+
+  <!-- square-pair: big left / small right -->
+  <div class="case-grid-two">
+    <figure class="case-card">
+      <img src="./images/promo-final/8-left-bigsquare.png" alt="Материал проекта" loading="lazy" />
+    </figure>
+    <figure class="case-card">
+      <img src="./images/promo-final/8-right-smallsquare.png" alt="Материал проекта" loading="lazy" />
+    </figure>
+  </div>
+
+  <figure class="case-card case-media">
+    <img src="./images/promo-final/9-full.png" alt="Материал проекта" loading="lazy" />
+  </figure>
+
+  <!-- square-pair: big left / small right -->
+  <div class="case-grid-two">
+    <figure class="case-card">
+      <img src="./images/promo-final/10-left-bigsquare.png" alt="Материал проекта" loading="lazy" />
+    </figure>
+    <figure class="case-card">
+      <img src="./images/promo-final/10-right-smallsquare.png" alt="Материал проекта" loading="lazy" />
+    </figure>
+  </div>
+
+  <figure class="case-card case-media">
+    <img src="./images/promo-final/11-full.png" alt="Материал проекта" loading="lazy" />
+  </figure>
+
+  <!-- rect-pair: small left / big right -->
+  <div class="case-grid-two case-grid-two--small-left case-grid-two--rect">
+    <figure class="case-card">
+      <img src="./images/promo-final/12-left-smallrect.png" alt="Материал проекта" loading="lazy" />
+    </figure>
+    <figure class="case-card">
+      <img src="./images/promo-final/12-right-bigrect.png" alt="Материал проекта" loading="lazy" />
+    </figure>
+  </div>
+
+  <figure class="case-card case-media">
+    <img src="./images/promo-final/13-full.png" alt="Материал проекта" loading="lazy" />
+  </figure>
+
+  <!-- rect-pair: big left / small right -->
+  <div class="case-grid-two case-grid-two--rect">
+    <figure class="case-card">
+      <img src="./images/promo-final/14-left-bigrect.png" alt="Материал проекта" loading="lazy" />
+    </figure>
+    <figure class="case-card">
+      <img src="./images/promo-final/14-right-smallrect.png" alt="Материал проекта" loading="lazy" />
+    </figure>
+  </div>
+
+  <figure class="case-card case-media">
+    <img src="./images/promo-final/15-full.png" alt="Материал проекта" loading="lazy" />
+  </figure>
+</section>
 <section class="project-bottom"><a class="back-to-projects" href="./index.html#projects">← К другим проектам</a></section></main>
       <section id="contacts" class="contacts project-contacts">
         <h2>КОНТАКТЫ</h2>

@@ -34,6 +34,10 @@ const RU_TO_EN = {
     "Worked with: OneTwoTrip, Clay, TravelLine, Strelka KB, Half-Price Punk Spiders, Mission Control, DAL Group of Companies.",
   "Коммуникационный и бренд-дизайн для проектов, которые хотят быть понятными и сильными визуально.":
     "Communication and brand design for projects that need to be clear and visually strong.",
+  "Коммуникационный и бренд-дизайнер, мне близок ясный и содержательный дизайн. Интересуюсь новыми технологиями и нейросетями, постоянно учусь, расту и ценю работу в амбициозных и внимательных командах : )":
+    "Communication and brand designer focused on clear and meaningful design. I am interested in new technologies and AI tools, keep learning, and value working in ambitious and thoughtful teams.",
+  "Коммуникационный и бренд-дизайнер, мне близок ясный и содержательный дизайн. Интересуюсь новыми технологиями и нейросетями, постоянно учусь, расту и ценю работу в амбициозных и внимательных командах :)":
+    "Communication and brand designer focused on clear and meaningful design. I am interested in new technologies and AI tools, keep learning, and value working in ambitious and thoughtful teams.",
   "коммуникационный и бренд-дизайнер": "communication & brand designer",
   "коммуникационный дизайнер": "communication designer",
 
@@ -46,6 +50,7 @@ const RU_TO_EN = {
   "Айдентика для кафе-бистро «else»": "Brand Identity for “else” Bistro Cafe",
   "Промо-материалы «Дикой охоты»": "Promotional Materials for \"Wild Hunt\"",
   "Промо-серии OneTwoTrip": "OneTwoTrip Promo Series",
+  "Промо-материалы OneTwoTrip": "OneTwoTrip Promotional Materials",
   "Концептуальная айдентика города Выборг": "Conceptual Identity for Vyborg",
   "Айдентика для компании в сфере нефрологии": "Brand Identity for a Nephrology Company",
   "Айдентика лыжного забега": "Ski Race Identity",

@@ -22,6 +22,10 @@
         --line: rgba(255, 255, 255, 0.14);
         --case-gap-y: 1.2rem;
         --case-gap-x: 0.7rem;
+        --case-big-col: 1.23fr;
+        --case-small-col: 0.77fr;
+        --case-big-rect-col: 1.45fr;
+        --case-small-rect-col: 0.55fr;
       }
 
       * {
@@ -175,23 +179,23 @@
       }
 
       .case-row--58-42 {
-        grid-template-columns: minmax(0, 1.23fr) minmax(0, 0.77fr);
+        grid-template-columns: minmax(0, var(--case-big-col)) minmax(0, var(--case-small-col));
       }
 
       .case-row--55-45 {
-        grid-template-columns: minmax(0, 1.48fr) minmax(0, 0.52fr);
+        grid-template-columns: minmax(0, var(--case-big-rect-col)) minmax(0, var(--case-small-rect-col));
       }
 
       .case-row--45-55 {
-        grid-template-columns: minmax(0, 0.77fr) minmax(0, 1.23fr);
+        grid-template-columns: minmax(0, var(--case-small-col)) minmax(0, var(--case-big-col));
       }
 
       .case-row--30-70 {
-        grid-template-columns: minmax(0, 0.52fr) minmax(0, 1.48fr);
+        grid-template-columns: minmax(0, var(--case-small-rect-col)) minmax(0, var(--case-big-rect-col));
       }
 
       .case-row--70-30 {
-        grid-template-columns: minmax(0, 1.48fr) minmax(0, 0.52fr);
+        grid-template-columns: minmax(0, var(--case-big-rect-col)) minmax(0, var(--case-small-rect-col));
       }
 
       .case-row--stack-right {

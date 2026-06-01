@@ -22,6 +22,10 @@
         --line: rgba(255, 255, 255, 0.14);
         --case-gap-y: 1.2rem;
         --case-gap-x: 0.7rem;
+        --case-big-col: 1.23fr;
+        --case-small-col: 0.77fr;
+        --case-big-rect-col: 1.45fr;
+        --case-small-rect-col: 0.55fr;
       }
 
       * {
@@ -150,15 +154,15 @@
       }
 
       .case-row--60-40 {
-        grid-template-columns: minmax(0, 1.23fr) minmax(0, 0.77fr);
+        grid-template-columns: minmax(0, var(--case-big-col)) minmax(0, var(--case-small-col));
       }
 
       .case-row--40-60 {
-        grid-template-columns: minmax(0, 0.77fr) minmax(0, 1.23fr);
+        grid-template-columns: minmax(0, var(--case-small-col)) minmax(0, var(--case-big-col));
       }
 
       .case-row--26-74 {
-        grid-template-columns: minmax(0, 0.52fr) minmax(0, 1.48fr);
+        grid-template-columns: minmax(0, var(--case-small-rect-col)) minmax(0, var(--case-big-rect-col));
       }
 
       .case-row--50-50 {
@@ -166,15 +170,15 @@
       }
 
       .case-row--34-66 {
-        grid-template-columns: minmax(0, 0.52fr) minmax(0, 1.48fr);
+        grid-template-columns: minmax(0, var(--case-small-rect-col)) minmax(0, var(--case-big-rect-col));
       }
 
       .case-row--44-56 {
-        grid-template-columns: minmax(0, 0.52fr) minmax(0, 1.48fr);
+        grid-template-columns: minmax(0, var(--case-small-rect-col)) minmax(0, var(--case-big-rect-col));
       }
 
       .case-row--72-28 {
-        grid-template-columns: minmax(0, 1.23fr) minmax(0, 0.77fr);
+        grid-template-columns: minmax(0, var(--case-big-rect-col)) minmax(0, var(--case-small-rect-col));
       }
 
       .case-item {
@@ -435,10 +439,10 @@
 
         <div class="case-row case-row--72-28">
           <figure class="case-item">
-            <img src="./images/nefro-final/13-tote.jpg" alt="Шоппер в фирменном стиле" loading="lazy" />
+            <img src="./images/nefro-final/7-left-bigrect.png" alt="Шоппер в фирменном стиле" loading="lazy" />
           </figure>
           <figure class="case-item">
-            <img src="./images/nefro-final/14-typography.jpg" alt="Типографика бренда" loading="lazy" />
+            <img src="./images/nefro-final/7-right-smallrect.png" alt="Типографика бренда" loading="lazy" />
           </figure>
         </div>
 

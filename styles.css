@@ -79,7 +79,7 @@ nav {
 .lang-switch button {
   border: 0;
   background: transparent;
-  color: #fff;
+  color: var(--muted);
   font-size: 0.66rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -90,10 +90,15 @@ nav {
 
 .lang-switch button.is-active {
   color: #fff;
+  opacity: 1;
+}
+
+.lang-switch button:not(.is-active) {
+  opacity: 0.58;
 }
 
 .lang-switch span {
-  color: #fff;
+  color: var(--muted);
   font-size: 0.62rem;
   mix-blend-mode: difference;
 }
@@ -195,6 +200,8 @@ button,
 
 .projects {
   padding: 2rem 0;
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 .projects-grid {
@@ -316,7 +323,7 @@ button,
 }
 
 .other-project:hover {
-  opacity: 0.7;
+  opacity: inherit;
 }
 
 .other-projects__preview {
@@ -475,6 +482,10 @@ button,
     padding-top: 76%;
   }
 
+  .project-top .project__thumb {
+    padding-top: 76%;
+  }
+
   .other-projects__preview {
     display: none;
   }
@@ -505,6 +516,15 @@ button,
   .project__thumb {
     padding-top: 76%;
   }
+
+  .project-top .project__thumb {
+    padding-top: 76%;
+  }
+
+  .other-project {
+    pointer-events: none;
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -515,5 +535,9 @@ button,
 
   .project:hover {
     filter: brightness(0.92);
+  }
+
+  .other-project:hover {
+    opacity: 0.7;
   }
 }
