@@ -465,6 +465,7 @@ button,
   }
 
   .project,
+  .project-top,
   .project-1,
   .project-2,
   .project-3,
@@ -484,6 +485,7 @@ button,
 
   .project-top .project__thumb {
     padding-top: 76%;
+    background-position: center;
   }
 
   .other-projects__preview {
@@ -519,6 +521,7 @@ button,
 
   .project-top .project__thumb {
     padding-top: 76%;
+    background-position: center;
   }
 
   .other-project {

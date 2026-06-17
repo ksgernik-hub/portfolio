@@ -32,8 +32,8 @@ const RU_TO_EN = {
     "8+ years in communication and brand design. I build visual systems that help people understand faster and make better decisions.",
   "Работала с OneTwoTrip, Clay, TravelLine, Strelka KB, Half-Price Punk Spiders, Mission Control, Группа компаний ДАЛЬ.":
     "Worked with: OneTwoTrip, Clay, TravelLine, Strelka KB, Half-Price Punk Spiders, Mission Control, DAL Group of Companies.",
-  "Делаю коммуникационный и бренд-дизайн, который помогает проектам звучать ясно, выглядеть смело и запоминаться.":
-    "Communication and brand design that helps projects speak clearly, look bold, and stay memorable.",
+  "Работаю на стыке брендинга, коммуникаций и здравого смысла":
+    "Working at the intersection of branding, communications, and common sense.",
   "Коммуникационный и бренд-дизайнер, мне близок ясный и содержательный дизайн. Интересуюсь новыми технологиями и нейросетями, постоянно учусь, расту и ценю работу в амбициозных и внимательных командах : )":
     "Communication and brand designer focused on clear and meaningful design. I am interested in new technologies and AI tools, keep learning, and value working in ambitious and thoughtful teams.",
   "Коммуникационный и бренд-дизайнер, мне близок ясный и содержательный дизайн. Интересуюсь новыми технологиями и нейросетями, постоянно учусь, расту и ценю работу в амбициозных и внимательных командах :)":
