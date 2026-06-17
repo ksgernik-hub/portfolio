@@ -140,6 +140,27 @@ const initHeroNameImageLetters = () => {
   const title = document.querySelector('.hero__title');
   if (!title) return;
 
+  const preloadedLetters = new Set();
+
+  const preloadLetterImages = () => {
+    title.querySelectorAll('[data-image]').forEach((letter) => {
+      const imagePath = letter.dataset.image;
+      if (!imagePath || preloadedLetters.has(imagePath)) return;
+
+      preloadedLetters.add(imagePath);
+      const image = new Image();
+      image.src = imagePath;
+    });
+  };
+
+  const scheduleLetterPreload = () => {
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(preloadLetterImages, { timeout: 1600 });
+    } else {
+      window.setTimeout(preloadLetterImages, 700);
+    }
+  };
+
   const ruLetterImageMap = {
     'г': './images/letters-cyr/г.png',
     'е': './images/letters-cyr/е.png',
@@ -195,8 +216,8 @@ const initHeroNameImageLetters = () => {
 
     if (imagePath) {
       span.dataset.image = imagePath;
-      span.style.setProperty('--letter-image', `url('${imagePath}')`);
       span.addEventListener('mouseenter', () => {
+        span.style.setProperty('--letter-image', `url('${imagePath}')`);
         span.classList.add('is-image');
       });
       span.addEventListener('mouseleave', () => {
@@ -242,6 +263,7 @@ const initHeroNameImageLetters = () => {
     title.textContent = '';
     rebuilt.forEach((node) => title.appendChild(node));
     title.dataset.lettersReady = '1';
+    scheduleLetterPreload();
   };
 
   const resetIfNeeded = () => {
