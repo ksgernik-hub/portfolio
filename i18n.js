@@ -13,6 +13,7 @@ const RU_TO_EN = {
   "Обсудить ваш проект": "Discuss your project",
   "← к другим проектам": "← Back to projects",
   "← К другим проектам": "← Back to projects",
+  "К описанию проекта": "Project description",
   "Проект": "Project",
   "Описание": "Description",
   "Роль": "Role",

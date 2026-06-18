@@ -53,11 +53,13 @@
         justify-content: space-between;
         z-index: 30;
         background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none;
+        color: #fff;
+        mix-blend-mode: difference;
       }
 
       .brand,
       nav a {
-        color: var(--text);
+        color: currentColor;
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 0.08em;
@@ -79,7 +81,7 @@
       .lang-switch button {
         border: 0;
         background: transparent;
-        color: var(--muted);
+        color: currentColor;
         font-size: 0.66rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
@@ -88,12 +90,18 @@
       }
 
       .lang-switch button.is-active {
-        color: var(--text);
+        color: currentColor;
+        opacity: 1;
+      }
+
+      .lang-switch button:not(.is-active) {
+        opacity: 0.58;
       }
 
       .lang-switch span {
-        color: var(--muted);
+        color: currentColor;
         font-size: 0.62rem;
+        opacity: 0.58;
       }
 
       .page,
@@ -368,14 +376,6 @@
         }
       }
     
-    
-
-      .brand,
-      nav a {
-        color: #fff;
-        mix-blend-mode: difference;
-      }
-    
 
       @media (max-width: 700px) {
         .site-header nav a:not([href="./resume.html"]) {
@@ -473,7 +473,10 @@
         </div>
 
         <figure class="case-item">
-          <img src="./images/else-final/3-full.jpg" alt="Материал проекта else" loading="lazy" />
+          <picture>
+            <source media="(max-width: 700px)" srcset="./images/else-final/3-mobile.png" />
+            <img src="./images/else-final/3-full.jpg" alt="Материал проекта else" loading="lazy" />
+          </picture>
         </figure>
 
         <div class="case-row case-row--42-58">
