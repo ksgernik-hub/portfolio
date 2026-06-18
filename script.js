@@ -74,7 +74,17 @@ const otherProjectsPreviewImage = otherProjectsPreview
 const otherProjectLinks = [...document.querySelectorAll('.other-project[data-preview]')];
 const desktopPreviewMedia = window.matchMedia('(hover: hover) and (pointer: fine)');
 
-if (otherProjectsPreview && otherProjectsPreviewImage && otherProjectLinks.length && desktopPreviewMedia.matches) {
+if (otherProjectLinks.length) {
+  const previewSources = [...new Set(otherProjectLinks.map((link) => link.getAttribute('data-preview')).filter(Boolean))];
+
+  previewSources.forEach((src) => {
+    const image = new Image();
+    image.decoding = 'async';
+    image.src = src;
+  });
+}
+
+if (otherProjectsPreview && otherProjectsPreviewImage && otherProjectLinks.length) {
   const movePreview = (x, y) => {
     const offsetX = 30;
     const offsetY = -30;
@@ -89,26 +99,73 @@ if (otherProjectsPreview && otherProjectsPreviewImage && otherProjectLinks.lengt
     otherProjectsPreview.style.top = `${safeTop}px`;
   };
 
-  window.addEventListener('mousemove', (event) => {
-    const hoveredProject = document.querySelector('.other-project:hover');
-    if (!hoveredProject) {
-      otherProjectsPreview.classList.remove('is-visible');
-      otherProjectsPreview.style.left = '-9999px';
-      otherProjectsPreview.style.top = '-9999px';
-      return;
-    }
+  const hidePreview = () => {
+    otherProjectsPreview.classList.remove('is-visible');
+    otherProjectsPreview.style.left = '-9999px';
+    otherProjectsPreview.style.top = '-9999px';
+  };
 
-    const previewImage = hoveredProject.getAttribute('data-preview');
+  const showPreview = (project, x, y) => {
+    const previewImage = project.getAttribute('data-preview');
     if (!previewImage) {
-      otherProjectsPreview.classList.remove('is-visible');
+      hidePreview();
       return;
     }
 
     otherProjectsPreviewImage.src = previewImage;
-
-    movePreview(event.clientX, event.clientY);
+    movePreview(x, y);
     otherProjectsPreview.classList.add('is-visible');
-  });
+  };
+
+  if (desktopPreviewMedia.matches) {
+    window.addEventListener('mousemove', (event) => {
+      const hoveredProject = document.querySelector('.other-project:hover');
+      if (!hoveredProject) {
+        hidePreview();
+        return;
+      }
+
+      showPreview(hoveredProject, event.clientX, event.clientY);
+    });
+  } else {
+    otherProjectLinks.forEach((project) => {
+      project.setAttribute('role', 'button');
+      project.setAttribute('tabindex', '0');
+
+      project.addEventListener('click', (event) => {
+        const rect = project.getBoundingClientRect();
+        const x = event.clientX || rect.left + rect.width / 2;
+        const y = event.clientY || rect.top + rect.height / 2;
+        showPreview(project, x, y);
+      });
+
+      project.addEventListener('keydown', (event) => {
+        if (event.key !== 'Enter' && event.key !== ' ') {
+          return;
+        }
+
+        event.preventDefault();
+        const rect = project.getBoundingClientRect();
+        showPreview(project, rect.left + rect.width / 2, rect.top + rect.height / 2);
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (event.target.closest('.other-project')) {
+        return;
+      }
+
+      hidePreview();
+    });
+
+    window.addEventListener('scroll', hidePreview, { passive: true });
+    window.addEventListener('resize', hidePreview);
+    window.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        hidePreview();
+      }
+    });
+  }
 }
 
 const customCursor = document.querySelector('.custom-cursor');

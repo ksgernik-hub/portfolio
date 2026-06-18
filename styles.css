@@ -318,7 +318,7 @@ button,
   font-size: 0.82rem;
   letter-spacing: 0.06em;
   width: fit-content;
-  cursor: default;
+  cursor: pointer;
   transition: opacity 220ms ease;
 }
 
@@ -488,8 +488,10 @@ button,
     background-position: center;
   }
 
-  .other-projects__preview {
-    display: none;
+  .other-projects__preview,
+  .other-projects__preview img {
+    max-width: min(320px, calc(100vw - 24px));
+    max-height: 46vh;
   }
 }
 
@@ -525,8 +527,11 @@ button,
   }
 
   .other-project {
-    pointer-events: none;
     -webkit-tap-highlight-color: transparent;
+  }
+
+  .other-project:active {
+    opacity: 0.7;
   }
 }
 
