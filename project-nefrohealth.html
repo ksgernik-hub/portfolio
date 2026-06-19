@@ -193,6 +193,7 @@
         margin: 0;
       }
 
+      .case-item picture,
       .case-item img {
         display: block;
         width: 100%;
@@ -444,7 +445,10 @@
         </div>
 
         <figure class="case-item">
-          <img src="./images/nefro-final/15-social-cards.jpg" alt="Серия постов для соцсетей" loading="lazy" />
+          <picture>
+            <source media="(max-width: 700px)" srcset="./images/nefro-final/15-social-cards-mobile.png" />
+            <img src="./images/nefro-final/15-social-cards.jpg" alt="Серия постов для соцсетей" loading="lazy" />
+          </picture>
         </figure>
       </section>
 

@@ -226,6 +226,7 @@
         margin: 0;
       }
 
+      .case-item picture,
       .case-item img {
         display: block;
         width: 100%;
@@ -310,8 +311,15 @@
           row-gap: var(--case-gap-x);
         }
 
-        .case-stack {
+        .case-stack,
+        .case-stack-fill {
+          grid-template-rows: auto;
+          min-height: 0;
           row-gap: var(--case-gap-x);
+        }
+
+        .case-spacer {
+          display: none;
         }
       }
 
@@ -477,7 +485,10 @@
         </div>
 
         <figure class="case-item">
-          <img src="./images/fastino-final/3-full.png" alt="Материал проекта Fastino" loading="lazy" />
+          <picture>
+            <source media="(max-width: 700px)" srcset="./images/fastino-final/3-mobile.png" />
+            <img src="./images/fastino-final/3-full.png" alt="Материал проекта Fastino" loading="lazy" />
+          </picture>
         </figure>
 
         <div class="case-row case-row--58-42">
@@ -485,7 +496,10 @@
             <img src="./images/fastino-final/4-left-bigsquare.png" alt="Материал проекта Fastino" loading="lazy" />
           </figure>
           <figure class="case-item">
-            <img src="./images/fastino-final/4-right-smallsquare.png" alt="Материал проекта Fastino" loading="lazy" />
+            <picture>
+              <source media="(max-width: 700px)" srcset="./images/fastino-final/4-right-smallsquare-mobile.png" />
+              <img src="./images/fastino-final/4-right-smallsquare.png" alt="Материал проекта Fastino" loading="lazy" />
+            </picture>
           </figure>
         </div>
 
@@ -501,7 +515,10 @@
         </div>
 
         <figure class="case-item">
-          <img src="./images/fastino-final/6-full.png" alt="Материал проекта Fastino" loading="lazy" />
+          <picture>
+            <source media="(max-width: 700px)" srcset="./images/fastino-final/6-mobile.png" />
+            <img src="./images/fastino-final/6-full.png" alt="Материал проекта Fastino" loading="lazy" />
+          </picture>
         </figure>
 
         <div class="case-row case-row--70-30">
@@ -517,7 +534,10 @@
         </div>
 
         <figure class="case-item">
-          <img src="./images/fastino-final/8-full.png" alt="Материал проекта Fastino" loading="lazy" />
+          <picture>
+            <source media="(max-width: 700px)" srcset="./images/fastino-final/8-mobile.png" />
+            <img src="./images/fastino-final/8-full.png" alt="Материал проекта Fastino" loading="lazy" />
+          </picture>
         </figure>
 
         <div class="case-row case-row--70-30">
@@ -533,7 +553,10 @@
         </div>
 
         <figure class="case-item">
-          <img src="./images/fastino-final/10-full.png" alt="Материал проекта Fastino" loading="lazy" />
+          <picture>
+            <source media="(max-width: 700px)" srcset="./images/fastino-final/10-mobile.png" />
+            <img src="./images/fastino-final/10-full.png" alt="Материал проекта Fastino" loading="lazy" />
+          </picture>
         </figure>
 
         <div class="case-row case-row--30-70">
@@ -546,7 +569,10 @@
         </div>
 
         <figure class="case-item">
-          <img src="./images/fastino-final/12-full.png" alt="Материал проекта Fastino" loading="lazy" />
+          <picture>
+            <source media="(max-width: 700px)" srcset="./images/fastino-final/12-mobile.png" />
+            <img src="./images/fastino-final/12-full.png" alt="Материал проекта Fastino" loading="lazy" />
+          </picture>
         </figure>
 
         <figure class="case-item">

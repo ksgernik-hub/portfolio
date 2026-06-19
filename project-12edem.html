@@ -169,6 +169,8 @@
         margin: 0;
       }
 
+      .case-media picture,
+      .case-card picture,
       .case-media img,
       .case-media video,
       .case-card img,
@@ -269,14 +271,17 @@
           row-gap: 0.9rem;
         }
 
-        .case-grid-two {
-          grid-template-columns: 1fr;
-          row-gap: 0.9rem;
-        }
+          .case-grid-two,
+          .case-grid-two--small-left,
+          .case-grid-two--rect,
+          .case-grid-two--rect.case-grid-two--small-left {
+            grid-template-columns: 1fr;
+            row-gap: 0.9rem;
+          }
 
-        .case-grid-two .case-card {
-          aspect-ratio: 4 / 3;
-        }
+          .case-grid-two .case-card {
+            aspect-ratio: auto;
+          }
 
         .case-grid-two--rect .case-card {
           aspect-ratio: auto;
@@ -404,7 +409,10 @@
         </div>
 
         <figure class="case-card case-media">
-          <img src="./images/12edem-final/2-full.png" alt="Материал проекта" loading="lazy" />
+          <picture>
+            <source media="(max-width: 700px)" srcset="./images/12edem-final/2-mobile.png" />
+            <img src="./images/12edem-final/2-full.png" alt="Материал проекта" loading="lazy" />
+          </picture>
         </figure>
 
         <div class="case-grid-two case-grid-two--small-left">
@@ -414,7 +422,10 @@
             </div>
           </figure>
           <figure class="case-card">
-            <img src="./images/12edem-final/3-left-bigsquare.png" alt="Материал проекта" loading="lazy" />
+            <picture>
+              <source media="(max-width: 700px)" srcset="./images/12edem-final/3-left-bigsquare-mobile.png" />
+              <img src="./images/12edem-final/3-left-bigsquare.png" alt="Материал проекта" loading="lazy" />
+            </picture>
           </figure>
         </div>
 
@@ -436,7 +447,10 @@
         </div>
 
         <figure class="case-card case-media">
-          <img src="./images/12edem-final/6-full.png" alt="Материал проекта" loading="lazy" />
+          <picture>
+            <source media="(max-width: 700px)" srcset="./images/12edem-final/6-mobile.png" />
+            <img src="./images/12edem-final/6-full.png" alt="Материал проекта" loading="lazy" />
+          </picture>
         </figure>
       </section>
 
