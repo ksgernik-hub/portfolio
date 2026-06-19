@@ -10,6 +10,7 @@ const RU_TO_EN = {
   "Скачать": "Download",
   "Смотреть онлайн": "View online",
   "Смотреть портфолио": "View portfolio",
+  "На главную": "Back to home",
   "Обсудить ваш проект": "Discuss your project",
   "← к другим проектам": "← Back to projects",
   "← К другим проектам": "← Back to projects",
@@ -27,7 +28,12 @@ const RU_TO_EN = {
   "Новый проект": "New project",
   "Soon... Сайт для сервиса по ремонту техники": "Soon... Website for an Electronics Repair Service",
   "КСЮША ГЕРНИК": "KSUSHA GERNIK",
+  "Ксюша Герник": "Ksusha Gernik",
   "© 2026 КСЮША ГЕРНИК": "© 2026 KSUSHA GERNIK",
+  "Вернуться на главную страницу портфолио Ксюши Герник.":
+    "Return to Ksusha Gernik’s portfolio homepage.",
+  "Похоже, здесь ничего нет. Можно вернуться на главную страницу портфолио.":
+    "Looks like there is nothing here. You can return to the portfolio homepage.",
 
   "8+ лет в коммуникационном и бренд-дизайне. Проектирую визуальные системы, которые помогают быстрее понимать и принимать решения.":
     "8+ years in communication and brand design. I build visual systems that help people understand faster and make better decisions.",
@@ -40,7 +46,7 @@ const RU_TO_EN = {
   "Коммуникационный и бренд-дизайнер, мне близок ясный и содержательный дизайн. Интересуюсь новыми технологиями и нейросетями, постоянно учусь, расту и ценю работу в амбициозных и внимательных командах :)":
     "Communication and brand designer focused on clear and meaningful design. I am interested in new technologies and AI tools, keep learning, and value working in ambitious and thoughtful teams.",
   "коммуникационный и бренд-дизайнер": "communication & brand designer",
-  "коммуникационный дизайнер": "communication designer",
+  "коммуникационный дизайнер": "Communication designer",
 
   "Раз, Два, Весна!": "One, Two, Spring!",
   "Новогодняя кампания «Раз, два, едем»": "New Year Campaign \"One, Two, Let’s Go\"",

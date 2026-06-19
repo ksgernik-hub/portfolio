@@ -8,6 +8,18 @@
       name="description"
       content="Резюме Ксении Герник: коммуникационный дизайнер, опыт работы, софт, навыки, образование и контакты."
     />
+    <link rel="canonical" href="https://ksushagernik.ru/resume.html" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Резюме — Ксюша Герник" />
+    <meta property="og:description" content="Резюме Ксении Герник: коммуникационный дизайнер, опыт работы, софт, навыки, образование и контакты." />
+    <meta property="og:url" content="https://ksushagernik.ru/resume.html" />
+    <meta property="og:image" content="https://ksushagernik.ru/images/promo-final/hero-cover.png" />
+    <meta property="og:image:width" content="1996" />
+    <meta property="og:image:height" content="1068" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Резюме — Ксюша Герник" />
+    <meta name="twitter:description" content="Резюме Ксении Герник: коммуникационный дизайнер, опыт работы, софт, навыки, образование и контакты." />
+    <meta name="twitter:image" content="https://ksushagernik.ru/images/promo-final/hero-cover.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,17 +46,33 @@
 
       .resume-name {
         margin: 0.45rem 0 0;
-        font-weight: 600;
+        font-weight: 500;
         font-size: clamp(2rem, 7vw, 5.4rem);
         line-height: 0.92;
         letter-spacing: -0.02em;
+      }
+
+      .resume-name-row {
+        display: flex;
+        align-items: center;
+        gap: clamp(0.75rem, 2vw, 1.4rem);
+        width: fit-content;
+        max-width: 100%;
+      }
+
+      .resume-avatar {
+        width: clamp(52px, 7vw, 92px);
+        height: clamp(52px, 7vw, 92px);
+        border-radius: 999px;
+        object-fit: cover;
+        display: block;
+        flex: 0 0 auto;
       }
 
       .resume-role {
         margin-top: 0.7rem;
         color: var(--muted);
         font-size: 1rem;
-        text-transform: uppercase;
         letter-spacing: 0.05em;
       }
 
@@ -68,6 +96,7 @@
         font-size: 0.74rem;
         letter-spacing: 0.08em;
         border: 1px solid var(--line);
+        border-radius: var(--ui-radius);
         padding: 0.58rem 0.8rem;
         transition: opacity 220ms ease;
       }
@@ -104,6 +133,7 @@
       .job {
         padding: 0.8rem 0.9rem;
         background: rgba(255, 255, 255, 0.03);
+        border-radius: var(--ui-radius);
       }
 
       .job-title,
@@ -166,12 +196,14 @@
         letter-spacing: 0.05em;
         color: var(--muted);
         background: rgba(255, 255, 255, 0.03);
+        border-radius: var(--ui-radius);
       }
 
       .education-block {
         margin-top: 1.3rem;
         background: rgba(255, 255, 255, 0.03);
         padding: 1rem;
+        border-radius: var(--ui-radius);
       }
 
       .education-block .col-title {
@@ -208,6 +240,7 @@
         font-size: 0.74rem;
         letter-spacing: 0.08em;
         border: 1px solid var(--line);
+        border-radius: var(--ui-radius);
         padding: 0.5rem 0.75rem;
         display: inline-block;
       }
@@ -254,6 +287,26 @@
         .site-header nav a:not([href="./resume.html"]) {
           display: none;
         }
+
+        .resume-hero {
+          display: grid;
+        }
+
+        .resume-name-row {
+          align-items: flex-start;
+          display: contents;
+        }
+
+        .resume-avatar {
+          width: 72px;
+          height: 72px;
+          margin: 0 0 0.9rem;
+          order: -1;
+        }
+
+        .resume-kicker {
+          order: 0;
+        }
       }
 
     
@@ -281,7 +334,10 @@
     <main class="resume-page">
       <section class="resume-hero reveal">
         <p class="resume-kicker">CV</p>
-        <h1 class="resume-name">KSUSHA GERNIK</h1>
+        <div class="resume-name-row">
+          <h1 class="resume-name">Ксюша Герник</h1>
+          <img class="resume-avatar" src="./images/avatar-ksusha.jpg" alt="Ксюша Герник" />
+        </div>
         <p class="resume-role">коммуникационный дизайнер</p>
         <p class="resume-summary">
           Коммуникационный и бренд-дизайнер, мне близок ясный и содержательный дизайн. Интересуюсь

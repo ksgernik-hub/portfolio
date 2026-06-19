@@ -3,6 +3,7 @@
   --text: #f2f2f2;
   --muted: #b2b2b2;
   --line: #2f2f2f;
+  --ui-radius: 4px;
 }
 
 * {
@@ -232,7 +233,7 @@ button,
   padding-top: 80%;
   position: relative;
   overflow: hidden;
-  border-radius: 0;
+  border-radius: var(--ui-radius);
   background-image: var(--cover);
   background-size: cover;
   background-position: center;
@@ -354,6 +355,7 @@ button,
   max-height: min(320px, 36vh);
   object-fit: contain;
   display: block;
+  border-radius: var(--ui-radius);
 }
 
 .custom-cursor {
@@ -409,6 +411,7 @@ button,
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   border: 1px solid var(--line);
+  border-radius: var(--ui-radius);
   padding: 0.58rem 0.8rem;
   transition: opacity 220ms ease;
 }
