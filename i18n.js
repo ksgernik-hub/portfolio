@@ -26,7 +26,7 @@ const RU_TO_EN = {
   "Телефон:": "Phone:",
   "Телеграм:": "Telegram:",
   "Новый проект": "New project",
-  "Soon... Сайт для сервиса по ремонту техники": "Soon... Website for an Electronics Repair Service",
+  "Burek Font WIP": "Burek Font WIP",
   "КСЮША ГЕРНИК": "KSUSHA GERNIK",
   "Ксюша Герник": "Ksusha Gernik",
   "© 2026 КСЮША ГЕРНИК": "© 2026 KSUSHA GERNIK",
