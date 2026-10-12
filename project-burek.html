@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Шрифт Burek — кейс</title>
+    <meta name="description" content="Burek — бесплатный акцидентный шрифт с расширенной латиницей и кириллицей, созданный Ксюшей Герник." />
+    <link rel="canonical" href="https://ksushagernik.ru/project-burek.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Шрифт Burek — кейс" />
+    <meta property="og:description" content="Burek — бесплатный акцидентный шрифт с расширенной латиницей и кириллицей, созданный Ксюшей Герник." />
+    <meta property="og:url" content="https://ksushagernik.ru/project-burek.html" />
+    <meta property="og:image" content="https://ksushagernik.ru/images/burek-final/%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0%20%D1%85%D0%B8%D1%80%D0%BE.jpg" />
+    <meta property="og:image:width" content="3992" />
+    <meta property="og:image:height" content="2136" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Шрифт Burek — кейс" />
+    <meta name="twitter:description" content="Burek — бесплатный акцидентный шрифт с расширенной латиницей и кириллицей, созданный Ксюшей Герник." />
+    <meta name="twitter:image" content="https://ksushagernik.ru/images/burek-final/%D0%BE%D0%B1%D0%BB%D0%BE%D0%B6%D0%BA%D0%B0%20%D1%85%D0%B8%D1%80%D0%BE.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="./images/favicon-k.png" />
+    <style>
+      :root { --case-gap-y: 1.2rem; --case-gap-x: .7rem; --case-big-col: 1.23fr; --case-small-col: .77fr; }
+      .page { width: min(1500px, calc(100% - 2rem)); margin: 0 auto; padding: 3.1rem 0 2rem; }
+      .back-text { display: inline-block; color: var(--muted); text-decoration: none; text-transform: uppercase; letter-spacing: .08em; font-size: .68rem; margin: 0 0 .75rem; }
+      .hero-cover { margin: 0; }
+      .hero-cover img, .case-card img { display: block; width: 100%; height: auto; border-radius: 4px; }
+      .project-info { margin-top: 1.35rem; padding: 1.4rem 1.8rem; display: grid; grid-template-columns: 1fr 2fr 1fr 1.35fr 1fr; gap: 1rem; align-items: start; }
+      .info-item { min-width: 0; font-size: .78rem; line-height: 1.25; }
+      .info-item strong { display: block; font-weight: 500; font-size: .76rem; color: var(--muted); margin-bottom: .26rem; text-transform: uppercase; letter-spacing: .07em; }
+      .tag-list { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .06rem; }
+      .tag { display: inline-flex; align-items: center; padding: .28rem .56rem; background: rgba(255,255,255,.03); color: var(--muted); font-size: .66rem; letter-spacing: .05em; text-transform: uppercase; line-height: 1.02; border-radius: 4px; }
+      .case-content { margin-top: 6rem; display: grid; row-gap: var(--case-gap-y); }
+      .case-card { margin: 0; min-width: 0; }
+      .case-grid-two { display: grid; grid-template-columns: minmax(0,var(--case-big-col)) minmax(0,var(--case-small-col)); column-gap: var(--case-gap-x); align-items: start; }
+      .case-grid-two--small-left { grid-template-columns: minmax(0,var(--case-small-col)) minmax(0,var(--case-big-col)); }
+      .font-download { margin-top: 2rem; padding: 2rem 0; border-top: 1px solid var(--line); }
+      .font-download h2 { margin: 0 0 .8rem; font-size: .84rem; letter-spacing: .1em; text-transform: uppercase; }
+      .font-download p { color: var(--muted); font-size: .85rem; line-height: 1.5; max-width: 68ch; margin: .5rem 0; }
+      .font-download .font-download__button { margin-top: 1rem; }
+      .back-to-projects, .font-download__button, .project-discuss { color: var(--text); text-decoration: none; text-transform: uppercase; font-size: .78rem; letter-spacing: .08em; border: 1px solid var(--line); border-radius: 4px; padding: .6rem .9rem; display: inline-flex; }
+      .project-bottom { margin-top: 1.1rem; }
+      .project-contacts { width: min(1500px, calc(100% - 2rem)); margin: 0 auto; padding: 1rem 0 .8rem; display: grid; grid-template-columns: 1fr auto; grid-template-areas: "h h" "list cta"; align-items: end; row-gap: .7rem; }
+      .project-contacts h2 { grid-area: h; }
+      .project-contacts .contact-list { grid-area: list; margin-top: 0; }
+      .project-contacts__cta { grid-area: cta; display: flex; justify-content: flex-end; }
+      @media (max-width: 980px) {
+        .project-info { grid-template-columns: repeat(2,minmax(0,1fr)); gap: .85rem; padding: .55rem .6rem; }
+        .case-content { margin-top: 4rem; row-gap: .9rem; }
+        .case-grid-two, .case-grid-two--small-left { grid-template-columns: 1fr; row-gap: .9rem; }
+      }
+      @media (max-width: 900px) {
+        .project-contacts { grid-template-columns: 1fr; grid-template-areas: "h" "list" "cta"; row-gap: .75rem; }
+        .project-contacts__cta { justify-content: flex-start; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="custom-cursor" aria-hidden="true"></div>
+    <header class="site-header" id="top">
+      <a class="brand" href="./index.html">КСЮША ГЕРНИК</a>
+      <nav>
+        <a href="./index.html#projects">projects</a>
+        <a href="./index.html#about">about</a>
+        <a href="./resume.html">resume</a>
+        <a href="./index.html#contacts">contacts</a>
+      </nav>
+      <div class="lang-switch" aria-label="Language switcher">
+        <button type="button" data-lang-switch="en" class="is-active">EN</button>
+        <span>/</span>
+        <button type="button" data-lang-switch="ru">RU</button>
+      </div>
+    </header>
+    <main class="page">
+      <a class="back-text" href="./index.html#projects">← к другим проектам</a>
+      <figure class="hero-cover">
+        <img src="./images/burek-final/обложка хиро.jpg" alt="Burek — Free Font, Latin + Cyrillic" width="3992" height="2136" fetchpriority="high" />
+      </figure>
+      <section class="project-info">
+        <div class="info-item"><strong>Проект</strong>Шрифт Burek</div>
+        <div class="info-item"><strong>Описание</strong>Burek — акцидентный шрифт, вдохновлённый неспешным сербским летом: завтраком из соседней пекарни, кофе на балконе и ощущением, что можно никуда не торопиться. Массивные формы и плотный ритм букв создают выразительный характер для плакатов, упаковки, меню кафе, обложек и крупных заголовков.</div>
+        <div class="info-item"><strong>Роль</strong>Шрифтовой дизайнер</div>
+        <div class="info-item"><strong>Услуги</strong><div class="tag-list"><span class="tag">шрифтовой дизайн</span><span class="tag">типографика</span><span class="tag">акцидентный шрифт</span><span class="tag">латиница и кириллица</span></div></div>
+      </section>
+      <section class="case-content" aria-label="Burek type specimens">
+        <div class="case-grid-two">
+          <figure class="case-card"><img src="./images/burek-final/1-left-bigsquare.jpg" alt="Burek Cyrillic display lettering" width="2356" height="2356" loading="lazy" decoding="async" /></figure>
+          <figure class="case-card"><img src="./images/burek-final/1-right-smallsquare.jpg" alt="Burek unicase letter A" width="1608" height="1608" loading="lazy" decoding="async" /></figure>
+        </div>
+        <figure class="case-card"><img src="./images/burek-final/2-full.jpg" alt="Burek Serbian Cyrillic lettering in a café" width="3992" height="2356" loading="lazy" decoding="async" /></figure>
+        <div class="case-grid-two case-grid-two--small-left">
+          <figure class="case-card"><img src="./images/burek-final/3-left-smallsquare.jpg" alt="Coffee and fruit illustration" width="1608" height="1608" loading="lazy" decoding="async" /></figure>
+          <figure class="case-card"><img src="./images/burek-final/3-right-bigsquare.jpg" alt="Burek Serbian Cyrillic poster — Belgrade, 09:45" width="2356" height="2356" loading="lazy" decoding="async" /></figure>
+        </div>
+        <figure class="case-card"><img src="./images/burek-final/4-full.jpg" alt="Burek Latin lettering with numerals and punctuation" width="3992" height="2356" loading="lazy" decoding="async" /></figure>
+        <div class="case-grid-two">
+          <figure class="case-card"><img src="./images/burek-final/5-left-bigsquare.jpg" alt="Burek Živeli! lettering and an illustrated toast" width="2356" height="2356" loading="lazy" decoding="async" /></figure>
+          <figure class="case-card"><img src="./images/burek-final/5-right-smallsquare.jpg" alt="Burek Latin and Cyrillic glyph selection" width="1608" height="1608" loading="lazy" decoding="async" /></figure>
+        </div>
+        <div class="case-grid-two case-grid-two--small-left">
+          <figure class="case-card"><img src="./images/burek-final/6-left-smallrect.jpg" alt="Burek ampersand over a café illustration" width="1200" height="1470" loading="lazy" decoding="async" /></figure>
+          <figure class="case-card"><img src="./images/burek-final/6-right-bigrect.jpg" alt="Burek social media layouts in Serbian and French" width="2764" height="2306" loading="lazy" decoding="async" /></figure>
+        </div>
+        <figure class="case-card"><img src="./images/burek-final/7-full.jpg" alt="Burek takeaway packaging — Beograd, Dorćol" width="3992" height="2356" loading="lazy" decoding="async" /></figure>
+      </section>
+      <section class="font-download">
+        <h2>Скачать шрифт Burek</h2>
+        <p>Одно начертание Black · OpenType (.otf) · 354 глифа</p>
+        <p>Бесплатно для личных и коммерческих проектов. Расширенная латиница и кириллица, включая сербскую; кириллические лигатуры СТ, ГД, ГЛ, ТД. Прописные и строчные знаки имеют формы заглавных букв.</p>
+        <a class="font-download__button" href="https://ksushagernik.gumroad.com/l/burek" target="_blank" rel="noopener noreferrer">Скачать шрифт Burek</a>
+      </section>
+      <section class="project-bottom"><a class="back-to-projects" href="./index.html#projects">← К другим проектам</a></section>
+    </main>
+    <section id="contacts" class="contacts project-contacts">
+      <h2>КОНТАКТЫ</h2>
+      <div class="contact-list">
+        <a href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer">Телеграм</a>
+        <a href="mailto:ks.gernik@gmail.com">Почта</a>
+        <a href="tel:+381613796705">Телефон</a>
+        <a href="https://www.linkedin.com/in/kseniia-gernik-pdf/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+      <div class="project-contacts__cta"><a class="project-discuss" href="https://t.me/ksusha_pdf" target="_blank" rel="noreferrer">Обсудить ваш проект</a></div>
+    </section>
+    <footer class="site-footer"><p>© 2026 КСЮША ГЕРНИК</p></footer>
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+    <script src="./protection.js"></script>
+  </body>
+</html>
